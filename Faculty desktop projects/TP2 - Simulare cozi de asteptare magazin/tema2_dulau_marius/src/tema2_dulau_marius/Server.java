@@ -1,0 +1,88 @@
+package tema2_dulau_marius;
+
+import java.util.*;
+import java.util.concurrent.BlockingQueue;
+import java.util.concurrent.LinkedBlockingQueue;
+import java.util.concurrent.atomic.AtomicInteger;
+
+import javax.swing.JOptionPane;
+
+public class Server implements Runnable{
+
+	private BlockingQueue<Task> tasks;
+	//private AtomicInteger waitingPeriod;
+	private Thread t;
+	private int procTime;
+	private int nrClienti;
+	
+	public Server()
+	{
+		tasks = new LinkedBlockingQueue<Task>();
+		//waitingPeriod = new AtomicInteger();
+		procTime = 0;
+		t = new Thread(this);
+		t.start();
+	}
+
+	public void addTask(Task newTask)
+	{
+		//tasks.add(newTask);
+		try {
+			tasks.put(newTask);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		//this.waitingPeriod.incrementAndGet();
+	}
+	
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		while(true)
+		{
+			try 	
+			{
+				if(tasks.size() != 0)
+				{
+					Task task = this.tasks.peek();
+					Thread.sleep(task.getProcessingPeriod() * 1000);
+					//JOptionPane.showMessageDialog(null, task.getName());
+					tasks.remove(task);
+					//task = this.tasks.take();
+					//waitingPeriod.decrementAndGet();
+				}
+			}catch (InterruptedException e) 
+			{
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+	}
+	
+	public Task[] getTasks()
+	{
+		Task[] clienti = new Task[this.tasks.size()];
+		return (Task[]) tasks.toArray(clienti);
+	}
+	
+	public void setProcTime(int nr)
+	{
+		this.procTime = this.procTime + nr;
+	}
+	
+	public int getProcTime()
+	{
+		return this.procTime;
+	}
+	
+	public void setNrClienti()
+	{
+		this.nrClienti = this.nrClienti + 1;
+	}
+	
+	public int getNrClienti()
+	{
+		return this.nrClienti;
+	}
+}

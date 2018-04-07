@@ -1,0 +1,53 @@
+package model;
+
+import java.util.HashSet;
+
+public class ceav implements BankProc {
+
+	public ceav() {
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public void addPerson(Person p) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public Person findPerson(String cnp) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void removePerson(Person p) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void addAccount(Account a) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void removeAccount(Account a) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public HashSet<Account> readAccounts(Person p) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public int getMaxAccountId() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

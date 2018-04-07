@@ -1,0 +1,14 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Download/Sem II/AC - Arhitectura calculatoarelor/laboratoare/lab9/mips/mips.sim/sim_1/synth/func/test_env_func_synth.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module EX
+INFO: [VRFC 10-311] analyzing module EX_MEM
+INFO: [VRFC 10-311] analyzing module ID
+INFO: [VRFC 10-311] analyzing module ID_EX
+INFO: [VRFC 10-311] analyzing module IF_ID
+INFO: [VRFC 10-311] analyzing module InstrFetch
+INFO: [VRFC 10-311] analyzing module MEM
+INFO: [VRFC 10-311] analyzing module MEM_WB
+INFO: [VRFC 10-311] analyzing module MonoPulseGenerator
+INFO: [VRFC 10-311] analyzing module MonoPulseGenerator_0
+INFO: [VRFC 10-311] analyzing module reg_file
+INFO: [VRFC 10-311] analyzing module test_env
+INFO: [VRFC 10-311] analyzing module glbl

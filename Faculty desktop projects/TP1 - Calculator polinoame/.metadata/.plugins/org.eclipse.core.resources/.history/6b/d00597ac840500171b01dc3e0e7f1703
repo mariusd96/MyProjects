@@ -1,0 +1,20 @@
+package appLogic;
+
+import java.util.*;
+
+public class Logic {
+	
+	private int pozitieX(String sir)
+	{
+		for(int i = 0; i < sir.length(); i++)
+		{
+			if(sir.substring(i, i + 1).compareTo("x") == 0) 
+			{
+				return i;
+			}
+		}
+		
+		return -1;
+	}
+	
+}

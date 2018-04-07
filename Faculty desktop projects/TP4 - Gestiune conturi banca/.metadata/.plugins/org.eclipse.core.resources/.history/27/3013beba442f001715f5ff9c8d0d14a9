@@ -1,0 +1,64 @@
+package tema4_dulau_marius;
+
+import java.io.Serializable;
+
+public class Person implements Serializable {
+	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -936859516123722914L;
+	
+	private String personCNP;
+	private String firstName;
+	private String lastName;
+	private String address;
+	
+	public Person(String cnp, String firstName, String lastName, String address) 
+	{
+		this.personCNP = cnp;
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.address = address;
+	}
+
+	public String getPersonCNP() 
+	{
+		return personCNP;
+	}
+
+	public void setPersonId(String personCNP) 
+	{
+		this.personCNP = personCNP;
+	}
+
+	public String getFirstName() 
+	{
+		return firstName;
+	}
+
+	public void setFirstName(String firstName) 
+	{
+		this.firstName = firstName;
+	}
+
+	public String getLastName() 
+	{
+		return lastName;
+	}
+
+	public void setLastName(String lastName) 
+	{
+		this.lastName = lastName;
+	}
+
+	public String getAddress() 
+	{
+		return address;
+	}
+
+	public void setAddress(String address) 
+	{
+		this.address = address;
+	}
+}

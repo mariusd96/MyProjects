@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <title>Chat elev</title>
+    <link rel="stylesheet" href="css/chatElev.css">
+</head>
+
+<body ng-app = "myApp" ng-controller = "controller" background="stuff/background.svg">
+
+<div class="nav">
+    <div class="nume">{{msg}}</div>
+    <script type="text/javascript">
+        tday=new Array("Duminica","Luni","Marti","Miercuri","Joi","Vineri","Sambata");
+        tmonth=new Array("Ianuarie","Februarie","Martie","Aprilie","Mai","Iunie","Iulie","August","Septembrie","Octombrie","Noiembrie","Decembrie");
+
+        function GetClock(){
+            var d=new Date();
+            var nday=d.getDay(),nmonth=d.getMonth(),ndate=d.getDate(),nyear=d.getFullYear();
+            var nhour=d.getHours(),nmin=d.getMinutes(),nsec=d.getSeconds();
+            if(nmin<=9) nmin="0"+nmin
+            if(nsec<=9) nsec="0"+nsec;
+
+            document.getElementById('data').innerHTML=""+tday[nday]+", "+tmonth[nmonth]+" "+ndate+", "+nyear+" "+nhour+":"+nmin+":"+nsec+"";
+        }
+
+        window.onload=function(){
+            GetClock();
+            setInterval(GetClock,1000);
+        }
+    </script>
+    <div id="data"></div>
+    <button class="logout" onclick="window.location ='login.html'">Logout</button>
+</div>
+
+
+<div class="page">
+    <div class="container">
+        <form>
+            <p class="titlu">Chat</p> <br/>
+            <div class="scroll">
+            <table border = "1">
+                <tr ng-repeat = "x in receiveData">
+                    <td>P</td>
+                    <td style="width: 50%">{{x.mesajProf}}</td>
+                    <td style="width: 50%">{{x.mesajElev}}</td>
+                    <td>E</td>
+                </tr>
+            </table>
+            </div>
+            <br/>
+            <textarea rows = "3" cols="60" ng-model = "mesaj"></textarea>
+            <input type="button" value="send" ng-click = "send()">
+        </form>
+    </div>
+</div>
+
+<script>
+    var myApp = angular.module("myApp", []);
+    myApp.controller("controller", function ($scope, $http) {
+        $scope.msg = document.cookie;
+
+        window.onload = function start()
+        {
+            readFromDB();
+        };
+
+        readFromDB = function ()
+        {
+            setInterval(function ()
+            {
+                var data = {
+                    "tabel": "Chat",
+                    "sqlQuery": "SELECT * FROM Chat WHERE idProfesor = '5' AND idElev = '"+document.cookie.split(',')[0]+"'"
+                };
+
+                $http.post('../php/selectAll.php', data)
+                    .then(function (response) {
+                        //console.log(response.data);
+                        //$scope.msg2 = response.data.records;
+                        $scope.receiveData = response.data.records;
+                    }, function (error)
+                    {
+                        console.log("Error");
+                    });
+            }, 250);
+        };
+
+        $scope.send = function ()
+        {
+            if($scope.mesaj!=null)
+            {
+                var data = {
+                    "sqlQuery": "INSERT into Chat values('5', '" + document.cookie.split(',')[0] + "', '','" + $scope.mesaj + "')"
+                };
+
+                console.log(data);
+                //console.log(data.sqlQuery);
+                $http.post('../php/InsertUpdateDelete.php', data)
+                    .then(function (response) {
+                        $scope.responseJSON = response.data;
+                        console.log($scope.responseJSON.msg);
+                    }, function (error) {
+                        console.log(error);
+                    });
+
+                $scope.mesaj = null;
+            }
+        }
+    });
+</script>
+
+</body>
+</html>

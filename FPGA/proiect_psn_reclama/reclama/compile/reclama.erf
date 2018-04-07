@@ -1,0 +1,5 @@
+MESSAGE "File: e:\Active-HDL\My_Projects\proiect_psn_reclama\reclama\src\animatie4.vhd" 
+MESSAGE "Compile Entity "animatie4"" 
+MESSAGE "Entity `animatie4' has been skipped - no difference detected." 
+MESSAGE "Compile Architecture "anim4" of Entity "animatie4"" 
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]" 

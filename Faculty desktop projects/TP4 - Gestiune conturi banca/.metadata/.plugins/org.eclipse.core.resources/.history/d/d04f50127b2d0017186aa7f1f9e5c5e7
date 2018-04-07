@@ -1,0 +1,10 @@
+package tema4_dulau_marius;
+
+import java.io.Serializable;
+
+public class Person implements Serializable {
+	private int personId;
+	private String firstName;
+	private String lastName;
+	private String address;
+}

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="presentation.Bank"/>
+<fullyQualifiedTypeName name="java.awt.Component"/>
+<fullyQualifiedTypeName name="java.io.Serializable"/>
+<fullyQualifiedTypeName name="tema4_dulau_marius.Bank"/>
+<fullyQualifiedTypeName name="javax.swing.JTable"/>
+<fullyQualifiedTypeName name="javax.swing.JOptionPane"/>
+<fullyQualifiedTypeName name="javax.swing.table.JTableHeader"/>
+<fullyQualifiedTypeName name="java.awt.event.ActionListener"/>
+<fullyQualifiedTypeName name="java.io.FileOutputStream"/>
+<fullyQualifiedTypeName name="org.omg.CORBA.Context"/>
+<fullyQualifiedTypeName name="javax.naming.Context"/>
+<fullyQualifiedTypeName name="java.io.File"/>
+<fullyQualifiedTypeName name="java.io.ObjectOutputStream"/>
+<fullyQualifiedTypeName name="java.io.FileInputStream"/>
+<fullyQualifiedTypeName name="java.io.ObjectInputStream"/>
+<fullyQualifiedTypeName name="tema4_dulau_marius.Person"/>
+<fullyQualifiedTypeName name="java.lang.Double"/>
+<fullyQualifiedTypeName name="tema4_dulau_marius.SavingAccount"/>
+<fullyQualifiedTypeName name="tema4_dulau_marius.SpendingAccount"/>
+<fullyQualifiedTypeName name="tema4_dulau_marius.Account"/>
+<fullyQualifiedTypeName name="model.SavingAccount"/>
+<fullyQualifiedTypeName name="model.SpendingAccount"/>
+<fullyQualifiedTypeName name="MyException.MyException"/>
+<fullyQualifiedTypeName name="model.Bank"/>
+</qualifiedTypeNameHistroy>

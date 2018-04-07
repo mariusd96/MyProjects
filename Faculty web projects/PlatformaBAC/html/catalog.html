@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <title>Catalog</title>
+    <link rel="stylesheet" href="css/catalog.css">
+</head>
+
+<body background="stuff/background.svg" ng-app = "myApp" ng-controller = "controller">
+
+<div class="nav">
+    <div class="nume">{{msg}}</div>
+    <script type="text/javascript">
+        tday=new Array("Duminica","Luni","Marti","Miercuri","Joi","Vineri","Sambata");
+        tmonth=new Array("Ianuarie","Februarie","Martie","Aprilie","Mai","Iunie","Iulie","August","Septembrie","Octombrie","Noiembrie","Decembrie");
+
+        function GetClock(){
+            var d=new Date();
+            var nday=d.getDay(),nmonth=d.getMonth(),ndate=d.getDate(),nyear=d.getFullYear();
+            var nhour=d.getHours(),nmin=d.getMinutes(),nsec=d.getSeconds();
+            if(nmin<=9) nmin="0"+nmin
+            if(nsec<=9) nsec="0"+nsec;
+
+            document.getElementById('data').innerHTML=""+tday[nday]+", "+tmonth[nmonth]+" "+ndate+", "+nyear+" "+nhour+":"+nmin+":"+nsec+"";
+        }
+
+        window.onload=function(){
+            GetClock();
+            setInterval(GetClock,1000);
+        }
+    </script>
+    <div id="data"></div>
+    <button class="logout" onclick="window.location ='login.html'">Logout</button>
+</div>
+
+<div class="page">
+    <div class="container">
+        <p class="titlu">Catalog</p>
+        <br />
+
+        Chei de inrolare:
+        <table>
+            <tr ng-repeat = "x in receiveData">
+                <td><input name = "x.idCheie" type = "button" value = {{x.cheieInrolare}} ng-click = "f(x.idCheie, x.cheieInrolare)"></td>
+            </tr>
+        </table>
+
+        <table border="1">
+            <tr>
+                <th style="width: 11.5%">ID Cont</th>
+                <th style="width: 10%">Nume</th>
+                <th style="width: 16.6%">Prenume</th>
+                <th style="width: 16.6%">Clasa</th>
+                <th style="width: 10%">Chat</th>
+                <th style="width: 16.6%">Acordare nota</th>
+                <th style="width: 16.6%">Vizualizare nota</th>
+            </tr>
+        </table>
+        <div class="scroll">
+            <table>
+                <tr ng-repeat = "x in receiveData2">
+                    <td style="width: 11.5%">{{x.idCont}}</td>
+                    <td style="width: 10%">{{x.nume}}</td>
+                    <td style="width: 16.6%">{{x.prenume}}</td>
+                    <td style="width: 16.6%">{{x.clasa}}</td>
+                    <td style="width: 10%"><button onclick="window.location = 'chatProfesor.html'" style="padding: 10px"></button></td>
+                    <td style="width: 16.6%"><button onclick="window.location = 'acordaNota.html'" style="padding: 10px"></button></td>
+                    <td style="width: 16.6%"><button onclick="window.location = 'vizualizeazaNota.html'" style="padding: 10px"></button></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+</body>
+
+<script>
+    var myApp = angular.module("myApp", []);
+    myApp.controller("controller", function ($scope, $http) {
+        $scope.msg = document.cookie;
+        //$scope.variante = ["A", "B", "C", "D"];
+        $scope.variante = [];
+        var index = 0;
+
+        var data = {
+            "tabel": "InrolareCurs",
+            "sqlQuery": "SELECT * FROM InrolareCurs WHERE idProfesor = '" + document.cookie.split(',')[0] + "'"
+        };
+
+        $http.post('../php/selectAll.php', data)
+            .then(function (response)
+            {
+                $scope.msg3 = response.data.records;
+                $scope.receiveData = response.data.records;
+            }, function (error) {
+                $scope.msg3 = "Eroare";
+            });
+
+        $scope.f = function (obj1, obj2) {
+            //alert(obj2);
+            var data = {
+                "idCatalog": obj1,
+                "idProfesor": document.cookie.split(',')[0]
+            };
+
+            $http.post('../php/catalog.php', data)
+                .then(function (response)
+                {
+                    $scope.msg4 = response.data.records;
+                    $scope.receiveData2 = response.data.records;
+                    //console.log(response.data.records);
+                }, function (error) {
+                    $scope.msg4 = "Eroare";
+                });
+        }
+
+        $scope.addA = function(){
+            if($scope.A != null && $scope.variante.indexOf("A") < 0) $scope.variante.push("A");
+            else if($scope.A == "" && (index = $scope.variante.indexOf("A")) >= 0) $scope.variante.splice(index, 1);
+            $scope.variante.sort();
+        };
+
+        $scope.addB = function(){
+            if($scope.B != null && $scope.variante.indexOf("B") < 0) $scope.variante.push("B");
+            else if($scope.B == "" && (index = $scope.variante.indexOf("B")) >= 0) $scope.variante.splice(index, 1);
+            $scope.variante.sort();
+        };
+
+        $scope.addC = function(){
+            if($scope.C != null && $scope.variante.indexOf("C") < 0) $scope.variante.push("C");
+            else if($scope.C == "" && (index = $scope.variante.indexOf("C")) >= 0) $scope.variante.splice(index, 1);
+            $scope.variante.sort();
+        };
+
+        $scope.addD = function(){
+            if($scope.D != null && $scope.variante.indexOf("D") < 0) $scope.variante.push("D");
+            else if($scope.D == "" && (index = $scope.variante.indexOf("D")) >= 0) $scope.variante.splice(index, 1);
+            $scope.variante.sort();
+        };
+
+        $scope.spreUpload = function () {
+            window.location = "upload.html";
+        };
+
+        $scope.spreChat = function () {
+            window.location = "chatProfesor.html";
+        };
+
+        $scope.insertKey = function() {
+            var data = {
+                "sqlQuery": "INSERT into InrolareCurs(idProfesor, cheieInrolare) values('"+ document.cookie.split(',')[0] + "','" + $scope.cheieInrolare +"')"
+            };
+            //console.log(data.sqlQuery);
+            $http.post('../php/InsertUpdateDelete.php', data)
+                .then(function (response)
+                {
+                    $scope.responseJSON = response.data;
+                    console.log($scope.responseJSON.msg);
+                },function (error) {
+                    console.log(error);
+                });
+        };
+
+        $scope.insertIntrebareVariante = function () {
+            if($scope.enunt == null) alert("Introduceti intrebarea");
+            else if($scope.timp == null) alert("Introduceti timpul de raspuns");
+            else if($scope.varianta == null) alert("Alegeti varianta de raspuns");
+            else
+            {
+                var data = {
+                    "idProfesor": document.cookie.split(',')[0],
+                    "enunt": $scope.intrebare,
+                    "timpRaspuns": $scope.timp,
+                    "varA": $scope.A,
+                    "varB": $scope.B,
+                    "varC": $scope.C,
+                    "varD": $scope.D,
+                    "varCorecta": $scope.varianta
+                };
+
+                $http.post('../php/insertIntrebareVariante.php', data)
+                    .then(function (response) {
+                        $scope.responseJSON = response.data;
+                        console.log($scope.responseJSON.msg);
+                    }, function (error) {
+                        console.log(error);
+                    });
+            }
+        }
+    });
+</script>
+
+</html>

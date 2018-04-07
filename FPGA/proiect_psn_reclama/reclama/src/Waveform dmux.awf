@@ -1,0 +1,21 @@
+$WAVE4
+$RESOLUTION 1000
+$ENDTIME 2100000
+I 1 "e#9#std_logicc9 UX01ZWLH-"
+$IN 1 1 CLK
+I 2 "a#28#std_logic_vector(2 downto 0)1 ricd2 0 e#9#std_logicc9 UX01ZWLH-"
+$BUS IN 2 2 3 sel
+$SC 3-5
+$BUS OUT 6 2 3 nr_animatie_enable
+$SC 7-9
+P 0 1-9 CS "0"
+P 0 1 Stimulator "CLK:FRM:Override:100.000000;2;1;0;50;1:Clock:1:"
+$WAVES 1
+=0 T 0
+R 1 42 =1 T 50k
+$VALUES
+R 2 21 0 1
+V 1
+0
+$END
+$ENDWAVE

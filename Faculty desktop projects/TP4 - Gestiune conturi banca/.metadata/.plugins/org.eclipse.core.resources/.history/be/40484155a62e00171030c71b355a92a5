@@ -1,0 +1,17 @@
+package tema4_dulau_marius;
+
+public class SpendingAccount extends Account {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 9207266701909519430L;
+
+	public SpendingAccount(int accountId, Person accountHolder, double balance) {
+		super(accountId, accountHolder, balance);
+		// TODO Auto-generated constructor stub
+	}
+	
+	
+
+}

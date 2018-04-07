@@ -1,0 +1,35 @@
+package tema2_dulau_marius;
+
+import java.util.List;
+
+import javax.swing.JOptionPane;
+
+public class ConcreteStrategyTime implements Strategy {
+
+	@Override
+	public void addTask(List<Server> servers, Task t) {
+		// TODO Auto-generated method stub
+		
+		int index = 0, minim = Integer.MAX_VALUE;
+		
+		for(int i = 0; i < servers.size(); i++)
+		{
+			Task[] ts = servers.get(i).getTasks();
+			int sumaTimp = 0;
+			
+			for(int j = 0; j < ts.length; j++)
+			{
+				sumaTimp += ts[j].getProcessingPeriod();
+			}
+			
+			if(sumaTimp < minim) 
+			{
+				minim = ts.length;
+				index = i;
+			}
+		}
+		
+		servers.get(index).addTask(t);
+	}
+
+}

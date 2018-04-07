@@ -1,0 +1,12 @@
+package presentation;
+
+import javax.swing.*;
+
+public class EditDeletePerson extends JFrame{
+	
+	public EditDeletePerson(String name)
+	{
+		super(name);
+	}
+
+}

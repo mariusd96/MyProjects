@@ -1,0 +1,74 @@
+﻿<Window x:Class="FoodDelivery.presentation.AddModifyProdus"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FoodDelivery.presentation"
+        mc:Ignorable="d"
+        Title="AddModifyProdus" Height="550" Width="500" WindowStyle="None" WindowStartupLocation="CenterScreen" AllowsTransparency="True" BorderThickness="15">
+    <Window.BorderBrush>
+        <ImageBrush ImageSource="/FoodDelivery;component/Resources/contur2.png"/>
+    </Window.BorderBrush>
+
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Styles/btnGlass.xaml" />
+                <ResourceDictionary Source="/Styles/btnGlass2.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+
+    <Grid>
+        <Grid.Background>
+            <RadialGradientBrush>
+                <GradientStop Color="#FFF5C891" Offset="1"/>
+                <GradientStop Color="#FFFFE5C3" Offset="0.004"/>
+            </RadialGradientBrush>
+        </Grid.Background>
+
+        <DockPanel Name="TitleBar" DockPanel.Dock="Top" Height="60" Background="Transparent" Margin="0" VerticalAlignment="Top" MouseLeftButtonDown="TitleBar_MouseLeftButtonDown">
+            <Button x:Name="close" Height="20" VerticalAlignment="Center" Width="20" HorizontalAlignment="Right" Margin="0,10,20,0" DockPanel.Dock="Right" Foreground="Red" FontWeight="Bold" Style="{StaticResource btnGlass2}" FontSize="14" VerticalContentAlignment="Top" Cursor="Hand" ToolTip="Închide" BorderThickness="0" Click="close_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="/Resources/close.png"/>
+                </Button.Background>
+            </Button>
+            <Image x:Name="image" HorizontalAlignment="Left" Height="50" VerticalAlignment="Center" Width="100" Margin ="15,10,0,0" Source="/Resources/logo.png" DockPanel.Dock="Left"/>
+        </DockPanel>
+
+        <Label x:Name="label" Content="Creare produs" Height="30" VerticalAlignment="Top" HorizontalAlignment="Center" VerticalContentAlignment="Center" FontFamily="Times New Roman" FontSize="16" Foreground="#FFB34426" FontStyle="Italic" Width="102" Margin="184,70,184,0"/>
+
+        <Canvas x:Name="formular" Height="280" Width="400" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="35,120">
+            <Label x:Name="categorieProdusLabel" Content="Categorie produs" Canvas.Left="10" Canvas.Top="10" FontFamily="Times New Roman" FontSize="16" Height="35" VerticalContentAlignment="Center" Foreground="#FFB34426" FontStyle="Italic"/>
+            <Border BorderThickness="4" Height="35" Canvas.Right="10" Canvas.Top="10" Width="250" CornerRadius="15" Background="#FFFCE4C8" BorderBrush="#FFB34426">
+                <ComboBox x:Name="comboBoxCategorie" Margin="6,0" Background="{x:Null}" BorderBrush="Black" Foreground="#FFB34426"/>
+
+            </Border>
+            <Label x:Name="numeProdusLabel" Content="Nume produs" Canvas.Left="10" Canvas.Top="60" FontFamily="Times New Roman" FontSize="16" Height="35" VerticalContentAlignment="Center" Foreground="#FFB34426" FontStyle="Italic"/>
+            <Border BorderThickness="4" Height="35" Canvas.Right="10" Canvas.Top="60" Width="250" CornerRadius="15" Background="#FFFCE4C8" BorderBrush="#FFB34426">
+                <TextBox x:Name="numeProdusTextBox" Background="{x:Null}" Foreground="#FFB34426" Margin="10,0,10,0" FontFamily="Times New Roman" BorderThickness="0" FontSize="16" VerticalContentAlignment="Center" FontStyle="Italic"/>
+            </Border>
+
+            <Label x:Name="descriereLabel" Content="Descriere" Canvas.Left="10" Canvas.Top="140" FontFamily="Times New Roman" FontSize="16" Height="35" VerticalContentAlignment="Center" Foreground="#FFB34426" FontStyle="Italic"/>
+            <Border BorderThickness="4" Height="100" Canvas.Right="10" Canvas.Top="110" Width="250" CornerRadius="15" Background="#FFFCE4C8" BorderBrush="#FFB34426">
+                <TextBox x:Name="descriereTextBox" Background="{x:Null}" Foreground="#FFB34426" Margin="10,0,10,0" FontFamily="Times New Roman" BorderThickness="0" FontSize="16" VerticalContentAlignment="Center" FontStyle="Italic" TextWrapping="Wrap"/>
+            </Border>
+            <Label x:Name="gramajLabel" Content="Gramaj" Canvas.Left="10" Canvas.Top="230" FontFamily="Times New Roman" FontSize="16" Height="35" VerticalContentAlignment="Center" Foreground="#FFB34426" FontStyle="Italic"/>
+            <Border BorderThickness="4" Height="35" Canvas.Left="100" Canvas.Top="230" Width="85" CornerRadius="15" Background="#FFFCE4C8" BorderBrush="#FFB34426">
+                <TextBox x:Name="gramajTextBox" Background="{x:Null}" Foreground="#FFB34426" Margin="10,0,10,0" FontFamily="Times New Roman" BorderThickness="0" FontSize="16" VerticalContentAlignment="Center" FontStyle="Italic"/>
+            </Border>
+            <Label x:Name="pretLabel" Content="Preț" Canvas.Left="230" Canvas.Top="230" FontFamily="Times New Roman" FontSize="16" Height="35" VerticalContentAlignment="Center" Foreground="#FFB34426" FontStyle="Italic"/>
+            <Border BorderThickness="4" Height="35" Canvas.Left="295" Canvas.Top="230" Width="85" CornerRadius="15" Background="#FFFCE4C8" BorderBrush="#FFB34426">
+                <TextBox x:Name="pretTextBox" Background="{x:Null}" Foreground="#FFB34426" Margin="10,0,10,0" FontFamily="Times New Roman" BorderThickness="0" FontSize="16" VerticalContentAlignment="Center" FontStyle="Italic"/>
+            </Border>
+        </Canvas>
+
+        <Canvas x:Name="updateCanvas" HorizontalAlignment="Left" Height="35" Margin="35,450,0,0" VerticalAlignment="Top" Width="400" Visibility="Hidden">
+            <Button x:Name="btnActualizare" Content="Actualizare date" Style="{StaticResource btnGlass}" Width="175" Height="35" FontFamily="Times New Roman" FontSize="16" Foreground="#FFB34426" BorderBrush="#FFB34426" Background="#FFFCE4C8" BorderThickness="4" Cursor="Hand" FontStyle="Italic" Canvas.Left="0" Click="btnActualizare_Click"/>
+            <Button x:Name="btnStergereProdus" Content="Șterge produs" Style="{StaticResource btnGlass}" Width="175" Height="35" FontFamily="Times New Roman" FontSize="16" Foreground="#FFB34426" BorderBrush="#FFB34426" Background="#FFFCE4C8" BorderThickness="4" Cursor="Hand" FontStyle="Italic" Canvas.Right="0" Click="btnStergereProdus_Click"/>
+        </Canvas>
+        <Canvas x:Name="createCanvas" HorizontalAlignment="Left" Height="35" Margin="35,450,0,0" VerticalAlignment="Top" Width="400">
+            <Button x:Name="btnCreareProdus" Content="Creare produs" Style="{StaticResource btnGlass}" Width="175" Height="35" FontFamily="Times New Roman" FontSize="16" Foreground="#FFB34426" BorderBrush="#FFB34426" Background="#FFFCE4C8" BorderThickness="4" Cursor="Hand" FontStyle="Italic" Canvas.Left="112" Click="btnCreareProdus_Click"/>
+        </Canvas>
+    </Grid>
+</Window>

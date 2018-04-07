@@ -1,0 +1,245 @@
+package tema1_dulau_marius;
+
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+
+public class GUI extends JFrame{
+
+	private JPanel panel = new JPanel();
+	private JPanel panelOperatii = new JPanel();
+	private JPanel panelPolinoame = new JPanel();
+	
+	private JButton salvareDate = new JButton("Salveaza datele");
+	private JButton adunare = new JButton("Adunare");
+	private JButton scadere = new JButton("Scadere");
+	private JButton inmultire = new JButton("Inmultire");
+	private JButton impartire = new JButton("Impartire");
+	private JButton derivare = new JButton("Derivare");
+	private JButton integrare = new JButton("Integrare");
+	
+	private JLabel lbF = new JLabel("f  = ");
+	private JTextField tfF = new JTextField();
+	
+	private JLabel lbG = new JLabel("g = ");
+	private JTextField tfG = new JTextField();
+	
+	private JLabel lbH = new JLabel("h = ");
+	private JTextField tfH = new JTextField();
+	
+	private JLabel lbR = new JLabel("r = ");
+	private JTextField tfR = new JTextField();
+	
+	private Polinom polinomF = new Polinom();
+	private Polinom polinomG = new Polinom();
+	private Polinom polinomH = new Polinom();
+	private Polinom polinomR = new Polinom();
+	
+	private String f, g = null;
+	private String[] valF, valG;
+	
+	public GUI(String nume)
+	{
+		super(nume);
+		panel.setLayout(null);
+		
+		panelPolinoame.setBounds(20, 10, 530, 100);
+		panelPolinoame.setLayout(null);
+		
+		lbF.setBounds(0, 10, 20, 15);
+		lbG.setBounds(0, 45, 20, 15);
+		lbH.setBounds(0, 80, 20, 15);
+		lbR.setBounds(0, 115, 20, 15);		
+		
+		tfF.setBounds(30, 8, 500, 20);
+		tfG.setBounds(30, 43, 500, 20);
+		tfH.setBounds(30, 78, 500, 20);
+		
+		panelPolinoame.add(lbF);
+		panelPolinoame.add(lbG);
+		panelPolinoame.add(lbH);
+		panelPolinoame.add(tfF);
+		panelPolinoame.add(tfG);
+		panelPolinoame.add(tfH);
+		panelPolinoame.setBackground(new Color(0, 0, 0, 0));
+		panel.add(panelPolinoame);
+		
+		for(Component c: panelPolinoame.getComponents())
+		{
+			if(c instanceof JLabel)
+			{
+				c.setForeground(Color.WHITE);
+			}
+		}
+		
+		panelOperatii.setLayout(null);
+		panelOperatii.setBounds(20, 140, 530, 60);
+		
+		salvareDate.setBounds(0, 0, 125, 60);
+		adunare.setBounds(135, 0, 125, 25);
+		scadere.setBounds(135, 35, 125, 25);
+		inmultire.setBounds(270, 0, 125, 25);
+		impartire.setBounds(270, 35, 125, 25);
+		derivare.setBounds(405, 0, 125, 25);
+		integrare.setBounds(405, 35, 125, 25);
+		
+		salvareDate.addActionListener(new ActionListener(){
+			public void actionPerformed(ActionEvent e)
+			{
+				f = tfF.getText();
+				g = tfG.getText();
+				
+				f = f.replaceAll("-", "+-"); //inlocuim - cu +- pentru a avea semnul negativ la numere
+				f = f.replaceAll("\\s+", ""); // eliminam spatiile ca sa putem desparti mai usor
+				g = g.replace("-", "+-");
+				g = g.replaceAll("\\s+", "");
+				
+				valF = f.split("[+]"); //despartim in string dupa +
+				valG = g.split("[+]");
+				
+				try
+				{
+					polinomF = new Logic().construirePolinom(valF);
+					polinomF.sortare();
+					polinomF.eliminareGradeMultiple();
+					polinomG = new Logic().construirePolinom(valG);
+					polinomG.sortare();
+					polinomG.eliminareGradeMultiple();
+				}
+				catch(MyException ex)
+				{
+					JOptionPane.showMessageDialog(null, ex);
+				}
+			}
+		});
+		
+		adunare.addActionListener(new ActionListener(){
+			public void actionPerformed(ActionEvent e)
+			{
+				panelPolinoame.setBounds(20, 10, 530, 100);
+				panelOperatii.setBounds(20, 140, 530, 60);
+				
+				polinomH = polinomF.adunaCu(polinomG);
+				String mesaj = polinomH.afisare();
+				if(mesaj.compareTo("") == 0) tfH.setText("0"); 
+				else tfH.setText(mesaj);
+			}
+		});
+		
+		scadere.addActionListener(new ActionListener(){
+			public void actionPerformed(ActionEvent e)
+			{
+				panelPolinoame.setBounds(20, 10, 530, 100);
+				panelOperatii.setBounds(20, 140, 530, 60);
+				
+				Object[] stringArray = {"P - Q", "Q - P"};
+				int rezultat = JOptionPane.showOptionDialog(panel, "Alegeti scaderea de efectuat.", null, JOptionPane.YES_NO_OPTION, JOptionPane.INFORMATION_MESSAGE, null, stringArray, stringArray[0]);
+				
+				if(rezultat == 0) polinomH = polinomF.scadeCu(polinomG);
+				else polinomH = polinomG.scadeCu(polinomF);
+				
+				String mesaj = polinomH.afisare();
+				if(mesaj.compareTo("") == 0) tfH.setText("0"); 
+				else tfH.setText(mesaj);
+			}
+		});
+		
+		inmultire.addActionListener(new ActionListener(){
+			public void actionPerformed(ActionEvent e)
+			{
+				panelPolinoame.setBounds(20, 10, 530, 100);
+				panelOperatii.setBounds(20, 140, 530, 60);
+				
+				polinomH = polinomF.inmultesteCu(polinomG);
+				
+				String mesaj = polinomH.afisare();
+				if(mesaj.compareTo("") == 0) tfH.setText("0"); 
+				else tfH.setText(mesaj);
+			}
+		});
+		
+		impartire.addActionListener(new ActionListener(){
+			public void actionPerformed(ActionEvent e)
+			{
+				panelPolinoame.setBounds(20, 10, 530, 140);
+				panelOperatii.setBounds(20, 180, 530, 60);
+				
+				Object[] stringArray = {"P / Q", "Q / P"};
+				int rezultat = JOptionPane.showOptionDialog(panel, "Alegeti impartirea de efectuat.", null, JOptionPane.YES_NO_OPTION, JOptionPane.INFORMATION_MESSAGE, null, stringArray, stringArray[0]);
+				
+				if(rezultat == 0) polinomH = polinomF.imparteCu(polinomG);
+				else polinomH = polinomG.imparteCu(polinomF);
+				
+				String mesaj = polinomH.afisare();
+				if(mesaj.compareTo("") == 0) tfH.setText("0"); 
+				else tfH.setText(mesaj);
+			}
+		});
+		
+		derivare.addActionListener(new ActionListener(){
+			public void actionPerformed(ActionEvent e)
+			{
+				panelPolinoame.setBounds(20, 10, 530, 100);
+				panelOperatii.setBounds(20, 140, 530, 60);
+				
+				Object[] stringArray = {"P", "Q"};
+				int rezultat = JOptionPane.showOptionDialog(panel, "Alegeti polinomul de derivat.", null, JOptionPane.YES_NO_OPTION, JOptionPane.INFORMATION_MESSAGE, null, stringArray, stringArray[0]);
+				
+				if(rezultat == 0) polinomH = polinomF.deriveaza();
+				else polinomH = polinomG.deriveaza();
+				
+				String mesaj = polinomH.afisare();
+				if(mesaj.compareTo("") == 0) tfH.setText("0"); 
+				else tfH.setText(mesaj);
+			}
+		});
+		
+		integrare.addActionListener(new ActionListener(){
+			public void actionPerformed(ActionEvent e)
+			{
+				Object[] stringArray = {"P", "Q"};
+				int rezultat = JOptionPane.showOptionDialog(panel, "Alegeti polinomul de integrat.", null, JOptionPane.YES_NO_OPTION, JOptionPane.INFORMATION_MESSAGE, null, stringArray, stringArray[0]);
+				
+				if(rezultat == 0) polinomH = polinomF.integreaza();
+				else polinomH = polinomG.integreaza();
+				
+				String mesaj = polinomH.afisare();
+				if(mesaj.compareTo("") == 0) tfH.setText("0"); 
+				else tfH.setText(mesaj);
+			}
+		});
+		
+		panelOperatii.add(salvareDate);
+		panelOperatii.add(adunare);
+		panelOperatii.add(scadere);
+		panelOperatii.add(inmultire);
+		panelOperatii.add(impartire);
+		panelOperatii.add(derivare);
+		panelOperatii.add(integrare);
+		panelOperatii.setBackground(new Color(0, 0, 0, 0));
+		
+		for(Component c: panelOperatii.getComponents())
+		{
+			if(c instanceof JButton)
+			{
+				c.setBackground(Color.WHITE);
+				c.setCursor(new Cursor(Cursor.HAND_CURSOR));
+			}
+		}
+		
+		panel.add(panelOperatii);
+		panel.setBackground(new Color(0, 150, 255));
+		
+		this.add(panel);
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		JFrame frame = new GUI("Calculator polinoame");
+		frame.setDefaultCloseOperation(EXIT_ON_CLOSE);
+		frame.setSize(570, 250);
+		frame.setResizable(false);
+		frame.setVisible(true);
+	}
+
+}

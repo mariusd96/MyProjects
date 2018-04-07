@@ -1,0 +1,15 @@
+package presentation;
+
+import javax.swing.*;
+
+public class EditDeletePerson extends JFrame{
+	
+	private static final int WIDTH = 350;
+	[rovate static int HEIGHT = 270;
+	
+	public EditDeletePerson(String name)
+	{
+		super(name);
+	}
+
+}

@@ -1,0 +1,187 @@
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+acom $DSN/src/main.vhd $DSN/src/registru_inel.vhd $DSN/src/divizor_frecventa_1.vhd $DSN/src/pmw.vhd $DSN/src/is_enable.vhd $DSN/src/stins_aprins.vhd $DSN/src/registru_inel_schimbare_litera.vhd $DSN/src/curgere.vhd $DSN/src/divizor_reclama.vhd $DSN/src/afisor.vhd $DSN/src/ritm_alert.vhd $DSN/src/luminozitate_procent.vhd $DSN/src/cuvant4.vhd $DSN/src/ROM.vhd $DSN/src/animatie0.vhd $DSN/src/animatie1.vhd $DSN/src/animatie2.vhd $DSN/src/animatie3.vhd $DSN/src/animatie4.vhd $DSN/src/animatie5.vhd $DSN/src/animatie6.vhd $DSN/src/mux.vhd
+# Compile...
+# File: e:\Active-HDL\My_Projects\proiect_psn_reclama\reclama\src\main.vhd
+# Compile Entity "reclama"
+# Entity `reclama' has been skipped - no difference detected.
+# Compile Architecture "arh_reclama" of Entity "reclama"
+# File: e:\Active-HDL\My_Projects\proiect_psn_reclama\reclama\src\registru_inel.vhd
+# Compile Entity "registru_inel"
+# Entity `registru_inel' has been skipped - no difference detected.
+# Compile Architecture "comportamental" of Entity "registru_inel"
+# File: e:\Active-HDL\My_Projects\proiect_psn_reclama\reclama\src\divizor_frecventa_1.vhd
+# Compile Entity "divizor_frecventa_1"
+# Entity `divizor_frecventa_1' has been skipped - no difference detected.
+# Compile Architecture "comportamental" of Entity "divizor_frecventa_1"
+# File: e:\Active-HDL\My_Projects\proiect_psn_reclama\reclama\src\pmw.vhd
+# Compile Entity "pwm"
+# Entity `pwm' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "pwm"
+# File: e:\Active-HDL\My_Projects\proiect_psn_reclama\reclama\src\is_enable.vhd
+# Compile Entity "is_enable"
+# Entity `is_enable' has been skipped - no difference detected.
+# Compile Architecture "comportamental" of Entity "is_enable"
+# File: e:\Active-HDL\My_Projects\proiect_psn_reclama\reclama\src\stins_aprins.vhd
+# Compile Entity "stins_aprins"
+# Entity `stins_aprins' has been skipped - no difference detected.
+# Compile Architecture "comportamental" of Entity "stins_aprins"
+# File: e:\Active-HDL\My_Projects\proiect_psn_reclama\reclama\src\registru_inel_schimbare_litera.vhd
+# Compile Entity "registru_inel_schimbare_litera"
+# Entity `registru_inel_schimbare_litera' has been skipped - no difference detected.
+# Compile Architecture "comportamental" of Entity "registru_inel_schimbare_litera"
+# File: e:\Active-HDL\My_Projects\proiect_psn_reclama\reclama\src\curgere.vhd
+# Compile Entity "curgere"
+# Entity `curgere' has been skipped - no difference detected.
+# Compile Architecture "comportamental" of Entity "curgere"
+# File: e:\Active-HDL\My_Projects\proiect_psn_reclama\reclama\src\divizor_reclama.vhd
+# Compile Entity "divizor_reclama"
+# Entity `divizor_reclama' has been skipped - no difference detected.
+# Compile Architecture "comportamental" of Entity "divizor_reclama"
+# File: e:\Active-HDL\My_Projects\proiect_psn_reclama\reclama\src\afisor.vhd
+# Compile Entity "afisor"
+# Entity `afisor' has been skipped - no difference detected.
+# Compile Architecture "comportamental" of Entity "afisor"
+# File: e:\Active-HDL\My_Projects\proiect_psn_reclama\reclama\src\ritm_alert.vhd
+# Compile Entity "ritm_alert"
+# Compile Architecture "comportamental" of Entity "ritm_alert"
+# File: e:\Active-HDL\My_Projects\proiect_psn_reclama\reclama\src\luminozitate_procent.vhd
+# Compile Entity "luminozitate_procent"
+# Compile Architecture "arh" of Entity "luminozitate_procent"
+# File: e:\Active-HDL\My_Projects\proiect_psn_reclama\reclama\src\cuvant4.vhd
+# Compile Entity "cuvant4"
+# Compile Architecture "comportamental" of Entity "cuvant4"
+# File: e:\Active-HDL\My_Projects\proiect_psn_reclama\reclama\src\ROM.vhd
+# Compile Entity "memorie_ROM"
+# Entity `memorie_ROM' has been skipped - no difference detected.
+# Compile Architecture "comportamental" of Entity "memorie_ROM"
+# File: e:\Active-HDL\My_Projects\proiect_psn_reclama\reclama\src\animatie0.vhd
+# Compile Entity "animatie0"
+# Entity `animatie0' has been skipped - no difference detected.
+# Compile Architecture "anim0" of Entity "animatie0"
+# File: e:\Active-HDL\My_Projects\proiect_psn_reclama\reclama\src\animatie1.vhd
+# Compile Entity "animatie1"
+# Entity `animatie1' has been skipped - no difference detected.
+# Compile Architecture "anim1" of Entity "animatie1"
+# File: e:\Active-HDL\My_Projects\proiect_psn_reclama\reclama\src\animatie2.vhd
+# Compile Entity "animatie2"
+# Entity `animatie2' has been skipped - no difference detected.
+# Compile Architecture "anim2" of Entity "animatie2"
+# File: e:\Active-HDL\My_Projects\proiect_psn_reclama\reclama\src\animatie3.vhd
+# Compile Entity "animatie3"
+# Entity `animatie3' has been skipped - no difference detected.
+# Compile Architecture "anim3" of Entity "animatie3"
+# File: e:\Active-HDL\My_Projects\proiect_psn_reclama\reclama\src\animatie4.vhd
+# Compile Entity "animatie4"
+# Entity `animatie4' has been skipped - no difference detected.
+# Compile Architecture "anim4" of Entity "animatie4"
+# File: e:\Active-HDL\My_Projects\proiect_psn_reclama\reclama\src\animatie5.vhd
+# Compile Entity "animatie5"
+# Entity `animatie5' has been skipped - no difference detected.
+# Compile Architecture "anim5" of Entity "animatie5"
+# File: e:\Active-HDL\My_Projects\proiect_psn_reclama\reclama\src\animatie6.vhd
+# Compile Entity "animatie6"
+# Entity `animatie6' has been skipped - no difference detected.
+# Compile Architecture "anim6" of Entity "animatie6"
+# File: e:\Active-HDL\My_Projects\proiect_psn_reclama\reclama\src\mux.vhd
+# Compile Entity "mux"
+# Entity `mux' has been skipped - no difference detected.
+# Compile Architecture "comportamental" of Entity "mux"
+# Compile success 0 Errors 0 Warnings  Analysis time :  17.0 [s]
+acom $DSN/src/main.vhd $DSN/src/registru_inel.vhd $DSN/src/divizor_frecventa_1.vhd $DSN/src/pmw.vhd $DSN/src/is_enable.vhd $DSN/src/stins_aprins.vhd $DSN/src/registru_inel_schimbare_litera.vhd $DSN/src/curgere.vhd $DSN/src/divizor_reclama.vhd $DSN/src/afisor.vhd $DSN/src/ritm_alert.vhd $DSN/src/luminozitate_procent.vhd $DSN/src/ROM.vhd $DSN/src/animatie0.vhd $DSN/src/animatie1.vhd $DSN/src/animatie2.vhd $DSN/src/animatie3.vhd $DSN/src/animatie4.vhd $DSN/src/animatie5.vhd $DSN/src/animatie6.vhd $DSN/src/mux.vhd
+# Compile...
+# File: e:\Active-HDL\My_Projects\proiect_psn_reclama\reclama\src\main.vhd
+# Compile Entity "reclama"
+# Entity `reclama' has been skipped - no difference detected.
+# Compile Architecture "arh_reclama" of Entity "reclama"
+# File: e:\Active-HDL\My_Projects\proiect_psn_reclama\reclama\src\registru_inel.vhd
+# Compile Entity "registru_inel"
+# Entity `registru_inel' has been skipped - no difference detected.
+# Compile Architecture "comportamental" of Entity "registru_inel"
+# File: e:\Active-HDL\My_Projects\proiect_psn_reclama\reclama\src\divizor_frecventa_1.vhd
+# Compile Entity "divizor_frecventa_1"
+# Entity `divizor_frecventa_1' has been skipped - no difference detected.
+# Compile Architecture "comportamental" of Entity "divizor_frecventa_1"
+# File: e:\Active-HDL\My_Projects\proiect_psn_reclama\reclama\src\pmw.vhd
+# Compile Entity "pwm"
+# Entity `pwm' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "pwm"
+# File: e:\Active-HDL\My_Projects\proiect_psn_reclama\reclama\src\is_enable.vhd
+# Compile Entity "is_enable"
+# Entity `is_enable' has been skipped - no difference detected.
+# Compile Architecture "comportamental" of Entity "is_enable"
+# File: e:\Active-HDL\My_Projects\proiect_psn_reclama\reclama\src\stins_aprins.vhd
+# Compile Entity "stins_aprins"
+# Entity `stins_aprins' has been skipped - no difference detected.
+# Compile Architecture "comportamental" of Entity "stins_aprins"
+# File: e:\Active-HDL\My_Projects\proiect_psn_reclama\reclama\src\registru_inel_schimbare_litera.vhd
+# Compile Entity "registru_inel_schimbare_litera"
+# Entity `registru_inel_schimbare_litera' has been skipped - no difference detected.
+# Compile Architecture "comportamental" of Entity "registru_inel_schimbare_litera"
+# File: e:\Active-HDL\My_Projects\proiect_psn_reclama\reclama\src\curgere.vhd
+# Compile Entity "curgere"
+# Entity `curgere' has been skipped - no difference detected.
+# Compile Architecture "comportamental" of Entity "curgere"
+# File: e:\Active-HDL\My_Projects\proiect_psn_reclama\reclama\src\divizor_reclama.vhd
+# Compile Entity "divizor_reclama"
+# Entity `divizor_reclama' has been skipped - no difference detected.
+# Compile Architecture "comportamental" of Entity "divizor_reclama"
+# File: e:\Active-HDL\My_Projects\proiect_psn_reclama\reclama\src\afisor.vhd
+# Compile Entity "afisor"
+# Entity `afisor' has been skipped - no difference detected.
+# Compile Architecture "comportamental" of Entity "afisor"
+# File: e:\Active-HDL\My_Projects\proiect_psn_reclama\reclama\src\ritm_alert.vhd
+# Compile Entity "ritm_alert"
+# Compile Architecture "comportamental" of Entity "ritm_alert"
+# File: e:\Active-HDL\My_Projects\proiect_psn_reclama\reclama\src\luminozitate_procent.vhd
+# Compile Entity "luminozitate_procent"
+# Compile Architecture "arh" of Entity "luminozitate_procent"
+# File: e:\Active-HDL\My_Projects\proiect_psn_reclama\reclama\src\ROM.vhd
+# Compile Entity "memorie_ROM"
+# Entity `memorie_ROM' has been skipped - no difference detected.
+# Compile Architecture "comportamental" of Entity "memorie_ROM"
+# File: e:\Active-HDL\My_Projects\proiect_psn_reclama\reclama\src\animatie0.vhd
+# Compile Entity "animatie0"
+# Entity `animatie0' has been skipped - no difference detected.
+# Compile Architecture "anim0" of Entity "animatie0"
+# File: e:\Active-HDL\My_Projects\proiect_psn_reclama\reclama\src\animatie1.vhd
+# Compile Entity "animatie1"
+# Entity `animatie1' has been skipped - no difference detected.
+# Compile Architecture "anim1" of Entity "animatie1"
+# File: e:\Active-HDL\My_Projects\proiect_psn_reclama\reclama\src\animatie2.vhd
+# Compile Entity "animatie2"
+# Entity `animatie2' has been skipped - no difference detected.
+# Compile Architecture "anim2" of Entity "animatie2"
+# File: e:\Active-HDL\My_Projects\proiect_psn_reclama\reclama\src\animatie3.vhd
+# Compile Entity "animatie3"
+# Entity `animatie3' has been skipped - no difference detected.
+# Compile Architecture "anim3" of Entity "animatie3"
+# File: e:\Active-HDL\My_Projects\proiect_psn_reclama\reclama\src\animatie4.vhd
+# Compile Entity "animatie4"
+# Entity `animatie4' has been skipped - no difference detected.
+# Compile Architecture "anim4" of Entity "animatie4"
+# Error: ELAB1_0011: animatie4.vhd : (47, 0): Port "enable" is on entity "luminozitate_procent" but not on the component declaration.
+# Error: COMP96_0413: animatie4.vhd : (47, 62): Actual of mode "in" can not be assigned to formal "cuv_out" of mode "out"
+# Error: COMP96_0367: animatie4.vhd : (47, 62): Improper array length. Actual length is 35. Expected length is 28.
+# Error: COMP96_0100: animatie4.vhd : (47, 58): Actual parameter type in port map does not match the port formal type "cuv_in".
+# Error: COMP96_0525: animatie4.vhd : (47, 2): Too many actuals in the port map aspect in the component instantiation.
+# File: e:\Active-HDL\My_Projects\proiect_psn_reclama\reclama\src\animatie5.vhd
+# Compile Entity "animatie5"
+# Entity `animatie5' has been skipped - no difference detected.
+# Compile Architecture "anim5" of Entity "animatie5"
+# File: e:\Active-HDL\My_Projects\proiect_psn_reclama\reclama\src\animatie6.vhd
+# Compile Entity "animatie6"
+# Entity `animatie6' has been skipped - no difference detected.
+# Compile Architecture "anim6" of Entity "animatie6"
+# File: e:\Active-HDL\My_Projects\proiect_psn_reclama\reclama\src\mux.vhd
+# Compile Entity "mux"
+# Entity `mux' has been skipped - no difference detected.
+# Compile Architecture "comportamental" of Entity "mux"
+# Compile failure 5 Errors 0 Warnings  Analysis time :  15.0 [s]
+acom $DSN/src/animatie4.vhd
+# Compile...
+# File: e:\Active-HDL\My_Projects\proiect_psn_reclama\reclama\src\animatie4.vhd
+# Compile Entity "animatie4"
+# Entity `animatie4' has been skipped - no difference detected.
+# Compile Architecture "anim4" of Entity "animatie4"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]

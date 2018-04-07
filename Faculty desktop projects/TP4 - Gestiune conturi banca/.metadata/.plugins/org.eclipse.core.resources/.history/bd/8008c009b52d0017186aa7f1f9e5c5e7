@@ -1,0 +1,37 @@
+package presentation;
+
+import javax.swing.*;
+
+public class AddPerson extends JFrame{
+
+	private static final int WIDTH = 300, HEIGHT = 400;
+	
+	private JPanel panel = new JPanel();
+	private JLabel lblCNP = new JLabel("CNP");
+	private final JLabel lblFirstName = new JLabel("First name");
+	private JTextField tfCNP= new JTextField();
+	private final JTextField textField = new JTextField();
+	
+	public AddPerson(String name)
+	{
+		super(name);
+		this.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+		this.setVisible(true);
+		this.setSize(WIDTH, HEIGHT);
+		panel.setBounds(10, 10, 230, 350);
+		panel.setLayout(null);
+		lblCNP.setBounds(10, 10, 60, 25);
+		panel.add(lblCNP);
+		
+		tfCNP.setBounds(80, 15, 180, 25);
+		panel.add(tfCNP);
+		lblFirstName.setBounds(10, 51, 50, 25);
+		
+		panel.add(lblFirstName);
+		
+		getContentPane().add(panel);
+		textField.setBounds(80, 56, 180, 25);
+		
+		panel.add(textField);
+	}
+}

@@ -1,0 +1,3 @@
+Coada 1 --> Timp mediu procesare = 6
+Coada 2 --> Timp mediu procesare = 7
+Coada 3 --> Timp mediu procesare = 8

@@ -1,0 +1,24 @@
+package presentation;
+
+import javax.swing.*;
+
+public class AddPerson extends JFrame{
+
+	private static final int WIDTH = 300, HEIGHT = 400;
+	
+	private JPanel panel = new JPanel();
+	private JLabel lblCNP = new JLabel("CNP");
+	
+	public AddPerson(String name)
+	{
+		super(name);
+		this.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+		this.setVisible(true);
+		this.setSize(WIDTH, HEIGHT);
+		panel.setBounds(10, 10, 230, 350);
+		panel.setLayout(null);
+		lblCNP.setBounds(10, 10, 50, 30);
+		this.add(panel);
+	}
+	
+}

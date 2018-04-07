@@ -1,0 +1,76 @@
+package tema2_dulau_marius;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.*;
+
+public class SimulationManager implements Runnable {
+
+	public int timeLimit = 100;
+	public int maxProcessingTime = 10;
+	public int minProcessingTime = 2;
+	public int numberOfServers = 3;
+	public int numberOFClients = 100;
+	public SelectionPolicy selectionPolicy = SelectionPolicy.SHORTEST_TIME;
+	
+	private Scheduler scheduler;
+	private SimulationFrame frame;
+	public List<Task> generatedTasks;
+	
+	private Random rand;
+	
+	public SimulationManager()
+	{
+		frame = new SimulationFrame("Simulator");
+		generatedTasks = new ArrayList<Task>();
+		rand = new Random();
+		generateNRandomTasks();
+	}
+	
+	class CollectDataListener implements ActionListener
+	{
+		@Override
+		public void actionPerformed(ActionEvent arg0) {
+			// TODO Auto-generated method stub
+			timeLimit = frame.getTimp();
+			numberOfServers = frame.getNrServere();
+			numberOfClients = frame.getNrClienti();
+			
+		}
+		
+	}
+	
+	private void generateNRandomTasks()
+	{
+		int arrTime = rand.nextInt(60) + 1;
+		int procTime = rand.nextInt(maxProcessingTime) + minProcessingTime;
+		
+		generatedTasks.add(new Task(arrTime, procTime));
+	}
+	
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		int currentTime = 0;
+		
+		while(currentTime < timeLimit)
+		{
+			currentTime++;
+			System.out.println(currentTime);
+			try {
+				Thread.sleep(1000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		SimulationManager gen = new SimulationManager();
+		Thread t = new Thread(gen);
+		t.start();
+	}
+
+}

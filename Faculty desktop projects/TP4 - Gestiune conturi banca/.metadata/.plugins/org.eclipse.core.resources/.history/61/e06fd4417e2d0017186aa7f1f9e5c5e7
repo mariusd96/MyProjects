@@ -1,0 +1,62 @@
+package tema4_dulau_marius;
+
+import java.io.Serializable;
+
+public class Account implements Serializable {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	
+	public int accountId;
+	public Person accountHolder;
+	public double balance;//sold bancar
+	
+	public Account(int accountId, Person accountHolder, double balance) 
+	{
+		this.accountId = accountId;
+		this.accountHolder = accountHolder;
+		this.balance = balance;
+	}
+
+	public int getAccountId() 
+	{
+		return accountId;
+	}
+
+	public void setAccountId(int accountId) 
+	{
+		this.accountId = accountId;
+	}
+
+	public Person getAccountHolder() 
+	{
+		return accountHolder;
+	}
+
+	public void setAccountHolder(Person accountHolder) 
+	{
+		this.accountHolder = accountHolder;
+	}
+
+	public double getBalance() 
+	{
+		return balance;
+	}
+
+	public void setBalance(double balance) 
+	{
+		this.balance = balance;
+	}
+	
+	public void deposit(double sum)
+	{
+		this.balance = this.balance + sum;
+	}
+	
+	public void withdraw(double sum)
+	{
+		this.balance = this.balance - sum;
+	}
+}

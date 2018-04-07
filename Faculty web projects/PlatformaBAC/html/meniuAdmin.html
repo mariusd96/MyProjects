@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <title>Meniu administrator</title>
+    <link rel="stylesheet" href="css/meniuAdmin.css">
+</head>
+
+<body ng-app="myApp" ng-controller = "controller" background="stuff/background.svg">
+
+<div class="nav" >
+    <div class="nume">{{msg}}</div>
+    <script type="text/javascript">
+        tday=new Array("Duminica","Luni","Marti","Miercuri","Joi","Vineri","Sambata");
+        tmonth=new Array("Ianuarie","Februarie","Martie","Aprilie","Mai","Iunie","Iulie","August","Septembrie","Octombrie","Noiembrie","Decembrie");
+
+        function GetClock(){
+            var d=new Date();
+            var nday=d.getDay(),nmonth=d.getMonth(),ndate=d.getDate(),nyear=d.getFullYear();
+            var nhour=d.getHours(),nmin=d.getMinutes(),nsec=d.getSeconds();
+            if(nmin<=9) nmin="0"+nmin
+            if(nsec<=9) nsec="0"+nsec;
+
+            document.getElementById('data').innerHTML=""+tday[nday]+", "+tmonth[nmonth]+" "+ndate+", "+nyear+" "+nhour+":"+nmin+":"+nsec+"";
+        }
+
+        window.onload=function(){
+            GetClock();
+            setInterval(GetClock,1000);
+        }
+    </script>
+    <div id="data"></div>
+    <button class="logout" onclick="window.location ='login.html'">Logout</button>
+</div>
+
+<ul class="butoane">
+    <li onclick="window.location = 'accesBD.html'" class="button DB"></li>
+    <li onclick="window.location = 'dateElev.html'" class="button absolventi"></li>
+    <li onclick="window.location = 'dateProfesor.html'" class="button profesor"></li>
+    <li class="button feedback"><a href="#"></a></li>
+</ul>
+
+<script>
+    var myApp = angular.module("myApp", []);
+    myApp.controller("controller", function ($scope, $http) {
+        $scope.msg = document.cookie;
+
+        var data = {
+            "tabel": "Conturi",
+            "sqlQuery": "SELECT * FROM Conturi"
+        };
+
+        $http.post('../php/selectAll.php', data)
+            .then(function (response) {
+                //console.log(response.data);
+                $scope.msg2 = response.data.records;
+                $scope.receiveData = response.data.records;
+            }, function (error)
+            {
+                $scope.msg2 = "Eroare";
+            });
+
+    });
+</script>
+
+</body>
+

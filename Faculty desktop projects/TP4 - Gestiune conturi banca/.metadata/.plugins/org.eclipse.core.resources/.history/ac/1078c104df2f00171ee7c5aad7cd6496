@@ -1,0 +1,12 @@
+package model;
+
+public class Observer {
+
+	public SavingAccount a;
+	
+	public Observer(Saving Account b)
+	{
+		this.a = b;
+	}
+	
+}

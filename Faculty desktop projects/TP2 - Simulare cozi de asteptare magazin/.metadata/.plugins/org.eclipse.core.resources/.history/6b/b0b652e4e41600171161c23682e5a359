@@ -1,0 +1,43 @@
+package tema2_dulau_marius;
+
+import java.util.*;
+
+public class Task{
+
+	private int arrivalTime;
+	private int processingPeriod;
+	private int nume;
+	
+	public Task(int arrTime, int procTime)
+	{
+		arrivalTime = arrTime;
+		processingPeriod = procTime;
+	}	
+	
+	public Task(int arrTime)
+	{
+		this.arrivalTime = arrTime;
+		Random rand = new Random();
+		processingPeriod = rand.nextInt(5) + 1;
+	}
+	
+	public void setArrivalTime(int arrTime)
+	{
+		this.arrivalTime = arrTime;
+	}
+	
+	public int getArrivalTime()
+	{
+		return this.arrivalTime;
+	}
+	
+	public void setProcessingPeriod(int procTime)
+	{
+		this.arrivalTime = procTime;
+	}
+	
+	public int getProcessingPeriod()
+	{
+		return this.processingPeriod;
+	}
+}

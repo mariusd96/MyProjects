@@ -1,0 +1,10 @@
+package tema4_dulau_marius;
+
+public interface BankProc {
+
+	void addPerson(Person p);
+	void removePerson(Person p);
+	Account readAccount(Account p);
+	void writeAccount();
+	int getMaxAccountId();
+}

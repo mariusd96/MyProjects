@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Inserare elev</title>
+    <link rel="stylesheet" href="css/inserareElev.css">
+</head>
+
+<body ng-app="myApp" ng-controller="controller" background="stuff/background.svg">
+
+<div class="nav">
+    <div class="nume">{{msg}}</div>
+    <script type="text/javascript">
+        tday=new Array("Duminica","Luni","Marti","Miercuri","Joi","Vineri","Sambata");
+        tmonth=new Array("Ianuarie","Februarie","Martie","Aprilie","Mai","Iunie","Iulie","August","Septembrie","Octombrie","Noiembrie","Decembrie");
+
+        function GetClock(){
+            var d=new Date();
+            var nday=d.getDay(),nmonth=d.getMonth(),ndate=d.getDate(),nyear=d.getFullYear();
+            var nhour=d.getHours(),nmin=d.getMinutes(),nsec=d.getSeconds();
+            if(nmin<=9) nmin="0"+nmin
+            if(nsec<=9) nsec="0"+nsec;
+
+            document.getElementById('data').innerHTML=""+tday[nday]+", "+tmonth[nmonth]+" "+ndate+", "+nyear+" "+nhour+":"+nmin+":"+nsec+"";
+        }
+
+        window.onload=function(){
+            GetClock();
+            setInterval(GetClock,1000);
+        }
+    </script>
+    <div id="data"></div>
+    <button class="logout" onclick="window.location ='login.html'">Logout</button>
+</div>
+
+<div class="page">
+    <div class="container">
+        <form class="form">
+            <p class="titlu">Inserare elev</p><br/>
+            <input type="text" placeholder="Username" ng-model = "username"><br />
+            <input type="text" placeholder="Parola" ng-model = "parola"><br />
+            <input type="text" placeholder="Nume" ng-model = "nume"><br />
+            <input type="text" placeholder="Prenume" ng-model = "prenume"><br />
+            <select ng-model = "profil" ng-options = "x for x in profile" ng-change = "updateSpecializari()">
+                <option value="" disabled selected>Profil</option>
+            </select><br />
+            <select ng-model = "specializare" ng-options = "x for x in specializari" ng-change="updateClase()">
+                <option value="" disabled selected>Specializare</option>
+            </select><br />
+            <select ng-model = "clasa" ng-options = "x for x in clase">
+                <option value="" disabled selected>Clasa</option>
+            </select><br />
+            <input type="text" placeholder="Email" ng-model = "email"><br />
+            <input type = "button" value = "Submit" ng-click = "insertDateElev()" />
+        </form>
+    </div>
+</div>
+
+<script>
+    var app = angular.module("myApp", []);
+    app.controller("controller", function($scope, $http)
+    {
+        $scope.profile = ["Real", "Uman"];
+        $scope.specializari = [];
+        $scope.clase = [];
+
+        $scope.updateSpecializari = function ()
+        {
+            if ($scope.profil == "Real") $scope.specializari = ["Matematică - Informatică", "Științe ale naturii"];
+            else $scope.specializari = ["Filologie", "Știinte sociale"];
+            $scope.clase = [];
+        };
+
+        $scope.updateClase = function ()
+        {
+            if ($scope.specializare == "Matematică - Informatică") $scope.clase = ['12A', '12B'];
+            else if ($scope.specializare == "Științe ale naturii") $scope.clase = ['12C', '12D'];
+            else if ($scope.specializare == "Științe ale sociale") $scope.clase = ['12E', '12G'];
+            else if ($scope.specializare == "Filologie") $scope.clase = ['12F'];
+        };
+
+        $scope.insertDateElev = function ()
+        {
+            var goAhead = 1;
+            //alert(goAhead);
+            var boxes = document.getElementsByTagName("input");
+            for (var i = 0; i<boxes.length;i++)
+            {
+                if(boxes[i].type == "text" && boxes[i].value == "") goAhead = 0;
+            }
+
+            if(goAhead == 1)
+            {
+                if($scope.profil == null || $scope.specializare == null || $scope.clasa== null) goAhead = 0;
+            }
+
+            //alert(goAhead);
+            if(goAhead == 1)
+            {
+                var data = {
+                    "user": $scope.username,
+                    "pass": $scope.parola,
+                    "nume": $scope.nume,
+                    "prenume": $scope.prenume,
+                    "profil": $scope.profil,
+                    "specializare": $scope.specializare,
+                    "clasa": $scope.clasa,
+                    "email": $scope.email
+                };
+
+                console.log(data);
+                $http.post('../php/insertElev.php', data)
+                    .then(function (response) {
+                        console.log(response.data);
+                        $scope.responseJSON = response.data;
+                        console.log($scope.responseJSON.msg);
+                        if ($scope.responseJSON.msg == "Error") alert("Acest username exista deja!");
+                        else alert("Data Inserted Successfully");
+                    }, function (error) {
+                        alert("Sorry! Data Couldn't be inserted!");
+                        console.error(error);
+                    });
+            }
+            else alert("Completati toate campurile!");
+        };
+    });
+</script>
+
+</body>
+</html>

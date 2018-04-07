@@ -1,0 +1,16 @@
+#-----------------------------------------------------------
+# Vivado v2016.4 (64-bit)
+# SW Build 1756540 on Mon Jan 23 19:11:23 MST 2017
+# IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
+# Start of session at: Tue Jul 25 21:18:01 2017
+# Process ID: 4892
+# Current directory: E:/School/Proiecte M/Facultate/An II/Sem II/AC - Arhitectura calculatoarelor/laboratoare/lab9/mips
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent4172 E:\School\Proiecte M\Facultate\An II\Sem II\AC - Arhitectura calculatoarelor\laboratoare\lab9\mips\mips.xpr
+# Log file: E:/School/Proiecte M/Facultate/An II/Sem II/AC - Arhitectura calculatoarelor/laboratoare/lab9/mips/vivado.log
+# Journal file: E:/School/Proiecte M/Facultate/An II/Sem II/AC - Arhitectura calculatoarelor/laboratoare/lab9/mips\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {E:/School/Proiecte M/Facultate/An II/Sem II/AC - Arhitectura calculatoarelor/laboratoare/lab9/mips/mips.xpr}
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1

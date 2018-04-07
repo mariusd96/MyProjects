@@ -1,0 +1,136 @@
+package tema2_dulau_marius;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.*;
+
+import javax.swing.JOptionPane;
+
+public class SimulationManager implements Runnable {
+
+	public int timeLimit;
+	public int maxProcessingTime;
+	public int minProcessingTime;
+	public int numberOfServers;
+	public int numberOfClients;
+	public String option;
+	public SelectionPolicy selectionPolicy = SelectionPolicy.SHORTEST_TIME;
+	
+	private Scheduler scheduler;
+	private SimulationFrame frame;
+	public List<Task> generatedTasks;
+	
+	private Random rand;
+	private Thread t;
+	
+	public SimulationManager()
+	{
+		frame = new SimulationFrame("Simulator");
+		frame.addCollectData(new CollectDataListener());
+		generatedTasks = new ArrayList<Task>();
+		t = new Thread(this);
+	}
+	
+	class CollectDataListener implements ActionListener
+	{
+		@Override
+		public void actionPerformed(ActionEvent arg0) {
+			// TODO Auto-generated method stub
+			try
+			{
+				timeLimit = frame.getTimp();
+				numberOfServers = frame.getNrServere();
+				numberOfClients = frame.getNrClienti();
+				option = frame.getOption();
+				frame.displayServers();
+				minProcessingTime = frame.getMinProcTime();
+				maxProcessingTime = frame.getMaxProcTime();
+				
+				if(option.compareTo("Timp putin") == 0) selectionPolicy=SelectionPolicy.SHORTEST_TIME;
+				else if(option.compareTo("Cozi scurte") == 0) selectionPolicy=SelectionPolicy.SHORTEST_QUEUE;
+				
+				/*JOptionPane.showMessageDialog(null, timeLimit);
+				JOptionPane.showMessageDialog(null, numberOfServers);
+				JOptionPane.showMessageDialog(null, numberOfClients);
+				JOptionPane.showMessageDialog(null, option);*/
+				
+				rand = new Random();
+				generateNRandomTasks(numberOfClients);
+				
+				scheduler = new Scheduler(numberOfServers);
+				scheduler.changeStrategy(selectionPolicy);
+				
+				t.start();
+			}
+			catch(Exception ex)
+			{
+				JOptionPane.showMessageDialog(null, "Introduceti date valide in toate casetele de text");
+			}
+		}
+		
+	}
+	
+	private void generateNRandomTasks(int n)
+	{
+		int j = 1;
+		for(int i = 0; i < n; i++)
+		{
+			int arrTime = rand.nextInt(timeLimit) + 1;
+			int procTime = rand.nextInt(maxProcessingTime) + minProcessingTime;
+		
+			generatedTasks.add(new Task(arrTime, procTime, j++));
+		}
+	}
+	
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		int currentTime = 0;
+		
+		while(currentTime <= timeLimit + maxProcessingTime)
+		{
+			currentTime++;
+			frame.setTimp(currentTime);
+			System.out.print(currentTime);
+			for(Task t: generatedTasks)
+			{
+				if(t.getArrivalTime() == currentTime)
+				{
+					scheduler.dispatchTask(t);
+					System.out.print("  " + t.getName() + "[" + t.getProcessingPeriod() + "]"  + " la coada ");
+				}
+			}
+			System.out.println("");
+			
+			try {
+				Thread.sleep(1000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+			frame.displayData(scheduler.serversData());
+		}
+		
+		while(true)
+		{
+			currentTime++;
+			try {
+				Thread.sleep(1000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+			frame.displayData(scheduler.serversData());
+		}
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		SimulationManager gen = new SimulationManager();
+		/*Thread t = new Thread(gen);
+		t.start();*/
+	}
+
+}

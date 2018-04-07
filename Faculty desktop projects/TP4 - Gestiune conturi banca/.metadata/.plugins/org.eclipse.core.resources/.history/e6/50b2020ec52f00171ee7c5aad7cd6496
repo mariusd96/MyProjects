@@ -1,0 +1,78 @@
+package testare;
+
+import org.junit.*;
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+import model.*;
+
+public class Testare {
+
+	private Bank b = new Bank();
+	private Account a = null;
+	
+	private static int nrTesteExecutate = 0;
+	private static int nrTesteCuSucces = 0;
+	
+	private static boolean stare;
+	
+	public Testare()
+	{
+		System.out.println("Constructor inaintea fiecarui test!");
+	}
+
+	@AfterClass
+	public static void tearDownAfterClass() throws Exception {
+		System.out.println("O singura data dupa terminarea executiei setului de teste din clasa!");
+		System.out.println("S-au executat " + nrTesteExecutate + " teste din care "+ nrTesteCuSucces + " au avut succes!");
+	}
+	
+	@Before
+	public void setUp() throws Exception {
+		System.out.println("Incepe un nou test!");
+		nrTesteExecutate++;
+	}
+	
+	@After
+	public void tearDown() throws Exception {
+		System.out.println("S-a terminat testul curent!");
+	}
+	
+	@Test
+	public void test1()
+	{
+		Person p = new Person("1234567890123", "Maria", "Dan", "Calea Manastur nr. 100");
+		b.addPerson(p);
+		
+		/*if(b.getMap().containsKey(p)) stare = true;
+		else stare = false;*/
+		
+		assertNotNull(b.addPerson(p));
+		nrTesteCuSucces++;
+	}
+
+	@Test
+	public void test2()
+	{
+		Person p = null;
+		b.addPerson(p);
+		
+		if(b.getMap().containsKey(p)) stare = true;
+		else stare = false;
+		
+		assertTrue(stare);
+		nrTesteCuSucces++;
+	}
+	
+	@Test
+	public void test3()
+	{
+		Person p = b.findPerson("1960730260062");
+		
+		if(p != null) stare = true;
+		else stare = false;
+		
+		assertTrue(stare);
+		nrTesteCuSucces++;
+	}
+}

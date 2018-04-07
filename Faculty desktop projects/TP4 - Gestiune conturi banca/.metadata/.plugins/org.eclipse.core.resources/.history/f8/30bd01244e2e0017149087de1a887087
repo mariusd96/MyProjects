@@ -1,0 +1,14 @@
+package tema4_dulau_marius;
+
+public class SpendingAccount extends Account {
+
+	
+
+	public SpendingAccount(int accountId, Person accountHolder, double balance) {
+		super(accountId, accountHolder, balance);
+		// TODO Auto-generated constructor stub
+	}
+	
+	
+
+}

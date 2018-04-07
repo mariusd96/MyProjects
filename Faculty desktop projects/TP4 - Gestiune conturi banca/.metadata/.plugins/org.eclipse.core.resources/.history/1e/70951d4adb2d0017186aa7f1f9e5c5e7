@@ -1,0 +1,26 @@
+package presentation;
+
+import javax.swing.*;
+
+public class EditDeletePerson extends JFrame{
+	
+	private static final int WIDTH = 350;
+	private static int HEIGHT = 270;
+	
+	private JPanel panel = new JPanel();
+	private JLabel lblCNP = new JLabel("CNP");
+	private JLabel lblFirstName = new JLabel("First name");
+	private JLabel lblLastName = new JLabel("Last name");
+	private JLabel lblAddress = new JLabel("Address");
+	private JTextField tfCNP= new JTextField();
+	private JTextField tfFirstName = new JTextField();
+	private JTextField tfLastName = new JTextField();
+	private JTextField tfAddress = new JTextField();
+	private JButton btnAdd = new JButton("Add");
+	
+	public EditDeletePerson(String name)
+	{
+		super(name);
+	}
+
+}

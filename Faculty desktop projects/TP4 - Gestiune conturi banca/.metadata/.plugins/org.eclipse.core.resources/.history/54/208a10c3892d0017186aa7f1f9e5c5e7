@@ -1,0 +1,44 @@
+package tema4_dulau_marius;
+
+public class SavingAccount extends Account {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	private double minBalance;
+	private double interestRate;//dobanda
+	
+	
+	public SavingAccount(int accountId, Person accountHolder, double balance) 
+	{
+		super(accountId, accountHolder, balance);
+		// TODO Auto-generated constructor stub
+	}
+
+	public double getMinBalance() 
+	{
+		return minBalance;
+	}
+
+	public void setMinBalance(double minBalance) 
+	{
+		this.minBalance = minBalance;
+	}
+
+	public double getInterestRate() 
+	{
+		return interestRate;
+	}
+
+	public void setInterestRate(double interestRate) 
+	{
+		this.interestRate = interestRate;
+	}
+	
+	public void setMonthlyBalance()
+	{
+		this.deposit(this.getInterestRate() / 12);
+	}
+}

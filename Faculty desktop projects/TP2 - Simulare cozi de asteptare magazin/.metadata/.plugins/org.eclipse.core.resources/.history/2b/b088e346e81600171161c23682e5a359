@@ -1,0 +1,68 @@
+package tema2_dulau_marius;
+
+import java.util.*;
+
+import javax.swing.JOptionPane;
+
+public class Scheduler {
+	
+	private List<Server> servers;
+	private int maxNoServers;
+	private int maxTasksPerServer;
+	private Strategy strategy;
+	
+	public Scheduler(int maxServers, int maxTasks)
+	{
+		this.maxNoServers = maxServers;
+		this.maxTasksPerServer = maxTasks;
+		servers = new ArrayList<Server>();
+		
+		for(int i = 0; i < maxNoServers; i++)
+		{
+			servers.add(new Server());
+		}
+	}
+	
+	public void changeStrategy(SelectionPolicy policy)
+	{
+		if(policy == SelectionPolicy.SHORTEST_QUEUE)
+		{
+			strategy = new ConcreteStrategyQueue();
+		}
+		else if(policy == SelectionPolicy.SHORTEST_TIME)
+		{
+			strategy = new ConcreteStrategyTime();
+		}
+	}
+	
+	public void dispatchTask(Task t)
+	{
+		strategy.addTask(getServers(), t);
+	}
+	
+	public List<Server> getServers()
+	{
+		return servers;
+	}
+	
+	public Task[][] serversData()
+	{
+		Task[][] matrix = new Task[servers.size()][];
+		
+		int i = 0;
+		for(Server s : servers)
+		{
+			matrix[i++] = s.getTasks();
+		}
+		for(int j = 0; j<i;j++)
+		{
+			String sir = "";
+			for(int k = 0;k<matrix[j].length;k++)
+			{
+				sir = sir + matrix[j][k].getName() + " ";
+			}
+			JOptionPane.showMessageDialog(null, sir);
+		}
+		return matrix;
+	}
+}

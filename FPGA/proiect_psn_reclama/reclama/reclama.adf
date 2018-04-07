@@ -1,0 +1,88 @@
+[Project]
+Current Flow=Multivendor
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=reclama
+
+[Library]
+reclama=.\reclama.lib
+
+[$LibMap$]
+reclama=.
+Active_lib=
+
+[Settings]
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+REFRESH_FLOW=1
+SYNTH_TOOL=<none>
+IMPL_TOOL=<none>
+FAMILY=
+FLOWTOOLS=ONLY_IMPL
+
+[IMPLEMENTATION]
+UCF=
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=reclama|arh_reclama|0 
+ShowHide=ShowTopLevel
+Selected=
+
+[Files]
+/main.vhd=-1
+/ROM.vhd=-1
+/animatie0.vhd=-1
+/animatie1.vhd=-1
+/animatie2.vhd=-1
+/animatie3.vhd=-1
+/animatie4.vhd=-1
+/animatie5.vhd=-1
+/animatie6.vhd=-1
+/Waveform memorie_ROM.awf=-1
+/mux.vhd=-1
+/Waveform dmux.awf=-1
+/Waveform main.awf=-1
+/registru_inel.vhd=-1
+/divizor_frecventa_1.vhd=-1
+/pmw.vhd=-1
+/Waveform registru_inel.awf=-1
+/is_enable.vhd=-1
+/stins_aprins.vhd=-1
+/registru_inel_schimbare_litera.vhd=-1
+/curgere.vhd=-1
+/divizor_reclama.vhd=-1
+/afisor.vhd=-1
+/ritm_alert.vhd=-1
+/luminozitate_procent.vhd=-1
+
+[Files.Data]
+.\src\main.vhd=VHDL Source Code
+.\src\ROM.vhd=VHDL Source Code
+.\src\animatie0.vhd=VHDL Source Code
+.\src\animatie1.vhd=VHDL Source Code
+.\src\animatie2.vhd=VHDL Source Code
+.\src\animatie3.vhd=VHDL Source Code
+.\src\animatie4.vhd=VHDL Source Code
+.\src\animatie5.vhd=VHDL Source Code
+.\src\animatie6.vhd=VHDL Source Code
+.\src\Waveform memorie_ROM.awf=Waveform File
+.\src\mux.vhd=VHDL Source Code
+.\src\Waveform dmux.awf=Waveform File
+.\src\Waveform main.awf=Waveform File
+.\src\registru_inel.vhd=VHDL Source Code
+.\src\divizor_frecventa_1.vhd=VHDL Source Code
+.\src\pmw.vhd=VHDL Source Code
+.\src\Waveform registru_inel.awf=Waveform File
+.\src\is_enable.vhd=VHDL Source Code
+.\src\stins_aprins.vhd=VHDL Source Code
+.\src\registru_inel_schimbare_litera.vhd=VHDL Source Code
+.\src\curgere.vhd=VHDL Source Code
+.\src\divizor_reclama.vhd=VHDL Source Code
+.\src\afisor.vhd=VHDL Source Code
+.\src\ritm_alert.vhd=VHDL Source Code
+.\src\luminozitate_procent.vhd=VHDL Source Code
+

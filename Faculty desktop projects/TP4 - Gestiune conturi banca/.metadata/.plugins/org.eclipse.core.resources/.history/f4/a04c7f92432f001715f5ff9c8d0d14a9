@@ -1,0 +1,17 @@
+package actionListeners;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+//action listener pentru adaugare persoana
+	class AddPersonActionListener implements ActionListener
+	{
+		@Override
+		public void actionPerformed(ActionEvent arg0) {
+			// TODO Auto-generated method stub
+			b.addPerson(addPerson.getPerson());
+			refreshTablePerson();
+			addPerson.setVisible(false);
+			addPerson.dispose();
+		}	
+	}

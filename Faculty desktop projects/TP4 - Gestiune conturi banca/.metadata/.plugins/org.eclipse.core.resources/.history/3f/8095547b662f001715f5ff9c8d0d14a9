@@ -1,0 +1,40 @@
+package model;
+
+import java.util.HashSet;
+
+public interface BankProc {
+
+	/**
+	 * @pre p != null
+	 * @post map.contains(p)
+	 */
+	void addPerson(Person p);
+	
+	/**
+	 * @pre true
+	 * @post p2 != null
+	 * @post map.contains(p)
+	 */
+	Person findPerson(String cnp);
+	
+	/**
+	 * @pre p != null
+	 * @post !map.contains(p)
+	 */
+	void removePerson(Person p);
+	
+	/**
+	 * @pre true
+	 * @post map.contains(a.getAccountHolder() ,a)
+	 */
+	void addAccount(Account a);
+	
+	void removeAccount(Account a);
+	HashSet<Account> readAccounts(Person p);
+	
+	/**
+	 * @pre true
+	 * @post nr >= 0
+	 */
+	int getMaxAccountId();
+}

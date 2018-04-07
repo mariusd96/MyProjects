@@ -1,0 +1,102 @@
+package dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+import connection.ConnectionFactory;
+
+import java.lang.reflect.Field;
+
+public class ReflexionDAO {
+
+	protected static final Logger LOGGER = Logger.getLogger(CustomerDAO.class.getName());
+	
+	public static String insertQuery(Object object)
+	{
+		String insertStatementString = "insert into " + object.getClass().getSimpleName() + "(";
+		int nrFields = object.getClass().getDeclaredFields().length - 1;
+		int copyNrFields = nrFields;
+		
+		for(Field field : object.getClass().getDeclaredFields())
+		{
+			field.setAccessible(true);
+			
+			insertStatementString = insertStatementString + field.getName();
+			if(copyNrFields > 0)
+			{
+				insertStatementString = insertStatementString + ",";
+				copyNrFields--;
+			}
+		}
+		
+		insertStatementString = insertStatementString + ") values (";
+		
+		for(Field field : object.getClass().getDeclaredFields())
+		{
+			field.setAccessible(true);
+			
+			insertStatementString = insertStatementString + "?";
+			if(nrFields > 0)
+			{
+				insertStatementString = insertStatementString + ",";
+				nrFields--;
+			}
+		}
+		
+		insertStatementString = insertStatementString + ")";
+		
+		return insertStatementString;
+	}
+	
+	public static void insert(Object object)
+	{
+		Connection dbConnection = ConnectionFactory.getConnection();
+		PreparedStatement insertStatement = null;
+		String insertStatementString = insertQuery(object);
+		
+		try
+		{
+			insertStatement = dbConnection.prepareStatement(insertStatementString);
+			
+			int i = 1;
+			for(Field field : object.getClass().getDeclaredFields())
+			{
+				field.setAccessible(true);
+				Object value;
+				
+				try 
+				{
+					value = field.get(object);
+					if(value.getClass() == String.class) insertStatement.setString(i, (String)value);
+					else if(value.getClass() == Integer.class) insertStatement.setInt(i, (int)value);
+					else if(value.getClass() == Character.class) insertStatement.setString(i, String.valueOf(value));
+					
+					i++;
+				}
+				catch (IllegalArgumentException e) 
+				{
+					e.printStackTrace();
+				} 
+				catch (IllegalAccessException e) 
+				{
+					e.printStackTrace();
+				}
+			}
+			
+			insertStatement.executeUpdate();
+		}
+		catch(SQLException e)
+		{
+			LOGGER.log(Level.WARNING, "ReflexionDAO : insert " + e.getMessage());
+		}
+		finally
+		{
+			ConnectionFactory.close(insertStatement);
+			ConnectionFactory.close(dbConnection);
+		}
+	}
+	
+}

@@ -1,0 +1,46 @@
+package presentation;
+
+import javax.swing.*;
+
+public class AddAccount extends JFrame{
+
+	private static final int WIDTH = 360, HEIGHT = 400;
+	
+	private JPanel panel = new JPanel();
+	private JLabel lblAccountHolderCNP = new JLabel("Account Holder CNP");
+	private JLabel lblBalance = new JLabel("Balance");
+	private JLabel lblAccountType = new JLabel("Account Type");
+	private JTextField tfAccountHolderCNP = new JTextField();
+	private JTextField tfBalance = new JTextField();
+	private JRadioButton rdbtnSavingAccount = new JRadioButton("Saving Account");
+	private JRadioButton rdbtnSpendingAccount = new JRadioButton("Spending Account");
+	private JButton btnAdd = new JButton("Add");
+	
+	public AddAccount(String name)
+	{
+		super(name);
+		this.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+		this.setVisible(true);
+		this.setSize(WIDTH, HEIGHT);
+		panel.setLayout(null);
+		
+		lblAccountHolderCNP.setBounds(20, 20, 120, 25);
+		lblBalance.setBounds(20, 55, 120, 25);
+		lblAccountType.setBounds(20, 90, 120, 25);
+		panel.add(lblAccountHolderCNP);
+		panel.add(lblBalance);
+		panel.add(lblAccountType);
+		
+		tfAccountHolderCNP.setBounds(170, 20, 150, 25);
+		tfBalance.setBounds(170, 55, 150, 25);
+		panel.add(tfAccountHolderCNP);
+		panel.add(tfBalance);
+		
+		rdbtnSavingAccount.setBounds(170, 90, 110, 25);
+		rdbtnSpendingAccount.setBounds(170, 125, 110, 25);
+		panel.add(rdbtnSavingAccount);
+		panel.add(rdbtnSpendingAccount);
+		
+		this.add(panel);
+	}
+}

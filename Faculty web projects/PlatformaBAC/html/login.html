@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" >
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <title>Autentificare</title>
+    <link rel="stylesheet" href="css/login.css">
+</head>
+
+<body background="stuff/background.svg">
+
+<img class="logo" src="stuff/logo.svg">
+<div class="wrapper">
+    <div class="container" ng-app="myApp" ng-controller = "controller">
+        <h1>Welcome</h1>
+
+        <form class="form">
+            <input type="text" placeholder="Username" ng-model = "username">
+            <input type="password" placeholder="Password" ng-model = "parola">
+            <button type="submit" id="login-button" ng-click = "login()">Login</button>
+        </form>
+    </div>
+
+</div>
+
+
+<script>
+    var myApp = angular.module("myApp", []);
+    myApp.controller("controller", function ($scope, $http) {
+        $scope.login = function ()
+        {
+            if ($scope.username == null) $scope.username = "";
+            if ($scope.parola == null) $scope.parola = "";
+
+            var data = {
+                "user": $scope.username,
+                "pass": $scope.parola
+            };
+
+            $http.post('../php/login.php', data)
+                .then(function (response)
+                {
+                    console.log("Login successfull");
+                    $scope.responseJSON = response.data;
+                    console.log($scope.responseJSON.msg);
+
+                    if($scope.responseJSON.msg == "OK")
+                    {
+                        //$scope.cookie1 = $scope.responseJSON.idCont + "," + $scope.responseJSON.nume + " " + $scope.responseJSON.prenume;
+                        document.cookie = $scope.responseJSON.idCont + "," + $scope.responseJSON.nume + " " + $scope.responseJSON.prenume;
+
+                        if($scope.responseJSON.userType == "A") window.location = "meniuAdmin.html";
+                        else if($scope.responseJSON.userType == "P") window.location = "meniuProfesor.html";
+                        else if($scope.responseJSON.userType == "E") window.location = "elev.html";
+                    }
+                }, function (error)
+                {
+                    alert("Wrong username or password");
+                    console.error(error);
+                });
+        };
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+﻿<Window x:Class="FoodDelivery.presentation.VizualizareIstoric"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FoodDelivery.presentation"
+        mc:Ignorable="d"
+        Title="VizualizareIstoric" Height="650" Width="950" WindowStyle="None" WindowStartupLocation="CenterScreen" AllowsTransparency="True" BorderThickness="15">
+    <Window.BorderBrush>
+        <ImageBrush ImageSource="/FoodDelivery;component/Resources/contur2.png"/>
+    </Window.BorderBrush>
+
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Styles/btnGlass.xaml" />
+                <ResourceDictionary Source="/Styles/btnGlass2.xaml" />
+                <ResourceDictionary Source="/Styles/ScrollBarStyle.xaml" />
+                <ResourceDictionary Source="/Styles/TextBoxStyle.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Grid>
+        <Grid.Background>
+            <RadialGradientBrush>
+                <GradientStop Color="#FFF5C891" Offset="1"/>
+                <GradientStop Color="#FFFFE5C3" Offset="0.004"/>
+            </RadialGradientBrush>
+        </Grid.Background>
+
+        <DockPanel Name="TitleBar" DockPanel.Dock="Top" Height="60" Background="Transparent" Margin="0" VerticalAlignment="Top" MouseLeftButtonDown="TitleBar_MouseLeftButtonDown">
+            <Button x:Name="close" Height="20" VerticalAlignment="Center" Width="20" HorizontalAlignment="Right" Margin="0,10,20,0" DockPanel.Dock="Right" Foreground="Red" FontWeight="Bold" Style="{StaticResource btnGlass2}" FontSize="14" VerticalContentAlignment="Top" Cursor="Hand" ToolTip="Închide" BorderThickness="0" Click="close_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="/Resources/close.png"/>
+                </Button.Background>
+            </Button>
+            <Image x:Name="image" HorizontalAlignment="Left" Height="50" VerticalAlignment="Center" Width="100" Margin ="15,10,0,0" Source="/Resources/logo.png" DockPanel.Dock="Left"/>
+        </DockPanel>
+        <Canvas HorizontalAlignment="Center" Height="30" Margin="0,95,0,0" VerticalAlignment="Top" Width="500">
+            <Label Content="Data1" FontFamily="Times New Roman" FontSize="16" Foreground="#FFB34426"/>
+            <DatePicker x:Name="firstDate" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="60" Canvas.Top="2" FontSize="16" FontFamily="Times New Roman" SelectedDateChanged="firstDate_SelectedDateChanged"/>
+            <Label Content="Data2" FontFamily="Times New Roman" FontSize="16" Foreground="#FFB34426" Canvas.Left="319" Canvas.Top="1"/>
+            <DatePicker x:Name="secondDate" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="385" Canvas.Top="2" FontSize="16" FontFamily="Times New Roman" SelectedDateChanged="secondDate_SelectedDateChanged"/>
+        </Canvas>
+
+        <ScrollViewer x:Name="scrollViewer" HorizontalAlignment="Center" Height="380" Margin="35,140,35,100" VerticalAlignment="Center" Width="850">
+            <StackPanel x:Name="stackPanel">
+            </StackPanel>
+        </ScrollViewer>
+        <Canvas x:Name="canvas" HorizontalAlignment="Center" Height="35" Margin="0,550,0,0" VerticalAlignment="Top" Width="850">
+            <Label Content="E client loial ?" Foreground="#FFB44627" FontFamily="Times New Roman" FontSize="16" Canvas.Top="4"/>
+            <RadioButton x:Name="daRadioBtn" Content="DA" Canvas.Left="170" Canvas.Top="10" Foreground="#FFB44627" FontFamily="Times New Roman" FontSize="16"/>
+            <RadioButton x:Name="nuRadioBtn" Content="NU" Canvas.Left="250" Canvas.Top="10" Foreground="#FFB44627" FontFamily="Times New Roman" FontSize="16"/>
+            <Button x:Name="salvareBtn" Content="Salvează" Style="{StaticResource btnGlass}" Canvas.Left="665" Canvas.Top="1" Width="175" Height="35" FontFamily="Times New Roman" FontSize="16" Foreground="#FFB34426" BorderBrush="#FFB34426" Background="#FFFCE4C8" BorderThickness="4" Cursor="Hand" Click="salvareBtn_Click" FontStyle="Italic"/>
+        </Canvas>
+    </Grid>
+</Window>

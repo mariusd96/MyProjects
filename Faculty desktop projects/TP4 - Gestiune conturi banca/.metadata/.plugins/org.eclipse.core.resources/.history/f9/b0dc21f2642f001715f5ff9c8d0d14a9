@@ -1,0 +1,23 @@
+package model;
+
+import java.util.HashSet;
+
+public interface BankProc {
+
+	/**
+	 * 
+	 * @param p
+	 */
+	void addPerson(Person p);
+	Person findPerson(String cnp);
+	void removePerson(Person p);
+	void addAccount(Account a);
+	void removeAccount(Account a);
+	HashSet<Account> readAccounts(Person p);
+	
+	/**
+	 * @pre true
+	 * @post nr >= 0
+	 */
+	int getMaxAccountId();
+}

@@ -1,0 +1,69 @@
+package tema1_dulau_marius;
+
+import org.junit.*;
+import static org.junit.Assert.*;
+
+public class TestRezultat {
+
+	private static Polinom f;
+	private static Polinom g;
+	private static Polinom h;
+	private static Polinom r;
+	
+	private static String p, q;
+	private static String[] valP, valQ;
+	
+	private static int nrTesteExecutate = 0;
+	private static int nrTesteCuSucces = 0;
+	
+	public TestRezultat()
+	{
+		System.out.println("Constructor inaintea fiecarui test!");
+		f = new Polinom();
+		g = new Polinom();
+		
+		p = "";
+		q = "";
+		
+		p = p.replaceAll("-", "+-"); //inlocuim - cu +- pentru a avea semnul negativ la numere
+		p = p.replaceAll("\\s+", ""); // eliminam spatiile ca sa putem desparti mai usor
+		q = q.replace("-", "+-");
+		q = q.replaceAll("\\s+", "");
+		
+		valP = p.split("[+]"); //despartim in string dupa +
+		valQ = q.split("[+]");
+		
+		try
+		{
+			f = (new Logic()).construirePolinom(valP);
+			f.sortare();
+			f.eliminareGradeMultiple();
+			g = (new Logic()).construirePolinom(valQ);
+			g.sortare();
+			g.eliminareGradeMultiple();
+		}catch(MyException ex)
+		{
+			System.out.println(ex.toString());
+		}
+	}
+	
+	@AfterClass
+	public static void tearDownAfterClass() throws Exception {
+		System.out.println("O singura data dupa terminarea executiei setului de teste din clasa!");
+		System.out.println("S-au executat " + nrTesteExecutate + " teste din care "+ nrTesteCuSucces + " au avut succes!");
+	}
+	
+	@Before
+	public void setUp() throws Exception {
+		System.out.println("Incepe un nou test!");
+		nrTesteExecutate++;
+	}
+	
+	@After
+	public void tearDown() throws Exception {
+		System.out.println("S-a terminat testul curent!");
+	}
+	
+	
+	
+}

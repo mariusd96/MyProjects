@@ -1,0 +1,24 @@
+package tema4_dulau_marius;
+
+import java.io.Serializable;
+
+public class Person implements Serializable {
+	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	
+	private int personId;
+	private String firstName;
+	private String lastName;
+	private String address;
+	
+	public Person(int id, String prenume, String nume, String adresa)
+	{
+		this.personId = id;
+		this.firstName = prenume;
+		this.lastName = nume;
+		this.address = adresa;
+	}
+}

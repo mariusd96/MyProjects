@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <title>Upload lectie</title>
+    <link rel="stylesheet" href="css/uploadLectie.css">
+</head>
+
+<body ng-app = "myApp" ng-controller = "controller" background="stuff/background.svg">
+
+<div class="nav">
+    <div class="nume">{{msg}}</div>
+    <script type="text/javascript">
+        tday=new Array("Duminica","Luni","Marti","Miercuri","Joi","Vineri","Sambata");
+        tmonth=new Array("Ianuarie","Februarie","Martie","Aprilie","Mai","Iunie","Iulie","August","Septembrie","Octombrie","Noiembrie","Decembrie");
+
+        function GetClock(){
+            var d=new Date();
+            var nday=d.getDay(),nmonth=d.getMonth(),ndate=d.getDate(),nyear=d.getFullYear();
+            var nhour=d.getHours(),nmin=d.getMinutes(),nsec=d.getSeconds();
+            if(nmin<=9) nmin="0"+nmin
+            if(nsec<=9) nsec="0"+nsec;
+
+            document.getElementById('data').innerHTML=""+tday[nday]+", "+tmonth[nmonth]+" "+ndate+", "+nyear+" "+nhour+":"+nmin+":"+nsec+"";
+        }
+
+        window.onload=function(){
+            GetClock();
+            setInterval(GetClock,1000);
+        }
+    </script>
+    <div id="data"></div>
+    <button class="logout" onclick="window.location ='login.html'">Logout</button>
+</div>
+
+<div class="page">
+    <div class="container">
+        <form>
+            <p class="titlu">Upload lectie</p><br/>
+            <!--<input type="text" ng-model="name" placeholder="Enter Name here">-->
+            <input type="file" file-model="myFile"/>
+            <input type="button" value="Upload me" ng-click="uploadFile()">
+        </form>
+    </div>
+</div>
+
+<script>
+    var myApp = angular.module("myApp", []);
+    myApp.directive('fileModel', ['$parse', function ($parse) {
+        return {
+            restrict: 'A',
+            link: function(scope, element, attrs) {
+                var model = $parse(attrs.fileModel);
+                var modelSetter = model.assign;
+
+                element.bind('change', function(){
+                    scope.$apply(function(){
+                        modelSetter(scope, element[0].files[0]);
+                    });
+                });
+            }
+        };
+    }]);
+    myApp.service('fileUpload', ['$http', function ($http) {
+        this.uploadFileToUrl = function(file, uploadUrl, name){
+            var fd = new FormData();
+            fd.append('file', file);
+            fd.append('name', name);
+            $http.post(uploadUrl, fd, {transformRequest: angular.identity, headers: {'Content-Type': undefined,'Process-Data': false}})
+                .then(function(){
+                        console.log("Success");
+                    }
+                    ,function(){
+                        console.log("Error");
+                    });
+        }
+    }]);
+    myApp.controller('controller', ['$scope', 'fileUpload', function($scope, fileUpload){
+        $scope.msg = document.cookie;
+
+        $scope.uploadFile = function(){
+            var file = $scope.myFile;
+            console.log('file is ' );
+            console.dir(file);
+
+            var uploadUrl = "../php/upload.php";
+            var text = document.cookie.split(',')[0];
+
+            fileUpload.uploadFileToUrl(file, uploadUrl, text);
+        };
+    }]);
+</script>
+
+</body>
+</html>

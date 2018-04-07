@@ -1,0 +1,112 @@
+package presentation;
+
+import javax.swing.*;
+import java.awt.event.ActionListener;
+import java.util.List;
+import java.awt.event.ActionEvent;
+import java.awt.Color;
+import java.awt.event.*;
+
+import model.Product;
+import model.Stock;
+import bll.ProductBLL;
+import bll.StockBLL;
+import dao.ReflectionDAO;
+
+public class AdminFrame extends JFrame{
+
+	private static int WIDTH = 800, HEIGHT = 400;
+	private JPanel panel = new JPanel();
+	private JTable table = new JTable();
+	private JScrollPane scrollPane;
+	private JButton btnAddProduct = new JButton("Add product");
+	private JButton btnEditProduct = new JButton("Edit product");
+	private JButton btnLogout = new JButton("Logout");
+	
+	private AdaugaProdus adaugaProdus;
+	private boolean ok = false;
+	private List<Object> objects;
+	private Product test = new Product("test", 1);
+	
+	public AdminFrame(String name)
+	{
+		super(name);
+		setResizable(false);
+		this.setSize(WIDTH, HEIGHT);
+		
+		panel.setLayout(null);
+		
+		table.setBounds(232, 30, 540, 310);
+		//panel.add(table);
+		
+		btnAddProduct.setBounds(20, 30, 150, 35);
+		btnAddProduct.addActionListener(new ActionListener(){
+			@Override
+			public void actionPerformed(ActionEvent arg0) 
+			{
+				// TODO Auto-generated method stub
+				adaugaProdus = new AdaugaProdus("Adauga produs");
+				adaugaProdus.setVisible(true);
+				adaugaProdus.addProductListener(new AddProductListener());
+			}
+			
+		});
+		
+		panel.add(btnAddProduct);
+		
+		btnEditProduct.setBounds(20, 76, 150, 35);
+		panel.add(btnEditProduct);
+		
+		btnLogout.setBounds(20, 122, 150, 35);
+		panel.add(btnLogout);
+		
+		JSeparator separator = new JSeparator();
+		separator.setForeground(Color.GRAY);
+		separator.setOrientation(SwingConstants.VERTICAL);
+		separator.setBounds(200, 30, 2, 310);
+		panel.add(separator);
+		
+		objects = ReflectionDAO.createListOfObject(test);
+		table = ReflectionDAO.createTable(objects);
+		scrollPane = new JScrollPane(table);
+		scrollPane.setBounds(232, 30, 540, 310);
+		//table.setFillsViewportHeight(true);
+		
+		panel.add(scrollPane);
+		getContentPane().add(panel);
+	}
+	
+	class AddProductListener implements ActionListener
+	{
+		@Override
+		public void actionPerformed(ActionEvent arg0) {
+			// TODO Auto-generated method stub
+			ProductBLL productBLL = new ProductBLL();
+			Product p = new Product(adaugaProdus.getProduct(), adaugaProdus.getPrice());
+			Object[] campuri = {"productName"};
+			
+			try
+			{
+				productBLL.insertProduct(p);
+				p = (Product)productBLL.find(p, campuri);
+				Stock s = new Stock(p.getProductId(), adaugaProdus.getStock());
+				StockBLL stockBLL = new StockBLL();
+				stockBLL.insert(s);
+				adaugaProdus.setVisible(false);
+				adaugaProdus.dispose();
+				JOptionPane.showMessageDialog(panel, "Product successfully added");
+				//System.out.println(p.getProductId());
+			}
+			catch(Exception ex)
+			{
+				JOptionPane.showMessageDialog(panel, ex);
+			}
+			//System.out.println("Merge admin");
+			
+			objects = ReflectionDAO.createListOfObject(p);
+			table = ReflectionDAO.createTable(objects);
+			table.revalidate();
+		}
+		
+	}
+}

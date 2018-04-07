@@ -1,0 +1,234 @@
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+import java.awt.Graphics2D;
+import java.awt.Image;
+
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+
+import java.awt.event.*;
+import java.awt.geom.AffineTransform;
+import java.awt.image.AffineTransformOp;
+import java.awt.image.BufferedImage;
+
+import javax.swing.JButton;
+import java.awt.Panel;
+import javax.swing.JLabel;
+import javax.swing.Icon;
+import javax.swing.ImageIcon;
+import java.awt.Label;
+import java.awt.MouseInfo;
+import java.awt.GridLayout;
+import javax.swing.Timer;
+import java.awt.Color;
+import java.awt.Cursor;
+import java.net.URL;
+import javax.swing.SwingConstants;
+import java.awt.Font;
+
+public class Simulator extends JFrame implements ActionListener {
+
+	private JPanel contentPane;
+	Circuit c;
+	Masina m;
+	URL url;
+	ImageIcon img, img2;
+	Timer t, t2;
+	private JLabel lblTure;
+	private JLabel lblViteza;
+	private JLabel lblTimp;
+	private JLabel lblUltimulTimp;
+	private JLabel lblCelMaiBun;
+	private JLabel lupa;
+	
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					Simulator frame = new Simulator(0, 0);
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public Simulator(int nr_circuit, int nr_masina) {
+		setResizable(false);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 50, 900, 630);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(0, 0, 0, 0));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		c = new Circuit(nr_circuit);
+		//c.afiseazaPcte();
+		//System.out.println();
+		c.deter_unghiuri();
+		c.constrTraseu();
+		//c.afiseazaTraseu();
+		c.setBounds(0, 0, 900, 450);
+		contentPane.add(c);
+		c.setLayout(null);
+		
+		m = new Masina(nr_masina);
+		m.setHorizontalAlignment(SwingConstants.CENTER);
+		m.setBounds(125, 139, 85, 85);
+		url = Simulator.class.getResource("/Masini/car"+ (nr_masina + 1) + ".png");
+		img2 = new ImageIcon(new ImageIcon(url).getImage().getScaledInstance((int)m.getWidth(), m.getHeight(), Image.SCALE_AREA_AVERAGING));
+		m.setIcon(img2);
+		if(nr_circuit == 2) m.angle = -60;
+		m.setIcon(rotateImage(img2, m.angle));
+		c.add(m);
+		
+		JLabel label1 = new JLabel("");
+		label1.setBounds(0, 0, 900, 450);
+		url = Simulator.class.getResource("/Circuite/circuit"+ (nr_circuit + 1) +".png");
+		img = new ImageIcon(new ImageIcon(url).getImage().getScaledInstance((int)label1.getWidth(), (int)label1.getHeight(), Image.SCALE_AREA_AVERAGING));		
+		c.add(label1);
+		label1.setIcon(img);
+		
+		m.traseuDeParcurs(c.traseu);
+		m.setUnghiuri(c.unghiuri);
+		m.setPcteUnghiulare(c.pcte);
+		
+		JButton btnTimer = new JButton("Start");
+		btnTimer.setForeground(Color.WHITE);
+		btnTimer.setBackground(new Color(0, 153, 255));
+		btnTimer.setBounds(10, 525, 90, 25);
+		btnTimer.setCursor(new Cursor(Cursor.HAND_CURSOR));
+		contentPane.add(btnTimer);
+		
+		lblTure = new JLabel("Numar ture efectuate : 0");
+		lblTure.setFont(new Font("Times New Roman", Font.PLAIN, 14));
+		lblTure.setBounds(630, 460, 160, 25);
+		contentPane.add(lblTure);
+		
+		lblViteza = new JLabel("Viteza : 0 km/h");
+		lblViteza.setFont(new Font("Times New Roman", Font.PLAIN, 14));
+		lblViteza.setBounds(630, 485, 160, 25);
+		contentPane.add(lblViteza);
+		
+		lblTimp = new JLabel("Timp : 00:00:000");
+		lblTimp.setFont(new Font("Times New Roman", Font.PLAIN, 14));
+		lblTimp.setBounds(630, 510, 160, 25);
+		contentPane.add(lblTimp);
+		
+		lblUltimulTimp = new JLabel("Ultimul timp : 00:00:000");
+		lblUltimulTimp.setFont(new Font("Times New Roman", Font.PLAIN, 14));
+		lblUltimulTimp.setBounds(630, 536, 160, 25);
+		contentPane.add(lblUltimulTimp);
+		
+		lblCelMaiBun = new JLabel("Cel mai bun timp : 00:00:000");
+		lblCelMaiBun.setFont(new Font("Times New Roman", Font.PLAIN, 14));
+		lblCelMaiBun.setBounds(630, 563, 173, 25);
+		contentPane.add(lblCelMaiBun);
+		
+		lupa = new JLabel("");
+		lupa.setBounds(176, 485, 278, 103);
+		contentPane.add(lupa);
+		
+		//m.afiseazaTraseu();
+		t = new Timer(200, this);
+		t2 = new Timer(1, new ActionListener()
+		{
+			public void actionPerformed(ActionEvent e) 
+			{
+				m.cronometru();
+				lblTimp.setText("Timp : " + m.timp);
+				
+				if(m.i == 0)
+				{
+					lblUltimulTimp.setText("Ultimul timp : " + m.last_lap);
+					lblCelMaiBun.setText("Cel mai bun timp : " + m.best_lap);
+				}
+			}
+		});
+		
+		btnTimer.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if(btnTimer.getText() == "Start") 
+				{
+					t.start();
+					t2.start();
+					btnTimer.setText("Stop");
+				}
+				else
+				{
+					t.stop();
+					t2.stop();
+					btnTimer.setText("Start");
+				}
+			}
+		});
+		
+		Timer t3 = new Timer(100, new ActionListener()
+				{
+					public void actionPerformed(ActionEvent e)
+					{
+						int type = BufferedImage.TYPE_INT_ARGB;
+						BufferedImage image = new BufferedImage(lupa.getWidth() / 2, lupa.getHeight()/2, type);
+						Graphics2D g2 = image.createGraphics();
+						g2.copyArea(0, 0, 200, 100, 100, 0);
+						g2.dispose();
+						lupa.setText(String.valueOf(MouseInfo.getPointerInfo().getLocation().x));
+						//lupa.setIcon(new ImageIcon(image));
+					}
+				});
+		t3.start();
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		// TODO Auto-generated method stub
+		m.parcurgeTraseu();
+		m.setIcon(rotateImage(img2, m.angle));
+		//JOptionPane.showMessageDialog(null, m.angle);
+		lblTure.setText("Numar ture efectuate : " + m.nrTure);
+		lblViteza.setText("Viteza : " + m.viteza + " km/h");
+		t.setDelay(delay(m.viteza));
+	}
+	
+	private int delay(int viteza)
+	{
+		int nr = 0;
+		if(viteza >= 0 && viteza < 30) nr = 300;
+		else if(viteza >= 30 && viteza < 50) nr = 275;
+		else if(viteza >= 50 && viteza < 100) nr = 250;
+		else if(viteza >= 100 && viteza < 150) nr = 200;
+		else if(viteza >= 150 && viteza < 200) nr = 150;
+		else if(viteza >= 200 && viteza < 250) nr = 125;
+		else if(viteza >= 250 && viteza < 300) nr = 100;
+		else if(viteza == 300) nr = 75;
+		return nr;
+	}
+	
+	public ImageIcon rotateImage(ImageIcon picture, double angle)
+	{
+		int w = picture.getIconWidth();
+		int h = picture.getIconHeight();
+		int type = BufferedImage.TYPE_INT_ARGB;
+		BufferedImage image = new BufferedImage(w, h, type);
+		Graphics2D g = image.createGraphics();
+		double x = (h - w) / 2.0;
+		double y = (w - h) / 2.0;
+		//AffineTransform at = new AffineTransform().getTranslateInstance(x, y);
+		//at.rotate(Math.toRadians(angle), w / 2.0, h / 2.0);
+		g.rotate(Math.toRadians(angle), w/2,h/2);
+		g.drawImage(picture.getImage(), 0, 0, null);
+		g.dispose();
+		picture = new ImageIcon(image);
+		
+		return picture;
+	}
+}

@@ -1,0 +1,102 @@
+E:\Download\Sem I\Baze de Date\proiect\Cabinet medical\Cabinet medical\bin\Debug\Cabinet medical.exe.config
+E:\Download\Sem I\Baze de Date\proiect\Cabinet medical\Cabinet medical\bin\Debug\Cabinet medical.exe
+E:\Download\Sem I\Baze de Date\proiect\Cabinet medical\Cabinet medical\bin\Debug\Cabinet medical.pdb
+E:\Download\Sem I\Baze de Date\proiect\Cabinet medical\Cabinet medical\obj\Debug\MainWindow.g.cs
+E:\Download\Sem I\Baze de Date\proiect\Cabinet medical\Cabinet medical\obj\Debug\App.g.cs
+E:\Download\Sem I\Baze de Date\proiect\Cabinet medical\Cabinet medical\obj\Debug\Cabinet medical_MarkupCompile.cache
+E:\Download\Sem I\Baze de Date\proiect\Cabinet medical\Cabinet medical\obj\Debug\Cabinet medical_MarkupCompile.lref
+E:\Download\Sem I\Baze de Date\proiect\Cabinet medical\Cabinet medical\obj\Debug\MainWindow.baml
+E:\Download\Sem I\Baze de Date\proiect\Cabinet medical\Cabinet medical\obj\Debug\Cabinet medical.g.resources
+E:\Download\Sem I\Baze de Date\proiect\Cabinet medical\Cabinet medical\obj\Debug\Cabinet_medical.Properties.Resources.resources
+E:\Download\Sem I\Baze de Date\proiect\Cabinet medical\Cabinet medical\obj\Debug\Cabinet medical.csproj.GenerateResource.Cache
+E:\Download\Sem I\Baze de Date\proiect\Cabinet medical\Cabinet medical\obj\Debug\Cabinet medical.exe
+E:\Download\Sem I\Baze de Date\proiect\Cabinet medical\Cabinet medical\obj\Debug\Cabinet medical.pdb
+E:\Download\Sem I\Baze de Date\proiect\Cabinet medical\Cabinet medical\obj\Debug\Styles\btnGlass.baml
+E:\Download\Sem I\Baze de Date\proiect\Cabinet medical\Cabinet medical\bin\Debug\MySql.Data.dll
+E:\Download\Sem I\Baze de Date\proiect\Cabinet medical\Cabinet medical\bin\Debug\MySql.Data.xml
+E:\Download\Sem I\Baze de Date\proiect\Cabinet medical\Cabinet medical\obj\Debug\Meniu_admin.g.cs
+E:\Download\Sem I\Baze de Date\proiect\Cabinet medical\Cabinet medical\obj\Debug\Meniu_medic.g.cs
+E:\Download\Sem I\Baze de Date\proiect\Cabinet medical\Cabinet medical\obj\Debug\Meniu_admin.baml
+E:\Download\Sem I\Baze de Date\proiect\Cabinet medical\Cabinet medical\obj\Debug\Meniu_medic.baml
+E:\Download\Sem I\Baze de Date\proiect\Cabinet medical\Cabinet medical\obj\Debug\Styles\btnHexagon.baml
+E:\Download\Sem I\Baze de Date\proiect\Cabinet medical\Cabinet medical\obj\Debug\Pacient.g.cs
+E:\Download\Sem I\Baze de Date\proiect\Cabinet medical\Cabinet medical\obj\Debug\Pacient.baml
+E:\Download\Sem I\Baze de Date\proiect\Cabinet medical\Cabinet medical\obj\Debug\Bebelusi.g.cs
+E:\Download\Sem I\Baze de Date\proiect\Cabinet medical\Cabinet medical\obj\Debug\Programari.g.cs
+E:\Download\Sem I\Baze de Date\proiect\Cabinet medical\Cabinet medical\obj\Debug\Registru_consultatii.g.cs
+E:\Download\Sem I\Baze de Date\proiect\Cabinet medical\Cabinet medical\obj\Debug\Bebelusi.baml
+E:\Download\Sem I\Baze de Date\proiect\Cabinet medical\Cabinet medical\obj\Debug\Programari.baml
+E:\Download\Sem I\Baze de Date\proiect\Cabinet medical\Cabinet medical\obj\Debug\Registru_consultatii.baml
+E:\Download\Sem I\Baze de Date\proiect\Cabinet medical\Cabinet medical\obj\Debug\Aparatura_medicala.g.cs
+E:\Download\Sem I\Baze de Date\proiect\Cabinet medical\Cabinet medical\obj\Debug\Bolnavi_cronici.g.cs
+E:\Download\Sem I\Baze de Date\proiect\Cabinet medical\Cabinet medical\obj\Debug\Chemari_domiciliu.g.cs
+E:\Download\Sem I\Baze de Date\proiect\Cabinet medical\Cabinet medical\obj\Debug\Documente.g.cs
+E:\Download\Sem I\Baze de Date\proiect\Cabinet medical\Cabinet medical\obj\Debug\Femei_insarcinate.g.cs
+E:\Download\Sem I\Baze de Date\proiect\Cabinet medical\Cabinet medical\obj\Debug\Medicamente.g.cs
+E:\Download\Sem I\Baze de Date\proiect\Cabinet medical\Cabinet medical\obj\Debug\Obiecte_sanitare.g.cs
+E:\Download\Sem I\Baze de Date\proiect\Cabinet medical\Cabinet medical\obj\Debug\Tratamente_boli.g.cs
+E:\Download\Sem I\Baze de Date\proiect\Cabinet medical\Cabinet medical\obj\Debug\Vaccin.g.cs
+E:\Download\Sem I\Baze de Date\proiect\Cabinet medical\Cabinet medical\obj\Debug\Aparatura_medicala.baml
+E:\Download\Sem I\Baze de Date\proiect\Cabinet medical\Cabinet medical\obj\Debug\Bolnavi_cronici.baml
+E:\Download\Sem I\Baze de Date\proiect\Cabinet medical\Cabinet medical\obj\Debug\Chemari_domiciliu.baml
+E:\Download\Sem I\Baze de Date\proiect\Cabinet medical\Cabinet medical\obj\Debug\Documente.baml
+E:\Download\Sem I\Baze de Date\proiect\Cabinet medical\Cabinet medical\obj\Debug\Femei_insarcinate.baml
+E:\Download\Sem I\Baze de Date\proiect\Cabinet medical\Cabinet medical\obj\Debug\Medicamente.baml
+E:\Download\Sem I\Baze de Date\proiect\Cabinet medical\Cabinet medical\obj\Debug\Obiecte_sanitare.baml
+E:\Download\Sem I\Baze de Date\proiect\Cabinet medical\Cabinet medical\obj\Debug\Tratamente_boli.baml
+E:\Download\Sem I\Baze de Date\proiect\Cabinet medical\Cabinet medical\obj\Debug\Vaccin.baml
+E:\Download\Sem I\Baze de Date\proiect\Cabinet medical\Cabinet medical\obj\Debug\Styles\datagridStyle.baml
+E:\Download\Sem I\Baze de Date\proiect\Cabinet medical\Cabinet medical\obj\Debug\Styles\tabControlStyle.baml
+E:\Download\Sem I\Baze de Date\proiect\Cabinet medical\Cabinet medical\obj\Debug\Styles\btnGlass2.baml
+E:\Download\Sem I\Baze de Date\proiect\Cabinet medical\Cabinet medical\obj\Debug\Cabinet medical.csprojResolveAssemblyReference.cache
+E:\School\Proiecte M\Facultate\An II\Sem I\Baze de date\proiect\Cabinet medical\Cabinet medical\bin\Debug\Cabinet medical.exe.config
+E:\School\Proiecte M\Facultate\An II\Sem I\Baze de date\proiect\Cabinet medical\Cabinet medical\obj\Debug\Cabinet medical.exe
+E:\School\Proiecte M\Facultate\An II\Sem I\Baze de date\proiect\Cabinet medical\Cabinet medical\obj\Debug\Cabinet medical.pdb
+E:\School\Proiecte M\Facultate\An II\Sem I\Baze de date\proiect\Cabinet medical\Cabinet medical\bin\Debug\Cabinet medical.exe
+E:\School\Proiecte M\Facultate\An II\Sem I\Baze de date\proiect\Cabinet medical\Cabinet medical\bin\Debug\Cabinet medical.pdb
+E:\School\Proiecte M\Facultate\An II\Sem I\Baze de date\proiect\Cabinet medical\Cabinet medical\bin\Debug\MySql.Data.dll
+E:\School\Proiecte M\Facultate\An II\Sem I\Baze de date\proiect\Cabinet medical\Cabinet medical\bin\Debug\MySql.Data.xml
+E:\School\Proiecte M\Facultate\An II\Sem I\Baze de date\proiect\Cabinet medical\Cabinet medical\obj\Debug\Cabinet medical.csprojResolveAssemblyReference.cache
+E:\School\Proiecte M\Facultate\An II\Sem I\Baze de date\proiect\Cabinet medical\Cabinet medical\obj\Debug\Aparatura_medicala.g.cs
+E:\School\Proiecte M\Facultate\An II\Sem I\Baze de date\proiect\Cabinet medical\Cabinet medical\obj\Debug\Bebelusi.g.cs
+E:\School\Proiecte M\Facultate\An II\Sem I\Baze de date\proiect\Cabinet medical\Cabinet medical\obj\Debug\Bolnavi_cronici.g.cs
+E:\School\Proiecte M\Facultate\An II\Sem I\Baze de date\proiect\Cabinet medical\Cabinet medical\obj\Debug\Chemari_domiciliu.g.cs
+E:\School\Proiecte M\Facultate\An II\Sem I\Baze de date\proiect\Cabinet medical\Cabinet medical\obj\Debug\Documente.g.cs
+E:\School\Proiecte M\Facultate\An II\Sem I\Baze de date\proiect\Cabinet medical\Cabinet medical\obj\Debug\Femei_insarcinate.g.cs
+E:\School\Proiecte M\Facultate\An II\Sem I\Baze de date\proiect\Cabinet medical\Cabinet medical\obj\Debug\MainWindow.g.cs
+E:\School\Proiecte M\Facultate\An II\Sem I\Baze de date\proiect\Cabinet medical\Cabinet medical\obj\Debug\Medicamente.g.cs
+E:\School\Proiecte M\Facultate\An II\Sem I\Baze de date\proiect\Cabinet medical\Cabinet medical\obj\Debug\Meniu_admin.g.cs
+E:\School\Proiecte M\Facultate\An II\Sem I\Baze de date\proiect\Cabinet medical\Cabinet medical\obj\Debug\Meniu_medic.g.cs
+E:\School\Proiecte M\Facultate\An II\Sem I\Baze de date\proiect\Cabinet medical\Cabinet medical\obj\Debug\Obiecte_sanitare.g.cs
+E:\School\Proiecte M\Facultate\An II\Sem I\Baze de date\proiect\Cabinet medical\Cabinet medical\obj\Debug\Pacient.g.cs
+E:\School\Proiecte M\Facultate\An II\Sem I\Baze de date\proiect\Cabinet medical\Cabinet medical\obj\Debug\Programari.g.cs
+E:\School\Proiecte M\Facultate\An II\Sem I\Baze de date\proiect\Cabinet medical\Cabinet medical\obj\Debug\Registru_consultatii.g.cs
+E:\School\Proiecte M\Facultate\An II\Sem I\Baze de date\proiect\Cabinet medical\Cabinet medical\obj\Debug\Tratamente_boli.g.cs
+E:\School\Proiecte M\Facultate\An II\Sem I\Baze de date\proiect\Cabinet medical\Cabinet medical\obj\Debug\Vaccin.g.cs
+E:\School\Proiecte M\Facultate\An II\Sem I\Baze de date\proiect\Cabinet medical\Cabinet medical\obj\Debug\App.g.cs
+E:\School\Proiecte M\Facultate\An II\Sem I\Baze de date\proiect\Cabinet medical\Cabinet medical\obj\Debug\Cabinet medical_MarkupCompile.cache
+E:\School\Proiecte M\Facultate\An II\Sem I\Baze de date\proiect\Cabinet medical\Cabinet medical\obj\Debug\Cabinet medical_MarkupCompile.lref
+E:\School\Proiecte M\Facultate\An II\Sem I\Baze de date\proiect\Cabinet medical\Cabinet medical\obj\Debug\Aparatura_medicala.baml
+E:\School\Proiecte M\Facultate\An II\Sem I\Baze de date\proiect\Cabinet medical\Cabinet medical\obj\Debug\Bebelusi.baml
+E:\School\Proiecte M\Facultate\An II\Sem I\Baze de date\proiect\Cabinet medical\Cabinet medical\obj\Debug\Bolnavi_cronici.baml
+E:\School\Proiecte M\Facultate\An II\Sem I\Baze de date\proiect\Cabinet medical\Cabinet medical\obj\Debug\Chemari_domiciliu.baml
+E:\School\Proiecte M\Facultate\An II\Sem I\Baze de date\proiect\Cabinet medical\Cabinet medical\obj\Debug\Documente.baml
+E:\School\Proiecte M\Facultate\An II\Sem I\Baze de date\proiect\Cabinet medical\Cabinet medical\obj\Debug\Femei_insarcinate.baml
+E:\School\Proiecte M\Facultate\An II\Sem I\Baze de date\proiect\Cabinet medical\Cabinet medical\obj\Debug\MainWindow.baml
+E:\School\Proiecte M\Facultate\An II\Sem I\Baze de date\proiect\Cabinet medical\Cabinet medical\obj\Debug\Medicamente.baml
+E:\School\Proiecte M\Facultate\An II\Sem I\Baze de date\proiect\Cabinet medical\Cabinet medical\obj\Debug\Meniu_admin.baml
+E:\School\Proiecte M\Facultate\An II\Sem I\Baze de date\proiect\Cabinet medical\Cabinet medical\obj\Debug\Meniu_medic.baml
+E:\School\Proiecte M\Facultate\An II\Sem I\Baze de date\proiect\Cabinet medical\Cabinet medical\obj\Debug\Obiecte_sanitare.baml
+E:\School\Proiecte M\Facultate\An II\Sem I\Baze de date\proiect\Cabinet medical\Cabinet medical\obj\Debug\Pacient.baml
+E:\School\Proiecte M\Facultate\An II\Sem I\Baze de date\proiect\Cabinet medical\Cabinet medical\obj\Debug\Programari.baml
+E:\School\Proiecte M\Facultate\An II\Sem I\Baze de date\proiect\Cabinet medical\Cabinet medical\obj\Debug\Registru_consultatii.baml
+E:\School\Proiecte M\Facultate\An II\Sem I\Baze de date\proiect\Cabinet medical\Cabinet medical\obj\Debug\Styles\btnGlass.baml
+E:\School\Proiecte M\Facultate\An II\Sem I\Baze de date\proiect\Cabinet medical\Cabinet medical\obj\Debug\Styles\btnGlass2.baml
+E:\School\Proiecte M\Facultate\An II\Sem I\Baze de date\proiect\Cabinet medical\Cabinet medical\obj\Debug\Styles\btnHexagon.baml
+E:\School\Proiecte M\Facultate\An II\Sem I\Baze de date\proiect\Cabinet medical\Cabinet medical\obj\Debug\Styles\datagridStyle.baml
+E:\School\Proiecte M\Facultate\An II\Sem I\Baze de date\proiect\Cabinet medical\Cabinet medical\obj\Debug\Styles\tabControlStyle.baml
+E:\School\Proiecte M\Facultate\An II\Sem I\Baze de date\proiect\Cabinet medical\Cabinet medical\obj\Debug\Tratamente_boli.baml
+E:\School\Proiecte M\Facultate\An II\Sem I\Baze de date\proiect\Cabinet medical\Cabinet medical\obj\Debug\Vaccin.baml
+E:\School\Proiecte M\Facultate\An II\Sem I\Baze de date\proiect\Cabinet medical\Cabinet medical\obj\Debug\Cabinet medical.g.resources
+E:\School\Proiecte M\Facultate\An II\Sem I\Baze de date\proiect\Cabinet medical\Cabinet medical\obj\Debug\Cabinet_medical.Properties.Resources.resources
+E:\School\Proiecte M\Facultate\An II\Sem I\Baze de date\proiect\Cabinet medical\Cabinet medical\obj\Debug\Cabinet medical.csproj.GenerateResource.Cache

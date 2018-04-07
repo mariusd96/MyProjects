@@ -1,0 +1,99 @@
+﻿<Window x:Class="Cabinet_medical.Chemari_domiciliu"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Cabinet_medical"
+        mc:Ignorable="d"
+        Title="Chemari_domiciliu" Height="600" Width="1024" WindowStartupLocation="CenterScreen" WindowStyle="None" AllowsTransparency="True" BorderThickness="5" BorderBrush="#FF00B09E">
+    <Window.Background>
+        <ImageBrush ImageSource="Resources/white.jpg"/>
+    </Window.Background>
+
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Styles/btnGlass.xaml" />
+                <ResourceDictionary Source="Styles/btnGlass2.xaml" />
+                <ResourceDictionary Source="Styles/btnHexagon.xaml" />
+                <ResourceDictionary Source="Styles/datagridStyle.xaml" />
+                <ResourceDictionary Source="Styles/tabControlStyle.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+
+    <Grid>
+        <DockPanel Name="TitleBar" DockPanel.Dock="Top" Height="30" Background="Transparent" Margin="0" VerticalAlignment="Top" MouseLeftButtonDown="TitleBar_MouseLeftButtonDown">
+            <Button x:Name="close" Height="20" VerticalAlignment="Center" Width="20" HorizontalAlignment="Right" Margin="0,10,20,0" DockPanel.Dock="Right" Foreground="Red" FontWeight="Bold" Style="{StaticResource btnGlass}" FontSize="14.667" VerticalContentAlignment="Top" Cursor="Hand" Click="close_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="Resources2/close.png"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="maximize" Height="20" VerticalAlignment="Center" Width="20" HorizontalAlignment="Right" Margin="0,10,5,0" DockPanel.Dock="Right" Foreground="Red" FontWeight="Bold" Style="{StaticResource btnGlass}" FontSize="14.667" VerticalContentAlignment="Center" Cursor="Hand" Click="maximize_Click" Background="{x:Null}">
+                <StackPanel>
+                    <Image Source="Resources2/maximize.png" x:Name="maximize_img"/>
+                </StackPanel>
+            </Button>
+            <Button x:Name="minimize" Height="20" VerticalAlignment="Center" Width="20" HorizontalAlignment="Right" Margin="0,10,5,0" DockPanel.Dock="Right" Foreground="#FF00B0A0" FontWeight="Bold" Style="{StaticResource btnGlass}" FontSize="14.667" VerticalContentAlignment="Center" Cursor="Hand" Click="minimize_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="Resources2/minimize.png"/>
+                </Button.Background>
+            </Button>
+        </DockPanel>
+
+        <TabControl x:Name="tabControl" HorizontalAlignment="Center" Height="440" VerticalAlignment="Center" Width="850" Background="#9900B0A0" BorderBrush="#FF00B0A0" BorderThickness="3">
+            <TabItem Header="Orarul săptămânii" Foreground="White">
+                <Grid>
+                    <DataGrid x:Name="dataGrid1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="700" Height="270" AlternationCount="2" FontFamily="Times New Roman" FontSize="14.667" Background="{x:Null}" Margin="70,106,70,30" IsReadOnly="True" />
+                    <Border BorderBrush="#FF00B0A0" BorderThickness="3" Height="30" Width="300" Background="White" CornerRadius="15" HorizontalAlignment="Center" Margin="70,35,470,341">
+                        <Canvas Height="25">
+                            <Label x:Name="label" Content="Nume : " Width="55" Canvas.Left="0" Canvas.Top="1" FontFamily="Times New Roman" FontSize="14.667" Padding="8,3,5,5" VerticalContentAlignment="Center"/>
+                            <Button x:Name="cauta" Height="25" Canvas.Right="5" Canvas.Top="0" Width="30" Style="{StaticResource btnGlass}" Cursor="Hand" Click="cauta_Click">
+                                <Button.Background>
+                                    <ImageBrush ImageSource="Resources2/lupa.png"/>
+                                </Button.Background>
+                            </Button>
+                            <TextBox x:Name="numeBox" Height="25" TextWrapping="NoWrap" Canvas.Left="55" Width="200" VerticalContentAlignment="Center" FontFamily="Times New Roman" FontSize="14.667" BorderBrush="{x:Null}" BorderThickness="0" Background="{x:Null}" TextChanged="cautareBox_TextChanged"/>
+                        </Canvas>
+                    </Border>
+                    <Border BorderBrush="#FF00B0A0" BorderThickness="3" Height="30" Width="300" Background="White" CornerRadius="15" Margin="470,35,70,341" >
+                        <Canvas Height="25">
+                            <Label x:Name="label3" Content="CNP : " Width="50" Canvas.Left="0" Canvas.Top="1" FontFamily="Times New Roman" FontSize="14.667" Padding="8,3,5,5" VerticalContentAlignment="Center"/>
+                            <Button x:Name="cauta3" Height="25" Canvas.Right="5" Canvas.Top="0" Width="30" Style="{StaticResource btnGlass}" Cursor="Hand" Click="cauta_Click">
+                                <Button.Background>
+                                    <ImageBrush ImageSource="Resources2/lupa.png"/>
+                                </Button.Background>
+                            </Button>
+                            <TextBox x:Name="cnpBox" Height="25" TextWrapping="NoWrap" Canvas.Left="50" Width="205" VerticalContentAlignment="Center" FontFamily="Times New Roman" FontSize="14.667" BorderBrush="{x:Null}" BorderThickness="0" Background="{x:Null}" TextChanged="cautareBox_TextChanged"/>
+                        </Canvas>
+                    </Border>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Adăugare programare" Foreground="White" >
+                <Grid>
+                    <Canvas HorizontalAlignment="Center" Height="120" VerticalAlignment="Center" Width="605">
+                        <Label x:Name="cnpLabel" Content="CNP" Canvas.Left="10" Canvas.Top="10" FontFamily="Times New Roman" FontSize="18.667" Foreground="White"/>
+                        <Border Height="30" Canvas.Left="85" Canvas.Top="10" Width="180" CornerRadius="15" Background="White" BorderBrush="#FF00B0A0" BorderThickness="3">
+                            <ComboBox x:Name="cnpCB" Height="25" Width="150" IsEditable="True" Background="{x:Null}" BorderBrush="{x:Null}" BorderThickness="0" IsSynchronizedWithCurrentItem="True" FontFamily="Times New Roman" FontSize="14.667" VerticalContentAlignment="Center" Cursor="Hand"/>
+                        </Border>
+                        <Label x:Name="dataLabel" Content="Data" Canvas.Left="340" Canvas.Top="10" FontFamily="Times New Roman" FontSize="18.667" Foreground="White"/>
+                        <Border Height="30" Canvas.Left="400" Canvas.Top="10" Width="180" CornerRadius="15" Background="White" BorderBrush="#FF00B0A0" BorderThickness="3">
+                            <DatePicker Name="DatePicker1" Width="150" Background="{x:Null}" BorderBrush="{x:Null}" FontFamily="Times New Roman" FontSize="14.667"/>
+                        </Border>
+                        <Label x:Name="scopLabel" Content="Scop" Canvas.Left="10" Canvas.Top="65" FontFamily="Times New Roman" FontSize="18.667" Foreground="White"/>
+                        <Border Height="60" Canvas.Left="85" Canvas.Top="50" Width="495" CornerRadius="15" Background="White" BorderBrush="#FF00B0A0" BorderThickness="3">
+                            <TextBox x:Name="scopBox" TextWrapping="Wrap" Text="" Width="465" Background="{x:Null}" BorderBrush="{x:Null}" BorderThickness="0"/>
+                        </Border>
+                    </Canvas>
+                    <Button x:Name="insert" Content="Inserează datele" HorizontalAlignment="Center" Height="40" Margin="335,345,335,21" Width="170" Style="{StaticResource btnGlass2}" Background="White" BorderBrush="#FF00B0A0" BorderThickness="3" Cursor="Hand" Click="insert_Click"/>
+                </Grid>
+            </TabItem>
+        </TabControl>
+
+        <Button x:Name="btn_meniu" HorizontalAlignment="Center" Height="40" VerticalAlignment="Bottom" Width="40" Style="{StaticResource btnHexagon}" Margin="487,0,487,20" Click="btn_meniu_Click" BorderBrush="{x:Null}" Cursor="Hand">
+            <Button.Background>
+                <ImageBrush ImageSource="Resources/menu.png"/>
+            </Button.Background>
+        </Button>
+    </Grid>
+</Window>

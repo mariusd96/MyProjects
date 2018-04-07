@@ -1,0 +1,177 @@
+﻿<Window x:Class="Cabinet_medical.Pacient"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Cabinet_medical"
+        mc:Ignorable="d"
+        Title="Pacient" Height="600" Width="1024" WindowStartupLocation="CenterScreen" WindowStyle="None" AllowsTransparency="True" BorderThickness="5" BorderBrush="#FF00B09E">
+    <Window.Background>
+        <ImageBrush ImageSource="Resources/white.jpg"/>
+    </Window.Background>
+
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Styles/btnGlass.xaml" />
+                <ResourceDictionary Source="Styles/btnGlass2.xaml" />
+                <ResourceDictionary Source="Styles/btnHexagon.xaml" />
+                <ResourceDictionary Source="Styles/datagridStyle.xaml" />
+                <ResourceDictionary Source="Styles/tabControlStyle.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+
+    <Grid>
+        <DockPanel Name="TitleBar" DockPanel.Dock="Top" Height="30" Background="Transparent" Margin="0" VerticalAlignment="Top" MouseLeftButtonDown="TitleBar_MouseLeftButtonDown">
+            <Button x:Name="close" Height="20" VerticalAlignment="Center" Width="20" HorizontalAlignment="Right" Margin="0,10,20,0" DockPanel.Dock="Right" Foreground="Red" FontWeight="Bold" Style="{StaticResource btnGlass}" FontSize="14.667" VerticalContentAlignment="Top" Cursor="Hand" Click="close_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="Resources2/close.png"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="maximize" Height="20" VerticalAlignment="Center" Width="20" HorizontalAlignment="Right" Margin="0,10,5,0" DockPanel.Dock="Right" Foreground="Red" FontWeight="Bold" Style="{StaticResource btnGlass}" FontSize="14.667" VerticalContentAlignment="Center" Cursor="Hand" Click="maximize_Click" Background="{x:Null}">
+                <StackPanel>
+                    <Image Source="Resources2/maximize.png" x:Name="maximize_img"/>
+                </StackPanel>
+            </Button>
+            <Button x:Name="minimize" Height="20" VerticalAlignment="Center" Width="20" HorizontalAlignment="Right" Margin="0,10,5,0" DockPanel.Dock="Right" Foreground="#FF00B0A0" FontWeight="Bold" Style="{StaticResource btnGlass}" FontSize="14.667" VerticalContentAlignment="Center" Cursor="Hand" Click="minimize_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="Resources2/minimize.png"/>
+                </Button.Background>
+            </Button>
+        </DockPanel>
+        <TabControl x:Name="tabControl" HorizontalAlignment="Center" Height="440" VerticalAlignment="Center" Width="900" Background="#9900B0A0" BorderBrush="#FF00B09F" BorderThickness="3">
+            <TabItem Header="Vizualizare pacienți" FontFamily="Times New Roman" FontSize="16" Foreground="White" Cursor="Hand">
+                <Grid>
+                    <DataGrid x:Name="dataGrid1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="800" Height="270" AlternationCount="2" FontFamily="Times New Roman" FontSize="14.667" Background="{x:Null}" IsReadOnly="True" />
+                </Grid>
+            </TabItem>
+            <TabItem Header="Inserare pacient" FontFamily="Times New Roman" FontSize="16" Foreground="White">
+                <Grid>
+                    <Canvas HorizontalAlignment="Center" Height="280" Width="900" Margin="-5,24,-5,80" Name="canvas1">
+                        <Label x:Name="nume" Content="Nume" Canvas.Left="25" Canvas.Top="10" FontFamily="Times New Roman" FontSize="18.667" Foreground="White"/>
+                        <Border Height="30" Canvas.Left="125" Canvas.Top="10" Width="250" CornerRadius="15" Background="White" BorderBrush="#FF00B0A0" BorderThickness ="3">
+                            <TextBox x:Name="nume_pacient" Height="30" Width="220" TextWrapping="Wrap" Text="" Background="{x:Null}" Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Times New Roman" FontSize="16" VerticalContentAlignment="Center" BorderBrush="{x:Null}" BorderThickness="0"/>
+                        </Border>
+
+                        <Label x:Name="prenume" Content="Prenume" Canvas.Left="25" Canvas.Top="60" FontFamily="Times New Roman" FontSize="18.667" Foreground="White"/>
+                        <Border Height="30" Canvas.Left="125" Canvas.Top="60" Width="250" CornerRadius="15" Background="White" BorderBrush="#FF00B0A0" BorderThickness="3">
+                            <TextBox x:Name="prenume_pacient" Height="30" Width="220" TextWrapping="Wrap" Text="" Background="{x:Null}" Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Times New Roman" FontSize="16" VerticalContentAlignment="Center" BorderBrush="{x:Null}"  BorderThickness="0"/>
+                        </Border>
+
+                        <Label x:Name="cnp" Content="CNP" Canvas.Left="25" Canvas.Top="110" FontFamily="Times New Roman" FontSize="18.667" Foreground="White"/>
+                        <Border Height="30" Canvas.Left="125" Canvas.Top="110" Width="250" CornerRadius="15" Background="White" BorderBrush="#FF00B0A0" BorderThickness="3">
+                            <TextBox x:Name="cnp_pacient" Height="30" Width="220" TextWrapping="Wrap" Text="" Background="{x:Null}" Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Times New Roman" FontSize="16" VerticalContentAlignment="Center" BorderBrush="{x:Null}" BorderThickness="0"/>
+                        </Border>
+
+                        <Label x:Name="adresa" Content="Adresă" Canvas.Left="25" Canvas.Top="175" FontFamily="Times New Roman" FontSize="18.667" Foreground="White"/>
+                        <Border Height="60" Canvas.Left="125" Canvas.Top="160" Width="250" CornerRadius="15" Background="White" BorderBrush="#FF00B0A0" BorderThickness="3">
+                            <TextBox x:Name="adresa_pacient" Height="50" Width="220" TextWrapping="Wrap" Text="" Background="{x:Null}" Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Times New Roman" FontSize="16" VerticalContentAlignment="Top" BorderBrush="{x:Null}" BorderThickness="0"/>
+                        </Border>
+
+                        <Label x:Name="telefon" Content="Telefon" Canvas.Left="25" Canvas.Top="240" FontFamily="Times New Roman" FontSize="18.667" Foreground="White"/>
+                        <Border Height="30" Canvas.Left="125" Canvas.Top="240" Width="250" CornerRadius="15" Background="White" BorderBrush="#FF00B0A0" BorderThickness="3">
+                            <TextBox x:Name="telefon_pacient" Height="30" Width="220" TextWrapping="Wrap" Text="" Background="{x:Null}" Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Times New Roman" FontSize="16" VerticalContentAlignment="Center" BorderBrush="{x:Null}" BorderThickness="0"/>
+                        </Border>
+
+                        <Label x:Name="inaltime" Content="Înălțime" Canvas.Left="504" Canvas.Top="24" FontFamily="Times New Roman" FontSize="18.667" Foreground="White"/>
+                        <Border Height="30" Canvas.Left="674" Canvas.Top="24" Width="100" CornerRadius="15" Background="White" BorderBrush="#FF00B0A0" BorderThickness="3">
+                            <TextBox x:Name="inaltime_pacient" Height="30" Width="80" TextWrapping="Wrap" Text="" Background="{x:Null}" Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Times New Roman" FontSize="16" VerticalContentAlignment="Center" BorderBrush="{x:Null}" BorderThickness="0"/>
+                        </Border>
+                        <Label x:Name="unitate_metri" Content="(m)" Canvas.Left="784" Canvas.Top="24" FontFamily="Times New Roman" FontSize="18.667" Foreground="White"/>
+
+                        <Label x:Name="masa_corporala" Content="Masă corporală" Canvas.Left="504" Canvas.Top="74" FontFamily="Times New Roman" FontSize="18.667" Foreground="White"/>
+                        <Border Height="30" Canvas.Left="674" Canvas.Top="74" Width="100" CornerRadius="15" Background="White" BorderBrush="#FF00B0A0" BorderThickness="3">
+                            <TextBox x:Name="masa_corporala_pacient" Height="30" Width="80" TextWrapping="Wrap" Text="" Background="{x:Null}" Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Times New Roman" FontSize="16" VerticalContentAlignment="Center" BorderBrush="{x:Null}" BorderThickness="0"/>
+                        </Border>
+                        <Label x:Name="unitate_masa_corporala" Content="(kg)" Canvas.Left="784" Canvas.Top="74" FontFamily="Times New Roman" FontSize="18.667" Foreground="White"/>
+
+                        <Label x:Name="tensiune_arteriala" Content="Tensiune arterială" Canvas.Left="504" Canvas.Top="124" FontFamily="Times New Roman" FontSize="18.667" Foreground="White"/>
+                        <Border Height="30" Canvas.Left="674" Canvas.Top="124" Width="100" CornerRadius="15" Background="White" BorderBrush="#FF00B0A0" BorderThickness="3">
+                            <TextBox x:Name="tensiune_arteriala_pacient" Height="30" Width="80" TextWrapping="Wrap" Text="" Background="{x:Null}" Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Times New Roman" FontSize="16" VerticalContentAlignment="Center" BorderBrush="{x:Null}" BorderThickness="0"/>
+                        </Border>
+                        <Label x:Name="unitate_mm_mercur" Content="(mm / Hg)" Canvas.Left="784" Canvas.Top="124" FontFamily="Times New Roman" FontSize="18.667" Foreground="White"/>
+
+                        <Label x:Name="glicemie" Content="Glicemie" Canvas.Left="504" Canvas.Top="174" FontFamily="Times New Roman" FontSize="18.667" Foreground="White"/>
+                        <Border Height="30" Canvas.Left="674" Canvas.Top="174" Width="100" CornerRadius="15" Background="White" BorderBrush="#FF00B0A0" BorderThickness="3">
+                            <TextBox x:Name="glicemie_pacient" Height="30" Width="80" TextWrapping="Wrap" Text="" Background="{x:Null}" Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Times New Roman" FontSize="16" VerticalContentAlignment="Center" BorderBrush="{x:Null}" BorderThickness="0"/>
+                        </Border>
+                        <Label x:Name="unitate_mg_dl" Content="(mg / dl)" Canvas.Left="784" Canvas.Top="174" FontFamily="Times New Roman" FontSize="18.667" Foreground="White"/>
+
+                        <Label x:Name="grupa_sanguina" Content="Grupă sanguină" Canvas.Left="504" Canvas.Top="224" FontFamily="Times New Roman" FontSize="18.667" Foreground="White"/>
+                        <Border Height="30" Canvas.Left="674" Canvas.Top="224" Width="100" CornerRadius="15" Background="White" BorderBrush="#FF00B0A0" BorderThickness="3">
+                            <TextBox x:Name="grupa_sanguina_pacient" Height="30" Width="80" TextWrapping="Wrap" Text="" Background="{x:Null}" Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Times New Roman" FontSize="16" VerticalContentAlignment="Center" BorderBrush="{x:Null}" BorderThickness="0"/>
+                        </Border>
+                    </Canvas>
+                    <Button x:Name="inserare" Content="Inserare" HorizontalAlignment="Center" Height="35" Width="160" Background="White" Foreground="Black" VerticalContentAlignment="Center" Style="{StaticResource ResourceKey=btnGlass2}" Click="inserare_Click" BorderBrush="#FF00B0A0" BorderThickness="3" Margin="365,330,365,19" Cursor="Hand"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Date pacient" FontFamily="Times New Roman" FontSize="16" Foreground="White" Cursor="Hand">
+                <Grid>
+                    <Canvas HorizontalAlignment="Center" Height="280" Width="900" Margin="-5,24,-5,80">
+                        <Label x:Name="nume2" Content="Nume" Canvas.Left="25" Canvas.Top="10" FontFamily="Times New Roman" FontSize="18.667" Foreground="White"/>
+                        <Border Height="30" Canvas.Left="125" Canvas.Top="10" Width="250" CornerRadius="15" Background="White" BorderBrush="#FF00B0A0" BorderThickness ="3">
+                            <TextBox x:Name="nume_pacient2" Height="30" Width="220" TextWrapping="Wrap" Text="" Background="{x:Null}" Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Times New Roman" FontSize="16" VerticalContentAlignment="Center" BorderBrush="{x:Null}" BorderThickness="0"/>
+                        </Border>
+
+                        <Label x:Name="prenume2" Content="Prenume" Canvas.Left="25" Canvas.Top="60" FontFamily="Times New Roman" FontSize="18.667" Foreground="White"/>
+                        <Border Height="30" Canvas.Left="125" Canvas.Top="60" Width="250" CornerRadius="15" Background="White" BorderBrush="#FF00B0A0" BorderThickness="3">
+                            <TextBox x:Name="prenume_pacient2" Height="30" Width="220" TextWrapping="Wrap" Text="" Background="{x:Null}" Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Times New Roman" FontSize="16" VerticalContentAlignment="Center" BorderBrush="{x:Null}"  BorderThickness="0"/>
+                        </Border>
+
+                        <Label x:Name="cnp2" Content="CNP" Canvas.Left="25" Canvas.Top="110" FontFamily="Times New Roman" FontSize="18.667" Foreground="White"/>
+                        <Border Height="30" Canvas.Left="125" Canvas.Top="110" Width="250" CornerRadius="15" Background="White" BorderBrush="#FF00B0A0" BorderThickness="3">
+                            <TextBox x:Name="cnp_pacient2" Height="30" Width="220" TextWrapping="Wrap" Text="" Background="{x:Null}" Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Times New Roman" FontSize="16" VerticalContentAlignment="Center" BorderBrush="{x:Null}" BorderThickness="0"/>
+                        </Border>
+
+                        <Label x:Name="adrsa2" Content="Adresă" Canvas.Left="25" Canvas.Top="175" FontFamily="Times New Roman" FontSize="18.667" Foreground="White"/>
+                        <Border Height="60" Canvas.Left="125" Canvas.Top="160" Width="250" CornerRadius="15" Background="White" BorderBrush="#FF00B0A0" BorderThickness="3">
+                            <TextBox x:Name="adresa_pacient2" Height="50" Width="220" TextWrapping="Wrap" Text="" Background="{x:Null}" Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Times New Roman" FontSize="16" VerticalContentAlignment="Top" BorderBrush="{x:Null}" BorderThickness="0"/>
+                        </Border>
+
+                        <Label x:Name="telefon2" Content="Telefon" Canvas.Left="25" Canvas.Top="240" FontFamily="Times New Roman" FontSize="18.667" Foreground="White"/>
+                        <Border Height="30" Canvas.Left="125" Canvas.Top="240" Width="250" CornerRadius="15" Background="White" BorderBrush="#FF00B0A0" BorderThickness="3">
+                            <TextBox x:Name="telefon_pacient2" Height="30" Width="220" TextWrapping="Wrap" Text="" Background="{x:Null}" Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Times New Roman" FontSize="16" VerticalContentAlignment="Center" BorderBrush="{x:Null}" BorderThickness="0"/>
+                        </Border>
+
+                        <Label x:Name="inaltime2" Content="Înălțime" Canvas.Left="504" Canvas.Top="24" FontFamily="Times New Roman" FontSize="18.667" Foreground="White"/>
+                        <Border Height="30" Canvas.Left="674" Canvas.Top="24" Width="100" CornerRadius="15" Background="White" BorderBrush="#FF00B0A0" BorderThickness="3">
+                            <TextBox x:Name="inaltime_pacient2" Height="30" Width="80" TextWrapping="Wrap" Text="" Background="{x:Null}" Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Times New Roman" FontSize="16" VerticalContentAlignment="Center" BorderBrush="{x:Null}" BorderThickness="0"/>
+                        </Border>
+                        <Label x:Name="unitate_metri2" Content="(m)" Canvas.Left="784" Canvas.Top="24" FontFamily="Times New Roman" FontSize="18.667" Foreground="White"/>
+
+                        <Label x:Name="masa_corporala2" Content="Masă corporală" Canvas.Left="504" Canvas.Top="74" FontFamily="Times New Roman" FontSize="18.667" Foreground="White"/>
+                        <Border Height="30" Canvas.Left="674" Canvas.Top="74" Width="100" CornerRadius="15" Background="White" BorderBrush="#FF00B0A0" BorderThickness="3">
+                            <TextBox x:Name="masa_corporala_pacient2" Height="30" Width="80" TextWrapping="Wrap" Text="" Background="{x:Null}" Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Times New Roman" FontSize="16" VerticalContentAlignment="Center" BorderBrush="{x:Null}" BorderThickness="0"/>
+                        </Border>
+                        <Label x:Name="unitate_masa_corporala2" Content="(kg)" Canvas.Left="784" Canvas.Top="74" FontFamily="Times New Roman" FontSize="18.667" Foreground="White"/>
+
+                        <Label x:Name="tensiune_arteriala2" Content="Tensiune arterială" Canvas.Left="504" Canvas.Top="124" FontFamily="Times New Roman" FontSize="18.667" Foreground="White"/>
+                        <Border Height="30" Canvas.Left="674" Canvas.Top="124" Width="100" CornerRadius="15" Background="White" BorderBrush="#FF00B0A0" BorderThickness="3">
+                            <TextBox x:Name="tensiune_arteriala_pacient2" Height="30" Width="80" TextWrapping="Wrap" Text="" Background="{x:Null}" Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Times New Roman" FontSize="16" VerticalContentAlignment="Center" BorderBrush="{x:Null}" BorderThickness="0"/>
+                        </Border>
+                        <Label x:Name="unitate_mm_mercur2" Content="(mm / Hg)" Canvas.Left="784" Canvas.Top="124" FontFamily="Times New Roman" FontSize="18.667" Foreground="White"/>
+
+                        <Label x:Name="glicemie2" Content="Glicemie" Canvas.Left="504" Canvas.Top="174" FontFamily="Times New Roman" FontSize="18.667" Foreground="White"/>
+                        <Border Height="30" Canvas.Left="674" Canvas.Top="174" Width="100" CornerRadius="15" Background="White" BorderBrush="#FF00B0A0" BorderThickness="3">
+                            <TextBox x:Name="glicemie_pacient2" Height="30" Width="80" TextWrapping="Wrap" Text="" Background="{x:Null}" Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Times New Roman" FontSize="16" VerticalContentAlignment="Center" BorderBrush="{x:Null}" BorderThickness="0"/>
+                        </Border>
+                        <Label x:Name="unitate_mg_dl2" Content="(mg / dl)" Canvas.Left="784" Canvas.Top="174" FontFamily="Times New Roman" FontSize="18.667" Foreground="White"/>
+
+                        <Label x:Name="grupa_sanguina2" Content="Grupă sanguină" Canvas.Left="504" Canvas.Top="224" FontFamily="Times New Roman" FontSize="18.667" Foreground="White"/>
+                        <Border Height="30" Canvas.Left="674" Canvas.Top="224" Width="100" CornerRadius="15" Background="White" BorderBrush="#FF00B0A0" BorderThickness="3">
+                            <TextBox x:Name="grupa_sanguina_pacient2" Height="30" Width="80" TextWrapping="Wrap" Text="" Background="{x:Null}" Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Times New Roman" FontSize="16" VerticalContentAlignment="Center" BorderBrush="{x:Null}" BorderThickness="0"/>
+                        </Border>
+                    </Canvas>
+                </Grid>
+            </TabItem>
+        </TabControl>
+        <Button x:Name="btn_meniu" HorizontalAlignment="Center" Height="40" VerticalAlignment="Bottom" Width="40" Style="{StaticResource btnHexagon}" Margin="487,0,487,20" Click="btn_meniu_Click" BorderBrush="{x:Null}" Cursor="Hand">
+            <Button.Background>
+                <ImageBrush ImageSource="Resources/menu.png"/>
+            </Button.Background>
+
+        </Button>
+
+    </Grid>
+</Window>

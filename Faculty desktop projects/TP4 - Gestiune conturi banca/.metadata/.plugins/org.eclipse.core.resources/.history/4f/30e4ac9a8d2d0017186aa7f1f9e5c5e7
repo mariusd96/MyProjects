@@ -1,0 +1,9 @@
+package tema4_dulau_marius;
+
+public interface BankProc {
+
+	void addPerson(Person p);
+	void removePerson(Person p);
+	
+	
+}

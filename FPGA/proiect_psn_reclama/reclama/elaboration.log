@@ -1,0 +1,38 @@
+elbread.dll ver. 1.0.5.365 Thu May 12 11:10:34 2016
+
+
+----------------------------------------------------------
+Entity                          | Architecture   | Library
+----------------------------------------------------------
+reclama                         | arh_reclama    | reclama
+memorie_rom                     | comportamental | reclama
+animatie0                       | anim0          | reclama
+animatie1                       | anim1          | reclama
+animatie2                       | anim2          | reclama
+animatie3                       | anim3          | reclama
+animatie4                       | anim4          | reclama
+animatie5                       | anim5          | reclama
+animatie6                       | anim6          | reclama
+mux                             | comportamental | reclama
+divizor_reclama                 | comportamental | reclama
+afisor                          | comportamental | reclama
+is_enable                       | comportamental | reclama
+divizor_frecventa_1             | comportamental | reclama
+registru_inel                   | comportamental | reclama
+stins_aprins                    | comportamental | reclama
+pwm                             | arh            | reclama
+ritm_alert                      | comportamental | reclama
+cuvant4                         | comportamental | reclama
+luminozitate_procent            | arh            | reclama
+registru_inel_schimbare_litera  | comportamental | reclama
+curgere                         | comportamental | reclama
+----------------------------------------------------------
+
+-----------------------------
+Package             | Library
+-----------------------------
+standard            | std
+std_logic_1164      | ieee
+std_logic_arith     | ieee
+std_logic_unsigned  | ieee
+-----------------------------

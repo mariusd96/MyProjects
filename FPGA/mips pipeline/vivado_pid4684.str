@@ -1,0 +1,602 @@
+/*
+
+Vivado v2016.4 (64-bit)
+SW Build 1756540 on Mon Jan 23 19:11:23 MST 2017
+Process ID: 4684
+
+Current time: 	5/11/17 9:52:24 PM EEST
+Time zone: 	Eastern European Time (Europe/Athens)
+
+OS: Windows 10
+Version: 10.0
+Architecture: amd64
+Available processors (cores): 4
+
+Screen size: 1366x768
+Screen resolution (DPI): 96
+Available screens: 1
+Default font: family=Tahoma,name=Tahoma,style=plain,size=11
+
+Java version: 	1.8.0_66 64-bit
+Java home: 	E:/Xilinx/Vivado_2016.4/Vivado/2016.4/tps/win64/jre
+
+User name: 	Many
+User home directory: C:/Users/Many
+User working directory: E:/Download/Sem II/AC - Arhitectura calculatoarelor/laboratoare/lab9/mips
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI base root directory: E:/Xilinx/Vivado_2016.4/Vivado
+RDI data directory: E:/Xilinx/Vivado_2016.4/Vivado/2016.4/data
+RDI bin directory: E:/Xilinx/Vivado_2016.4/Vivado/2016.4/bin
+
+Vivado preferences path: C:/Users/Many/AppData/Roaming/Xilinx/Vivado/2016.4/vivado.ini
+Vivado layouts directory: C:/Users/Many/AppData/Roaming/Xilinx/Vivado/2016.4/layouts
+
+GUI allocated memory:	163 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 394 MB
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// [GUI Memory]: 55 MB (+54832kb) [00:00:15]
+// [Engine Memory]: 377 MB (+244091kb) [00:00:15]
+// TclEventType: PROJECT_OPEN_DIALOG
+// bt:g (cd:JFrame):  Open Project : addNotify
+// Opening Vivado Project: E:\Download\Sem II\AC - Arhitectura calculatoarelor\laboratoare\lab9\mips\mips.xpr. Version: Vivado v2016.4 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project {E:/Download/Sem II/AC - Arhitectura calculatoarelor/laboratoare/lab9/mips/mips.xpr} 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_NEW
+// Tcl Message: open_project {E:/Download/Sem II/AC - Arhitectura calculatoarelor/laboratoare/lab9/mips/mips.xpr} 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
+// HMemoryUtils.trashcanNow. Engine heap size: 405 MB. GUI used memory: 26 MB. Current time: 5/11/17 9:52:26 PM EEST
+// [Engine Memory]: 405 MB (+9600kb) [00:00:20]
+// TclEventType: PROJECT_NEW
+// [Engine Memory]: 475 MB (+51916kb) [00:00:30]
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/Xilinx/Vivado_2016.4/Vivado/2016.4/data/ip'. 
+// Tcl Message: open_project: Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 710.605 ; gain = 109.082 
+// Project name: mips; location: E:/Download/Sem II/AC - Arhitectura calculatoarelor/laboratoare/lab9/mips; part: xc7a35tcpg236-1
+dismissDialog("Open Project"); // bt:g (cd:JFrame)
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// [Engine Memory]: 499 MB (+534kb) [00:00:49]
+// Elapsed time: 23 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, test_env - Behavioral (test_env.vhd)]", 1); // y:i (D:JPanel, cd:JFrame)
+// [GUI Memory]: 58 MB (+866kb) [00:01:29]
+// PAPropertyPanels.initPanels (MEM.vhd) elapsed time: 0.2s
+// Elapsed time: 63 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, test_env - Behavioral (test_env.vhd), mem1 - MEM - Behavioral (MEM.vhd)]", 11, false); // y:i (D:JPanel, cd:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, test_env - Behavioral (test_env.vhd), mem1 - MEM - Behavioral (MEM.vhd)]", 11, false, false, false, false, false, true); // y:i (D:JPanel, cd:JFrame) - Double Click
+// [GUI Memory]: 63 MB (+1903kb) [00:02:02]
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, test_env - Behavioral (test_env.vhd), mem1 - MEM - Behavioral (MEM.vhd)]", 11, false); // y:i (D:JPanel, cd:JFrame)
+selectCodeEditor("MEM.vhd", 94, 100); // bF:I (JPanel:JComponent, cd:JFrame)
+// [GUI Memory]: 67 MB (+768kb) [00:04:07]
+// Elapsed time: 184 seconds
+selectCodeEditor("MEM.vhd", 223, 92); // bF:I (JPanel:JComponent, cd:JFrame)
+// HMemoryUtils.trashcanNow. Engine heap size: 516 MB. GUI used memory: 33 MB. Current time: 5/11/17 9:57:32 PM EEST
+// Elapsed time: 128 seconds
+selectCodeEditor("MEM.vhd", 298, 140); // bF:I (JPanel:JComponent, cd:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Elapsed time: 11 seconds
+selectCodeEditor("MEM.vhd", 385, 148); // bF:I (JPanel:JComponent, cd:JFrame)
+typeControlKey((HResource) null, "MEM.vhd", 'c'); // bF:I (JPanel:JComponent, cd:JFrame)
+selectCodeEditor("MEM.vhd", 291, 231); // bF:I (JPanel:JComponent, cd:JFrame)
+typeControlKey((HResource) null, "MEM.vhd", 'v'); // bF:I (JPanel:JComponent, cd:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+selectCodeEditor("MEM.vhd", 114, 147); // bF:I (JPanel:JComponent, cd:JFrame)
+selectCodeEditor("MEM.vhd", 396, 148); // bF:I (JPanel:JComponent, cd:JFrame)
+typeControlKey((HResource) null, "MEM.vhd", 'c'); // bF:I (JPanel:JComponent, cd:JFrame)
+typeControlKey((HResource) null, "MEM.vhd", 'v'); // bF:I (JPanel:JComponent, cd:JFrame)
+// [Engine Memory]: 525 MB (+760kb) [00:07:57]
+selectCodeEditor("MEM.vhd", 26, 245); // bF:I (JPanel:JComponent, cd:JFrame)
+typeControlKey((HResource) null, "MEM.vhd", 'c'); // bF:I (JPanel:JComponent, cd:JFrame)
+typeControlKey((HResource) null, "MEM.vhd", 'v'); // bF:I (JPanel:JComponent, cd:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Elapsed time: 34 seconds
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // B:b
+// [GUI Memory]: 72 MB (+1766kb) [00:09:14]
+// Elapsed time: 37 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 25, false); // u:K (t:D, cd:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// f:q (cd:JFrame): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, f:q)
+// y:aO (cd:JFrame): Synthesis is Out-of-date: addNotify
+dismissDialog("Launch Runs"); // f:q (cd:JFrame)
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a:JButton (JPanel:JComponent, y:aO)
+// bt:g (cd:JFrame):  Resetting Runs : addNotify
+dismissDialog("Synthesis is Out-of-date"); // y:aO (cd:JFrame)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// Tcl Message: reset_run synth_1 
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// 'cn' command handler elapsed time: 3 seconds
+dismissDialog("Resetting Runs"); // bt:g (cd:JFrame)
+// TclEventType: RUN_LAUNCH
+// bt:g (cd:JFrame):  Generate Bitstream : addNotify
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 2 
+// TclEventType: RUN_LAUNCH
+// HMemoryUtils.trashcanNow. Engine heap size: 539 MB. GUI used memory: 35 MB. Current time: 5/11/17 10:01:27 PM EEST
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Thu May 11 22:01:29 2017] Launched synth_1... Run output will be captured here: E:/Download/Sem II/AC - Arhitectura calculatoarelor/laboratoare/lab9/mips/mips.runs/synth_1/runme.log [Thu May 11 22:01:30 2017] Launched impl_1... Run output will be captured here: E:/Download/Sem II/AC - Arhitectura calculatoarelor/laboratoare/lab9/mips/mips.runs/impl_1/runme.log 
+dismissDialog("Generate Bitstream"); // bt:g (cd:JFrame)
+// TclEventType: RUN_COMPLETED
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking too long to process. Increasing delay to 2000 ms.
+// TclEventType: RUN_STEP_COMPLETED
+// Elapsed time: 129 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, test_env - Behavioral (test_env.vhd), if1 - InstrFetch - Behavioral (InstrFetch.vhd)]", 4, false); // y:i (D:JPanel, cd:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, test_env - Behavioral (test_env.vhd), if1 - InstrFetch - Behavioral (InstrFetch.vhd)]", 4, false, false, false, false, false, true); // y:i (D:JPanel, cd:JFrame) - Double Click
+// [GUI Memory]: 77 MB (+1943kb) [00:11:34]
+// TclEventType: RUN_COMPLETED
+// Elapsed time: 70 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, test_env - Behavioral (test_env.vhd), id1 - ID - Behavioral (ID.vhd)]", 7); // y:i (D:JPanel, cd:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, test_env - Behavioral (test_env.vhd), id1 - ID - Behavioral (ID.vhd), rg1 - reg_file - Behavioral (reg_file.vhd)]", 8, false); // y:i (D:JPanel, cd:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, test_env - Behavioral (test_env.vhd), id1 - ID - Behavioral (ID.vhd), rg1 - reg_file - Behavioral (reg_file.vhd)]", 8, false, false, false, false, false, true); // y:i (D:JPanel, cd:JFrame) - Double Click
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking too long to process. Increasing delay to 2000 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking too long to process. Increasing delay to 2000 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking too long to process. Increasing delay to 3000 ms.
+// TclEventType: RUN_COMPLETED
+// ah:y (cd:JFrame): Bitstream Generation Completed: addNotify
+// Elapsed time: 18 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a:JButton (JPanel:JComponent, ah:y)
+dismissDialog("Bitstream Generation Completed"); // ah:y (cd:JFrame)
+// [GUI Memory]: 82 MB (+470kb) [00:13:13]
+// Elapsed time: 10 seconds
+selectTab((HResource) null, (HResource) null, "Reports", 3); // aA:FrameContainer (ContainerContainer:JideSplitPane, cd:JFrame)
+selectTab((HResource) null, (HResource) null, "Design Runs", 4); // aA:FrameContainer (ContainerContainer:JideSplitPane, cd:JFrame)
+selectTab((HResource) null, (HResource) null, "Log", 2); // aA:FrameContainer (ContainerContainer:JideSplitPane, cd:JFrame)
+selectTab((HResource) null, (HResource) null, "Reports", 3); // aA:FrameContainer (ContainerContainer:JideSplitPane, cd:JFrame)
+selectTab((HResource) null, (HResource) null, "Messages", 1); // aA:FrameContainer (ContainerContainer:JideSplitPane, cd:JFrame)
+selectTab((HResource) null, (HResource) null, "Tcl Console", 0); // aA:FrameContainer (ContainerContainer:JideSplitPane, cd:JFrame)
+selectTab((HResource) null, (HResource) null, "Messages", 1); // aA:FrameContainer (ContainerContainer:JideSplitPane, cd:JFrame)
+selectTab((HResource) null, (HResource) null, "Log", 2); // aA:FrameContainer (ContainerContainer:JideSplitPane, cd:JFrame)
+selectTab((HResource) null, (HResource) null, "Reports", 3); // aA:FrameContainer (ContainerContainer:JideSplitPane, cd:JFrame)
+selectTab((HResource) null, (HResource) null, "Design Runs", 4); // aA:FrameContainer (ContainerContainer:JideSplitPane, cd:JFrame)
+// Elapsed time: 47 seconds
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, test_env - Behavioral (test_env.vhd), id1 - ID - Behavioral (ID.vhd)]", 7); // y:i (D:JPanel, cd:JFrame)
+// Elapsed time: 17 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, test_env - Behavioral (test_env.vhd)]", 1, true); // y:i (D:JPanel, cd:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, test_env - Behavioral (test_env.vhd)]", 1, true, false, false, false, false, true); // y:i (D:JPanel, cd:JFrame) - Double Click - Node
+// Elapsed time: 44 seconds
+selectCodeEditor("test_env.vhd", 181, 83); // bF:I (JPanel:JComponent, cd:JFrame)
+selectCodeEditor("test_env.vhd", 183, 93); // bF:I (JPanel:JComponent, cd:JFrame)
+// Elapsed time: 43 seconds
+selectCodeEditor("test_env.vhd", 341, 158); // bF:I (JPanel:JComponent, cd:JFrame)
+// Elapsed time: 41 seconds
+selectCodeEditor("test_env.vhd", 147, 210); // bF:I (JPanel:JComponent, cd:JFrame)
+// Elapsed time: 10 seconds
+selectCodeEditor("test_env.vhd", 278, 215); // bF:I (JPanel:JComponent, cd:JFrame)
+// Elapsed time: 15 seconds
+selectCodeEditor("test_env.vhd", 338, 213); // bF:I (JPanel:JComponent, cd:JFrame)
+// Elapsed time: 18 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, test_env - Behavioral (test_env.vhd)]", 1); // y:i (D:JPanel, cd:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, test_env - Behavioral (test_env.vhd), id1 - ID - Behavioral (ID.vhd)]", 7, true); // y:i (D:JPanel, cd:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, test_env - Behavioral (test_env.vhd), id1 - ID - Behavioral (ID.vhd)]", 7, true, false, false, false, false, true); // y:i (D:JPanel, cd:JFrame) - Double Click - Node
+// Elapsed time: 13 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "ID.vhd", 1); // k:TdiGroup (j:CodeEditorDocumentPane, cd:JFrame)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "InstrFetch.vhd", 3); // k:TdiGroup (j:CodeEditorDocumentPane, cd:JFrame)
+// Elapsed time: 20 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "test_env.vhd", 4); // k:TdiGroup (j:CodeEditorDocumentPane, cd:JFrame)
+selectCodeEditor("ID.vhd", 170, 130); // bF:I (JPanel:JComponent, cd:JFrame)
+// Elapsed time: 10 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "ID.vhd", 1); // k:TdiGroup (j:CodeEditorDocumentPane, cd:JFrame)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "InstrFetch.vhd", 3); // k:TdiGroup (j:CodeEditorDocumentPane, cd:JFrame)
+selectCodeEditor("test_env.vhd", 392, 161); // bF:I (JPanel:JComponent, cd:JFrame)
+selectCodeEditor("test_env.vhd", 443, 164); // bF:I (JPanel:JComponent, cd:JFrame)
+// Elapsed time: 28 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "test_env.vhd", 4); // k:TdiGroup (j:CodeEditorDocumentPane, cd:JFrame)
+// Elapsed time: 10 seconds
+selectCodeEditor("ID.vhd", 214, 75); // bF:I (JPanel:JComponent, cd:JFrame)
+// Elapsed time: 11 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "ID.vhd", 3); // k:TdiGroup (j:CodeEditorDocumentPane, cd:JFrame)
+// Elapsed time: 21 seconds
+selectCodeEditor("test_env.vhd", 559, 198); // bF:I (JPanel:JComponent, cd:JFrame)
+// Elapsed time: 16 seconds
+selectCodeEditor("test_env.vhd", 533, 196); // bF:I (JPanel:JComponent, cd:JFrame)
+// Elapsed time: 21 seconds
+selectCodeEditor("test_env.vhd", 345, 208); // bF:I (JPanel:JComponent, cd:JFrame)
+// Elapsed time: 20 seconds
+selectCodeEditor("test_env.vhd", 231, 143); // bF:I (JPanel:JComponent, cd:JFrame)
+// Elapsed time: 23 seconds
+selectCodeEditor("test_env.vhd", 281, 141); // bF:I (JPanel:JComponent, cd:JFrame)
+selectCodeEditor("test_env.vhd", 339, 141); // bF:I (JPanel:JComponent, cd:JFrame)
+selectCodeEditor("test_env.vhd", 367, 143); // bF:I (JPanel:JComponent, cd:JFrame)
+selectCodeEditor("test_env.vhd", 454, 146); // bF:I (JPanel:JComponent, cd:JFrame)
+selectCodeEditor("test_env.vhd", 497, 146); // bF:I (JPanel:JComponent, cd:JFrame)
+selectCodeEditor("test_env.vhd", 528, 143); // bF:I (JPanel:JComponent, cd:JFrame)
+selectCodeEditor("test_env.vhd", 583, 145); // bF:I (JPanel:JComponent, cd:JFrame)
+selectCodeEditor("test_env.vhd", 631, 149); // bF:I (JPanel:JComponent, cd:JFrame)
+// Elapsed time: 35 seconds
+selectCodeEditor("test_env.vhd", 271, 147); // bF:I (JPanel:JComponent, cd:JFrame)
+selectCodeEditor("test_env.vhd", 315, 147); // bF:I (JPanel:JComponent, cd:JFrame)
+selectCodeEditor("test_env.vhd", 375, 145); // bF:I (JPanel:JComponent, cd:JFrame)
+selectCodeEditor("test_env.vhd", 447, 148); // bF:I (JPanel:JComponent, cd:JFrame)
+selectCodeEditor("test_env.vhd", 488, 143); // bF:I (JPanel:JComponent, cd:JFrame)
+selectCodeEditor("test_env.vhd", 534, 143); // bF:I (JPanel:JComponent, cd:JFrame)
+selectCodeEditor("test_env.vhd", 578, 140); // bF:I (JPanel:JComponent, cd:JFrame)
+selectCodeEditor("test_env.vhd", 261, 149); // bF:I (JPanel:JComponent, cd:JFrame)
+selectCodeEditor("test_env.vhd", 329, 143); // bF:I (JPanel:JComponent, cd:JFrame)
+selectCodeEditor("test_env.vhd", 380, 148); // bF:I (JPanel:JComponent, cd:JFrame)
+// Elapsed time: 22 seconds
+selectCodeEditor("test_env.vhd", 94, 142); // bF:I (JPanel:JComponent, cd:JFrame)
+// Elapsed time: 22 seconds
+selectCodeEditor("test_env.vhd", 100, 163); // bF:I (JPanel:JComponent, cd:JFrame)
+// [GUI Memory]: 86 MB (+183kb) [00:25:37]
+// Elapsed time: 564 seconds
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, test_env - Behavioral (test_env.vhd), id1 - ID - Behavioral (ID.vhd)]", 7); // y:i (D:JPanel, cd:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, test_env - Behavioral (test_env.vhd), mem1 - MEM - Behavioral (MEM.vhd)]", 11, false); // y:i (D:JPanel, cd:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, test_env - Behavioral (test_env.vhd), mem1 - MEM - Behavioral (MEM.vhd)]", 11, false, false, false, false, false, true); // y:i (D:JPanel, cd:JFrame) - Double Click
+selectCodeEditor("MEM.vhd", 167, 159); // bF:I (JPanel:JComponent, cd:JFrame)
+selectCodeEditor("MEM.vhd", 413, 227); // bF:I (JPanel:JComponent, cd:JFrame)
+typeControlKey((HResource) null, "MEM.vhd", 'c'); // bF:I (JPanel:JComponent, cd:JFrame)
+typeControlKey(null, null, 'z');
+typeControlKey((HResource) null, "MEM.vhd", 'c'); // bF:I (JPanel:JComponent, cd:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Elapsed time: 24 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "MEM.vhd", 1); // k:TdiGroup (j:CodeEditorDocumentPane, cd:JFrame)
+selectCodeEditor("InstrFetch.vhd", 221, 71); // bF:I (JPanel:JComponent, cd:JFrame)
+// Elapsed time: 30 seconds
+selectCodeEditor("InstrFetch.vhd", 330, 183); // bF:I (JPanel:JComponent, cd:JFrame)
+typeControlKey((HResource) null, "InstrFetch.vhd", 'c'); // bF:I (JPanel:JComponent, cd:JFrame)
+selectCodeEditor("InstrFetch.vhd", 360, 61); // bF:I (JPanel:JComponent, cd:JFrame)
+typeControlKey((HResource) null, "InstrFetch.vhd", 'v'); // bF:I (JPanel:JComponent, cd:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+selectCodeEditor("InstrFetch.vhd", 297, 94); // bF:I (JPanel:JComponent, cd:JFrame)
+typeControlKey((HResource) null, "InstrFetch.vhd", 'c'); // bF:I (JPanel:JComponent, cd:JFrame)
+// [GUI Memory]: 91 MB (+845kb) [00:35:25]
+// Elapsed time: 125 seconds
+selectCodeEditor("InstrFetch.vhd", 318, 92); // bF:I (JPanel:JComponent, cd:JFrame)
+selectCodeEditor("InstrFetch.vhd", 327, 108); // bF:I (JPanel:JComponent, cd:JFrame)
+selectCodeEditor("InstrFetch.vhd", 315, 125); // bF:I (JPanel:JComponent, cd:JFrame)
+// Elapsed time: 85 seconds
+selectCodeEditor("InstrFetch.vhd", 329, 79); // bF:I (JPanel:JComponent, cd:JFrame)
+typeControlKey((HResource) null, "InstrFetch.vhd", 'c'); // bF:I (JPanel:JComponent, cd:JFrame)
+selectCodeEditor("InstrFetch.vhd", 317, 114); // bF:I (JPanel:JComponent, cd:JFrame)
+typeControlKey((HResource) null, "InstrFetch.vhd", 'v'); // bF:I (JPanel:JComponent, cd:JFrame)
+typeControlKey((HResource) null, "InstrFetch.vhd", 'v'); // bF:I (JPanel:JComponent, cd:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+selectCodeEditor("InstrFetch.vhd", 318, 164); // bF:I (JPanel:JComponent, cd:JFrame)
+typeControlKey((HResource) null, "InstrFetch.vhd", 'v'); // bF:I (JPanel:JComponent, cd:JFrame)
+typeControlKey((HResource) null, "InstrFetch.vhd", 'v'); // bF:I (JPanel:JComponent, cd:JFrame)
+typeControlKey((HResource) null, "InstrFetch.vhd", 'v'); // bF:I (JPanel:JComponent, cd:JFrame)
+// Elapsed time: 79 seconds
+selectCodeEditor("InstrFetch.vhd", 326, 184); // bF:I (JPanel:JComponent, cd:JFrame)
+selectCodeEditor("InstrFetch.vhd", 323, 96); // bF:I (JPanel:JComponent, cd:JFrame)
+// HMemoryUtils.trashcanNow. Engine heap size: 543 MB. GUI used memory: 38 MB. Current time: 5/11/17 10:31:27 PM EEST
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Elapsed time: 99 seconds
+selectCodeEditor("InstrFetch.vhd", 333, 147); // bF:I (JPanel:JComponent, cd:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Elapsed time: 23 seconds
+selectCodeEditor("InstrFetch.vhd", 258, 142); // bF:I (JPanel:JComponent, cd:JFrame)
+// Elapsed time: 12 seconds
+selectCodeEditor("InstrFetch.vhd", 295, 88); // bF:I (JPanel:JComponent, cd:JFrame)
+// Elapsed time: 16 seconds
+selectCodeEditor("InstrFetch.vhd", 117, 216); // bF:I (JPanel:JComponent, cd:JFrame)
+// Elapsed time: 27 seconds
+selectCodeEditor("InstrFetch.vhd", 168, 73); // bF:I (JPanel:JComponent, cd:JFrame)
+selectCodeEditor("InstrFetch.vhd", 166, 110); // bF:I (JPanel:JComponent, cd:JFrame)
+selectCodeEditor("InstrFetch.vhd", 166, 128); // bF:I (JPanel:JComponent, cd:JFrame)
+selectCodeEditor("InstrFetch.vhd", 165, 155); // bF:I (JPanel:JComponent, cd:JFrame)
+selectCodeEditor("InstrFetch.vhd", 164, 173); // bF:I (JPanel:JComponent, cd:JFrame)
+selectCodeEditor("InstrFetch.vhd", 162, 193); // bF:I (JPanel:JComponent, cd:JFrame)
+selectCodeEditor("InstrFetch.vhd", 164, 25); // bF:I (JPanel:JComponent, cd:JFrame)
+selectCodeEditor("InstrFetch.vhd", 168, 143); // bF:I (JPanel:JComponent, cd:JFrame)
+selectCodeEditor("InstrFetch.vhd", 169, 161); // bF:I (JPanel:JComponent, cd:JFrame)
+selectCodeEditor("InstrFetch.vhd", 169, 182); // bF:I (JPanel:JComponent, cd:JFrame)
+selectCodeEditor("InstrFetch.vhd", 169, 200); // bF:I (JPanel:JComponent, cd:JFrame)
+selectCodeEditor("InstrFetch.vhd", 168, 215); // bF:I (JPanel:JComponent, cd:JFrame)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "InstrFetch.vhd", 3); // k:TdiGroup (j:CodeEditorDocumentPane, cd:JFrame)
+// Elapsed time: 14 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "test_env.vhd", 1); // k:TdiGroup (j:CodeEditorDocumentPane, cd:JFrame)
+selectCodeEditor("InstrFetch.vhd", 165, 148); // bF:I (JPanel:JComponent, cd:JFrame)
+selectCodeEditor("InstrFetch.vhd", 165, 164); // bF:I (JPanel:JComponent, cd:JFrame)
+selectCodeEditor("InstrFetch.vhd", 166, 179); // bF:I (JPanel:JComponent, cd:JFrame)
+selectCodeEditor("InstrFetch.vhd", 166, 196); // bF:I (JPanel:JComponent, cd:JFrame)
+selectCodeEditor("InstrFetch.vhd", 171, 215); // bF:I (JPanel:JComponent, cd:JFrame)
+selectCodeEditor("InstrFetch.vhd", 164, 43); // bF:I (JPanel:JComponent, cd:JFrame)
+selectCodeEditor("InstrFetch.vhd", 161, 61); // bF:I (JPanel:JComponent, cd:JFrame)
+selectCodeEditor("InstrFetch.vhd", 161, 81); // bF:I (JPanel:JComponent, cd:JFrame)
+selectCodeEditor("InstrFetch.vhd", 160, 102); // bF:I (JPanel:JComponent, cd:JFrame)
+selectCodeEditor("InstrFetch.vhd", 155, 127); // bF:I (JPanel:JComponent, cd:JFrame)
+selectCodeEditor("InstrFetch.vhd", 159, 143); // bF:I (JPanel:JComponent, cd:JFrame)
+selectCodeEditor("InstrFetch.vhd", 162, 159); // bF:I (JPanel:JComponent, cd:JFrame)
+selectCodeEditor("InstrFetch.vhd", 163, 181); // bF:I (JPanel:JComponent, cd:JFrame)
+selectCodeEditor("InstrFetch.vhd", 159, 198); // bF:I (JPanel:JComponent, cd:JFrame)
+selectCodeEditor("InstrFetch.vhd", 160, 232); // bF:I (JPanel:JComponent, cd:JFrame)
+selectCodeEditor("InstrFetch.vhd", 307, 161); // bF:I (JPanel:JComponent, cd:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Elapsed time: 14 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 25, false); // u:K (t:D, cd:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// f:q (cd:JFrame): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, f:q)
+// y:aO (cd:JFrame): Synthesis is Out-of-date: addNotify
+dismissDialog("Launch Runs"); // f:q (cd:JFrame)
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a:JButton (JPanel:JComponent, y:aO)
+// bt:g (cd:JFrame):  Resetting Runs : addNotify
+dismissDialog("Synthesis is Out-of-date"); // y:aO (cd:JFrame)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// Tcl Message: reset_run synth_1 
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+dismissDialog("Resetting Runs"); // bt:g (cd:JFrame)
+// TclEventType: RUN_LAUNCH
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 2 
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Thu May 11 22:35:14 2017] Launched synth_1... Run output will be captured here: E:/Download/Sem II/AC - Arhitectura calculatoarelor/laboratoare/lab9/mips/mips.runs/synth_1/runme.log [Thu May 11 22:35:14 2017] Launched impl_1... Run output will be captured here: E:/Download/Sem II/AC - Arhitectura calculatoarelor/laboratoare/lab9/mips/mips.runs/impl_1/runme.log 
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking too long to process. Increasing delay to 2000 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking too long to process. Increasing delay to 2000 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking too long to process. Increasing delay to 2000 ms.
+// TclEventType: RUN_COMPLETED
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking too long to process. Increasing delay to 2000 ms.
+// TclEventType: RUN_STEP_COMPLETED
+// Elapsed time: 105 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 11, false); // u:K (t:D, cd:JFrame)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Simulation Settings]", 10, false); // u:K (t:D, cd:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_SETTINGS
+// Project Settings: addNotify
+selectComboBox(PAResourceOtoP.ProjectSettingsSimulationPanel_SIMULATION_SET, "Create Simulation Set...", 1); // s:a (JPanel:JComponent, i:aA)
+setText("PAResourceOtoP.ProjectSettingsSimulationPanel_ENTER_SIMULATION_SET_NAME", "sim_2"); // BasicOptionPaneUI:JTextField (JPanel:JComponent, G:JDialog)
+selectComboBox(PAResourceOtoP.ProjectSettingsSimulationPanel_SIMULATOR_LANGUAGE, "VHDL", 0); // e:JComboBox (JPanel:JComponent, i:aA)
+selectTab(PAResourceOtoP.ProjectSettingsSimulationPanel_TABBED_PANE, PAResourceOtoP.ProjectSettingsSimulationPanel_ELABORATION, "Elaboration", 1); // g:JideTabbedPane (JPanel:JComponent, i:aA)
+selectTab(PAResourceOtoP.ProjectSettingsSimulationPanel_TABBED_PANE, PAResourceOtoP.ProjectSettingsSimulationPanel_SIMULATION, "Simulation", 2); // g:JideTabbedPane (JPanel:JComponent, i:aA)
+selectTab(PAResourceOtoP.ProjectSettingsSimulationPanel_TABBED_PANE, PAResourceOtoP.ProjectSettingsSimulationPanel_ADVANCED, "Advanced", 4); // g:JideTabbedPane (JPanel:JComponent, i:aA)
+selectTab(PAResourceOtoP.ProjectSettingsSimulationPanel_TABBED_PANE, PAResourceOtoP.ProjectSettingsSimulationPanel_NETLIST, "Netlist", 3); // g:JideTabbedPane (JPanel:JComponent, i:aA)
+selectButton("Elaboration", "Elaboration"); // JideButton:JButton (ScrollableButtonPanel:ButtonPanel, i:aA)
+selectButton("General", "General"); // JideButton:JButton (ScrollableButtonPanel:ButtonPanel, i:aA)
+selectButton("OK", "OK"); // JButton:AbstractButton (ButtonPanel:JPanel, i:aA)
+// TclEventType: PROJECT_CHANGE
+// Tcl Message: set_property simulator_language VHDL [current_project] 
+dismissDialog("Project Settings"); // i:aA (cd:JFrame)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 11, false); // u:K (t:D, cd:JFrame)
+selectMenuItem(PAResourceCommand.PACommandNames_SIMULATION_RUN_POST_SYNTHESIS_FUNCTIONAL, "Run Post-Synthesis Functional Simulation"); // ab:JMenuItem (ah:JPopupMenu, cd:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_RUN_POST_SYNTHESIS_FUNCTIONAL
+// TclEventType: FILE_SET_CHANGE
+// e:bt (cd:JFrame):  Run Simulation : addNotify
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: LAUNCH_SIM
+// Tcl Message: launch_simulation -mode post-synthesis -type functional 
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: INFO: [SIM-utils-51] Simulation object is 'sim_1' 
+// Tcl Message: Design is defaulting to impl run constrset: constrs_1 Design is defaulting to synth run part: xc7a35tcpg236-1 
+// [Engine Memory]: 571 MB (+20293kb) [00:45:52]
+// TclEventType: READ_XDC_FILE_START
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: READ_XDC_FILE_END
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: DESIGN_NEW
+// HMemoryUtils.trashcanNow. Engine heap size: 643 MB. GUI used memory: 44 MB. Current time: 5/11/17 10:38:01 PM EEST
+// [Engine Memory]: 663 MB (+67294kb) [00:45:55]
+// Xgd.load filename: E:/Xilinx/Vivado_2016.4/Vivado/2016.4/data/./parts/xilinx/artix7/devint/artix7/xc7a35t/xc7a35t.xgd; ZipEntry: xc7a35t_floorplan.xgd elapsed time: 0.6s
+// [Engine Memory]: 704 MB (+7443kb) [00:45:57]
+// TclEventType: DESIGN_NEW
+// [Engine Memory]: 749 MB (+10544kb) [00:45:58]
+// Xgd.load filename: E:/Xilinx/Vivado_2016.4/Vivado/2016.4/data/./parts/xilinx/artix7/devint/artix7/xc7a35t/xc7a35t.xgd; ZipEntry: xc7a35t_detail.xgd elapsed time: 2.1s
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// RouteApi::loadEngineXgd elapsed time: 3.3s
+// Device: addNotify
+// DeviceView Instantiated
+// TclEventType: CURR_DESIGN_SET
+// Tcl Message: INFO: [Netlist 29-17] Analyzing 48 Unisim elements for replacement INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds INFO: [Project 1-479] Netlist was created with Vivado 2016.4 INFO: [Device 21-403] Loading part xc7a35tcpg236-1 INFO: [Project 1-570] Preparing netlist for logic optimization 
+// Tcl Message: Parsing XDC File [E:/Download/Sem II/AC - Arhitectura calculatoarelor/laboratoare/lab9/mips/mips.srcs/constrs_1/imports/Dulau Marius/Basys3_test_env.xdc] Finished Parsing XDC File [E:/Download/Sem II/AC - Arhitectura calculatoarelor/laboratoare/lab9/mips/mips.srcs/constrs_1/imports/Dulau Marius/Basys3_test_env.xdc] 
+// Tcl Message: INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s). INFO: [Project 1-111] Unisim Transformation Summary:   A total of 22 instances were transformed.   RAM256X1S => RAM256X1S (MUXF7, MUXF7, MUXF8, RAMS64E, RAMS64E, RAMS64E, RAMS64E): 16 instances   RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 6 instances  
+// Tcl Message: open_run: Time (s): cpu = 00:00:26 ; elapsed = 00:00:32 . Memory (MB): peak = 1068.969 ; gain = 305.605 
+// Device view-level: 0,0
+// Tcl Message: INFO: [SIM-utils-24] Writing simulation netlist file for design 'synth_1'... INFO: [SIM-utils-25] write_verilog -mode funcsim -nolib -force -file "E:/Download/Sem II/AC - Arhitectura calculatoarelor/laboratoare/lab9/mips/mips.sim/sim_1/synth/func/test_env_func_synth.v" INFO: [SIM-utils-36] Netlist generated:E:/Download/Sem II/AC - Arhitectura calculatoarelor/laboratoare/lab9/mips/mips.sim/sim_1/synth/func/test_env_func_synth.v INFO: [USF-XSim-37] Inspecting design source files for 'test_env' in fileset 'sim_1'... 
+// Tcl Message: INFO: [USF-XSim-2] XSim::Compile design 
+// Tcl Message: INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/Download/Sem II/AC - Arhitectura calculatoarelor/laboratoare/lab9/mips/mips.sim/sim_1/synth/func' 
+// HMemoryUtils.trashcanNow. Engine heap size: 795 MB. GUI used memory: 67 MB. Current time: 5/11/17 10:38:22 PM EEST
+// [Engine Memory]: 795 MB (+9285kb) [00:46:16]
+// Tcl Message: "xvlog -m64 --relax -prj test_env_vlog.prj" 
+// HMemoryUtils.trashcanNow. Engine heap size: 807 MB. GUI used memory: 66 MB. Current time: 5/11/17 10:38:42 PM EEST
+// [Engine Memory]: 910 MB (+78737kb) [00:46:41]
+// [Engine Memory]: 1,029 MB (+76662kb) [00:46:46]
+// RouteApi::initDelayMediator elapsed time: 42.5s
+// RouteApi: Init Delay Mediator Swing Worker Finished
+// [Engine Memory]: 1,141 MB (+63818kb) [00:46:50]
+// HMemoryUtils.trashcanNow. Engine heap size: 1,141 MB. GUI used memory: 67 MB. Current time: 5/11/17 10:38:57 PM EEST
+// TclEventType: LAUNCH_SIM_LOG
+// Tcl Message: run_program: Time (s): cpu = 00:00:26 ; elapsed = 00:00:49 . Memory (MB): peak = 1423.336 ; gain = 348.660 
+// Tcl Message: INFO: [USF-XSim-69] 'compile' step finished in '49' seconds INFO: [USF-XSim-3] XSim::Elaborate design 
+// Tcl Message: INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/Download/Sem II/AC - Arhitectura calculatoarelor/laboratoare/lab9/mips/mips.sim/sim_1/synth/func' 
+// WARNING: HTimer (B:b Update Status Timer) is taking too long to process. Increasing delay to 6000 ms.
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking too long to process. Increasing delay to 3000 ms.
+// Tcl Message: Vivado Simulator 2016.4 Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved. Running: E:/Xilinx/Vivado_2016.4/Vivado/2016.4/bin/unwrapped/win64.o/xelab.exe -wto 0dff007c22af45b9ad4e6a642b0cf093 --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L secureip --snapshot test_env_func_synth xil_defaultlib.test_env xil_defaultlib.glbl -log elaborate.log  Using 2 slave threads. 
+// Tcl Message: Starting static elaboration 
+// Tcl Message: Completed static elaboration Starting simulation data flow analysis 
+// TclEventType: RUN_COMPLETED
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking too long to process. Increasing delay to 3000 ms.
+// Tcl Message: Built simulation snapshot test_env_func_synth 
+// Tcl Message: ERROR: [Common 17-165] Too many positional options when parsing '-notrace', please type 'webtalk -help' for usage info.  
+// TclEventType: LAUNCH_SIM

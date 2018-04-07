@@ -1,0 +1,21 @@
+package presentation;
+
+import javax.swing.*;
+
+public class AddAccount extends JFrame{
+
+	private static final int WIDTH = 250, HEIGHT = 400;
+	
+	private JPanel panel = new JPanel();
+	
+	public AddAccount(String name)
+	{
+		super(name);
+		this.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+		this.setSize(WIDTH, HEIGHT);
+		panel.setBounds(10, 10, 230, 350);
+		panel.setLayout(null);
+		this.add(panel);
+	}
+	
+}

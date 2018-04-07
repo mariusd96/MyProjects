@@ -1,0 +1,118 @@
+package presentation;
+
+import java.awt.Color;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.*;
+
+public class EditDeleteAccount extends JFrame{
+
+	private static final int WIDTH = 450;
+	private static int HEIGHT = 119;
+	
+	public JPanel panel = new JPanel();
+	private JLabel lblAccountHolderCNP = new JLabel("Account Holder CNP");
+	private JLabel lblAccountId = new JLabel("Account Id");
+	private JLabel lblBalance = new JLabel("Balance");
+	private JLabel lblAccountType = new JLabel("Account Type");
+	private JTextField tfAccountHolderCNP = new JTextField();
+	private JComboBox cbAccounts = new JComboBox();
+	private JTextField tfBalance = new JTextField();
+	public JRadioButton rdbtnSavingAccount = new JRadioButton("Saving Account");
+	public JRadioButton rdbtnSpendingAccount = new JRadioButton("Spending Account");
+	private JButton btnEdit = new JButton("Edit");
+	private JButton btnDelete = new JButton("Delete");
+	private JButton btnOk = new JButton("Ok");
+	private JButton btnOk2 = new JButton("Ok");
+	
+	public EditDeleteAccount(String name)
+	{
+		super(name);
+		setResizable(false);
+		this.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+		this.setVisible(true);
+		this.setSize(WIDTH, HEIGHT);
+		panel.setLayout(null);
+		
+		lblAccountHolderCNP.setBounds(20, 20, 120, 25);
+		lblAccountId.setBounds(20, 55, 120, 25);
+		lblBalance.setBounds(20, 90, 120, 25);
+		lblAccountType.setBounds(20, 125, 120, 25);
+		panel.add(lblAccountHolderCNP);
+		panel.add(lblAccountId);
+		panel.add(lblBalance);
+		panel.add(lblAccountType);
+		
+		tfAccountHolderCNP.setBounds(170, 20, 150, 25);
+		cbAccounts.setBounds(170, 55, 150, 25);
+		tfBalance.setBounds(170, 90, 150, 25);
+		panel.add(tfAccountHolderCNP);
+		panel.add(cbAccounts);
+		panel.add(tfBalance);
+		
+		rdbtnSavingAccount.setBounds(170, 125, 150, 25);
+		rdbtnSavingAccount.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				if(rdbtnSpendingAccount.isSelected() == true)
+				{
+					rdbtnSpendingAccount.setSelected(false);
+				}
+			}
+		});
+		rdbtnSpendingAccount.setBounds(170, 160, 150, 25);
+		rdbtnSpendingAccount.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				if(rdbtnSavingAccount.isSelected() == true)
+				{
+					rdbtnSavingAccount.setSelected(false);
+				}
+			}
+		});
+		panel.add(rdbtnSavingAccount);
+		panel.add(rdbtnSpendingAccount);
+		
+		btnEdit.setBackground(Color.BLACK);
+		btnEdit.setForeground(Color.WHITE);
+		btnEdit.setBounds(20, 210, 100, 30);
+		panel.add(btnEdit);
+		
+		btnDelete.setForeground(Color.WHITE);
+		btnDelete.setBackground(Color.BLACK);
+		btnDelete.setBounds(220, 210, 100, 30);
+		panel.add(btnDelete);
+		
+		btnOk.setForeground(Color.WHITE);
+		btnOk.setBackground(Color.BLACK);
+		btnOk.setBounds(340, 20, 70, 25);
+		panel.add(btnOk);
+		
+		btnOk2.setForeground(Color.WHITE);
+		btnOk2.setBackground(Color.BLACK);
+		btnOk2.setBounds(340, 56, 70, 25);
+		panel.add(btnOk2);
+		
+		this.add(panel);
+	}
+	
+	public Double getBalance()
+	{
+		if(Double.valueOf(tfBalance.getText()) != null)	return Double.valueOf(tfBalance.getText());
+		return 0.0;
+	}
+	
+	public void btnOkAction(ActionListener okAL)
+	{
+		btnOk.addActionListener(okAL);
+	}
+	
+	public void btnOk2Action(ActionListener okAL)
+	{
+		btnOk2.addActionListener(okAL);
+	}
+	
+	public void editAction(ActionListener eal)
+	{
+		
+	}
+}

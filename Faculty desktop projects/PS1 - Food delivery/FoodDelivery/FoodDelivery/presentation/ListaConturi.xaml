@@ -1,0 +1,77 @@
+﻿<Window x:Class="FoodDelivery.presentation.ListaConturi"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FoodDelivery.presentation"
+        mc:Ignorable="d"
+        Title="ListaConturi" Height="600" Width="950" WindowStyle="None" WindowStartupLocation="CenterScreen" AllowsTransparency="True" BorderThickness="15">
+    <Window.BorderBrush>
+        <ImageBrush ImageSource="/FoodDelivery;component/Resources/contur2.png"/>
+    </Window.BorderBrush>
+
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Styles/btnGlass.xaml" />
+                <ResourceDictionary Source="/Styles/btnGlass2.xaml" />
+                <ResourceDictionary Source="/Styles/ScrollBarStyle.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+
+    <Grid>
+        <Grid.Background>
+            <RadialGradientBrush>
+                <GradientStop Color="#FFF5C891" Offset="1"/>
+                <GradientStop Color="#FFFFE5C3" Offset="0.004"/>
+            </RadialGradientBrush>
+        </Grid.Background>
+
+        <DockPanel Name="TitleBar" DockPanel.Dock="Top" Height="60" Background="Transparent" Margin="0" VerticalAlignment="Top" MouseLeftButtonDown="TitleBar_MouseLeftButtonDown">
+            <Button x:Name="userOptions" Height="24" VerticalAlignment="Center" Width="30" HorizontalAlignment="Right" Margin="0,10,30,0" DockPanel.Dock="Right" Foreground="Red" FontWeight="Bold" Style="{StaticResource btnGlass2}" FontSize="14" VerticalContentAlignment="Top" Cursor="Hand" ToolTip="Opțiuni" BorderThickness="0" Click="userOptions_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="/Resources/userOptions.png"/>
+                </Button.Background>
+
+                <Button.ContextMenu>
+                    <ContextMenu Background="#FFFCE4C8" Foreground="#FFB34426">
+                        <MenuItem Header="Logout" x:Name="Logout" Click="Logout_Click"/>
+                    </ContextMenu>
+                </Button.ContextMenu>
+            </Button>
+            <Button x:Name="minimize" Height="20" VerticalAlignment="Center" Width="20" HorizontalAlignment="Right" Margin="0,10,15,0" DockPanel.Dock="Right" Foreground="#FF00B0A0" FontWeight="Bold" Style="{StaticResource btnGlass2}" FontSize="14" VerticalContentAlignment="Center" Cursor="Hand" ToolTip="Minimize" BorderThickness="0" Click="minimize_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="/Resources/minimize.png"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="back" Height="30" VerticalAlignment="Center" Width="30" HorizontalAlignment="Left" Margin="15,10,0,0" DockPanel.Dock="Left" Foreground="#FFB34426" Style="{StaticResource btnGlass2}" FontSize="24" VerticalContentAlignment="Center" Cursor="Hand" ToolTip="Înapoi" BorderThickness="0" Content="&lt;" Background="#00000000" FontFamily="Times New Roman" FontWeight="Bold" Click="back_Click"/>
+            <Image x:Name="image" HorizontalAlignment="Left" Height="50" VerticalAlignment="Center" Width="100" Margin ="15,10,0,0" Source="/Resources/logo.png" DockPanel.Dock="Right"/>
+        </DockPanel>
+        <ScrollViewer x:Name="scrollViewer" HorizontalAlignment="Center" Height="470" Margin="0,65,0,0" VerticalAlignment="Center" Width="850">
+            <StackPanel x:Name="stackPanel">
+                <!--<Canvas Height="100" Width="800" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="15,15,0,0" Background="#FFFCE4C8">
+                    <Button x:Name="button" Content="Button" Canvas.Left="700" Canvas.Top="10" Width="80" Height="80"/>
+                    <Image x:Name="image1" Height="50" Canvas.Left="25" Canvas.Top="25" Width="50"/>
+                    <Border BorderBrush="#FFB34426" BorderThickness="2" Height="80" Canvas.Left="100" Canvas.Top="10" Width="3"/>
+                    <Label x:Name="label" Content="Username, Nume Prenume" Canvas.Left="120" Canvas.Top="10" FontFamily="Times New Roman" FontSize="14"/>
+                    <Label x:Name="label_Copy" Content="Adresa" Canvas.Left="120" Canvas.Top="36" FontFamily="Times New Roman" FontSize="14"/>
+                    <Label x:Name="label_Copy1" Content="Telefon" Canvas.Left="120" Canvas.Top="64" FontSize="14" FontFamily="Times New Roman"/>
+                    <Button x:Name="button_Copy" Content="Button" Canvas.Left="600" Canvas.Top="10" Width="80" Height="80">
+                        <Button.Background>
+                            <ImageBrush ImageSource="/FoodDelivery;component/Resources/shoppingHistory.png"/>
+                        </Button.Background>
+                    </Button>
+                </Canvas>
+                <Canvas Height="100" Width="800" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="15,15,0,0" Background="#FFFCE4C8">
+                    <Button x:Name="button1" Content="Button" Canvas.Left="700" Canvas.Top="10" Width="80" Height="80"/>
+                    <Image x:Name="image11" Height="50" Canvas.Left="25" Canvas.Top="25" Width="50"/>
+                    <Border BorderBrush="#FFB34426" BorderThickness="2" Height="80" Canvas.Left="100" Canvas.Top="10" Width="3"/>
+                    <Label x:Name="label1" Content="Username, Nume Prenume" Canvas.Left="120" Canvas.Top="10"/>
+                    <Label x:Name="label_Cop1y" Content="Adresa" Canvas.Left="120" Canvas.Top="35"/>
+                    <Label x:Name="label_Copy11" Content="Telefon" Canvas.Left="120" Canvas.Top="60" FontFamily="Times New Roman"/>
+                </Canvas>-->
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Window>

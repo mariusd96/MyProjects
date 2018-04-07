@@ -1,0 +1,30 @@
+package presentation;
+
+import javax.swing.*;
+
+public class AddAccount extends JFrame{
+
+	private static final int WIDTH = 300, HEIGHT = 400;
+	
+	private JPanel panel = new JPanel();
+	private JLabel lblAccountHolder = new JLabel("Account Holder");
+	private JLabel lblBalance = new JLabel("Balance");
+	private JTextField tfAccountHolder = new JTextField();
+	private JTextField tfBalance = new JTextField();
+	private JButton btnAdd = new JButton("Add");
+	
+	public AddAccount(String name)
+	{
+		super(name);
+		this.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+		this.setVisible(true);
+		this.setSize(WIDTH, HEIGHT);
+		panel.setLayout(null);
+		
+		lblAccountHolder.setBounds(20, 20, 60, 25);
+		lblBalance.setBounds(20, 55, 60, 25);
+		
+		this.add(panel);
+	}
+	
+}

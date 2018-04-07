@@ -1,0 +1,258 @@
+package tema2_dulau_marius;
+
+import javax.swing.*;
+
+import java.awt.*;
+import java.awt.event.*;
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
+
+import javax.swing.border.EmptyBorder;
+
+import java.io.*;
+
+public class SimulationFrame extends JFrame {
+
+	private static int WIDTH = 750, HEIGHT = 350;
+	private JPanel panel = new JPanel();
+	private JPanel meniu = new JPanel();
+	private JPanel panelSimulare = new JPanel();
+	private JPanel animatie = new JPanel();
+	
+	private JTextField nrMaxServere = new JTextField();
+	JLabel labelNrServere = new JLabel("Numar servere");
+	
+	private JTextField nrMaxClienti = new JTextField();
+	JLabel labelNrClienti = new JLabel("Numar clienti");
+	
+	private JTextField timpMinimServire = new JTextField();
+	JLabel labelTimpMinimServire = new JLabel("Timp minim servire");
+	
+	private JTextField timpMaximServire = new JTextField();
+	JLabel labelTimpMaximServire = new JLabel("Timp maxim servire");
+	
+	private JTextField timp = new JTextField();
+	JLabel labelTimp = new JLabel("Timp");
+	
+	private JComboBox optiuni = new JComboBox();
+	JLabel labelOptiuni = new JLabel("Optiuni");
+	
+	private JButton start = new JButton("Start");
+	private JSeparator separator = new JSeparator();
+	
+	private JLabel countTime = new JLabel("");
+	private JScrollPane scrollPane;
+	
+	private int[] timpAsteptare;
+	private int[] nrClientiAsteptare;
+	private int clientx = 0; 
+	
+	private int[] timpProcesare;
+	private int[] nrClientiProcesare;
+	private int clienty = 0;
+	
+	private void constrGUI()
+	{
+		meniu.setBounds(0, 0, 270, 350);
+		meniu.setLayout(null);
+		
+		labelNrServere.setBounds(20, 20, 90, 20);
+		nrMaxServere.setBounds(150, 20, 100, 20);
+		labelNrClienti.setBounds(20, 50, 90, 20);
+		nrMaxClienti.setBounds(150, 50, 100, 20);
+		labelTimpMinimServire.setBounds(20, 80, 120, 20);
+		timpMinimServire.setBounds(150, 80, 100, 20);
+		labelTimpMaximServire.setBounds(20, 110, 120, 20);
+		timpMaximServire.setBounds(150, 110, 100, 20);
+		labelTimp.setBounds(20, 140, 90, 20);
+		timp.setBounds(150, 140, 100, 20);
+		labelOptiuni.setBounds(20, 170, 90, 20);
+		optiuni.setBounds(150, 170, 100, 20);
+		optiuni.addItem("Timp putin");
+		optiuni.addItem("Cozi scurte");
+		start.setBounds(20, 260, 230, 40);
+		
+		start.setBackground(Color.BLUE);
+		start.setForeground(Color.WHITE);
+		start.setCursor(new Cursor(Cursor.HAND_CURSOR));
+		start.setFont(new Font("Times New Roman", Font.PLAIN, 14));
+		
+		meniu.add(labelNrServere);
+		meniu.add(nrMaxServere);
+		meniu.add(labelNrClienti);
+		meniu.add(nrMaxClienti);
+		meniu.add(timpMinimServire);
+		meniu.add(labelTimpMinimServire);
+		meniu.add(timpMaximServire);
+		meniu.add(labelTimpMaximServire);
+		meniu.add(timp);
+		meniu.add(labelTimp);
+		meniu.add(optiuni);
+		meniu.add(labelOptiuni);
+		meniu.add(start);		
+		
+		panelSimulare.setLayout(null);
+		panelSimulare.setBounds(285, 0, 455, 350);
+		countTime.setBounds(410, 10, 30, 20);
+		panelSimulare.add(countTime);
+		animatie.setLayout(null);
+		animatie.setPreferredSize(new Dimension(420, 260));
+		//animatie.setBounds(0, 40, 445, 270);
+		//panelSimulare.add(animatie);
+		scrollPane = new JScrollPane();
+		scrollPane.setBounds(0, 40, 445, 270);
+		scrollPane.setViewportBorder(null);
+		scrollPane.setViewportView(animatie);
+		panelSimulare.add(scrollPane);
+	}
+	
+	public SimulationFrame(String nume)
+	{
+		super(nume);
+		this.setSize(WIDTH, HEIGHT);
+		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
+		this.setResizable(false);
+		this.setLocationRelativeTo(null);
+		this.setVisible(true);
+		
+		constrGUI();
+		panel.setLayout(null);
+		panel.add(meniu);
+		panel.add(panelSimulare);
+		
+		panel.add(separator);
+		separator.setBounds(270, 10, 2, 300);
+		separator.setBackground(Color.WHITE);
+		separator.setOrientation(SwingConstants.VERTICAL);
+		getContentPane().add(panel);
+	}
+	
+	public void displayServers()
+	{
+		animatie.removeAll();
+		
+		JTextField[] tf = new JTextField[getNrServere()];
+		JLabel[] lbl = new JLabel[getNrServere()];
+		int y = 10;
+	
+		for(int i = 0; i < getNrServere(); i++)
+		{
+			lbl[i] = new JLabel();
+			lbl[i].setBounds(20, y, 60, 20);
+			lbl[i].setBackground(Color.CYAN);
+			lbl[i].setText("Coada " + String.valueOf((i + 1)));
+			tf[i] = new JTextField();
+			tf[i].setBounds(100, y, 300, 20);
+			tf[i].setText(" ");
+			tf[i].setName("tf" + String.valueOf(i + 1));
+			y += 30;
+			lbl[i].setLabelFor(tf[i]);
+			animatie.add(lbl[i]);
+			animatie.add(tf[i]);
+		}
+		
+		animatie.setPreferredSize(new Dimension(420, getNrServere() * 30 + 20));
+		animatie.revalidate();
+		animatie.repaint();
+	}
+	
+	public void displayData(Task[][] tasks)
+	{
+		Component[] components = animatie.getComponents();
+		int i = 0;
+		for (Component component : components) 
+		{
+			if(component instanceof JTextField) 
+			{
+				//JOptionPane.showMessageDialog(null, component.getName());
+				String sir = "";
+				for(int j = 0; j < tasks[i].length; j++)
+				{
+					if(j == 0)
+					{
+						if(clientx != tasks[i][j].getName())
+						{
+							clientx = tasks[i][j].getName();
+							timpProcesare[i] += tasks[i][j].getProcessingPeriod();
+							nrClientiProcesare[i]++;
+						}
+					}
+					sir = sir + String.valueOf(tasks[i][j].getName()) + "  ";
+					//((JTextField)component).setText(sir);
+				}
+				((JTextField)component).setText(sir);
+				i++;
+			}
+		}
+	}
+	
+	private void writeData()
+	{
+		try 
+		{
+			PrintWriter pw = new PrintWriter("Logger.txt");
+			for(int i = 0;i < timpAsteptare.length; i++) 
+			{
+				pw.println("Coada " + (i + 1) + "--> Timp procesare mediu = " + (timpAsteptare[i] / nrClientiAsteptare[i]));
+			}
+			pw.close();
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+	int getNrServere()
+	{
+		return Integer.parseInt(nrMaxServere.getText());
+	}
+	
+	int getNrClienti()
+	{
+		return Integer.parseInt(nrMaxClienti.getText());
+	}
+	
+	int getMinProcTime()
+	{
+		return Integer.parseInt(timpMinimServire.getText());
+	}
+	
+	int getMaxProcTime()
+	{
+		return Integer.parseInt(timpMaximServire.getText());
+	}
+	
+	int getTimp()
+	{
+		return Integer.parseInt(timp.getText());
+	}
+	
+	String getOption()
+	{
+		return String.valueOf(optiuni.getSelectedItem());
+	}
+	
+	void addCollectData(ActionListener cd)
+	{
+		start.addActionListener(cd);
+	}
+	
+	public void setTimp(int nr)
+	{
+		countTime.setText(String.valueOf(nr));
+	}
+	
+	public void setTimeWaitVec(int nr)
+	{
+		timpAsteptare = new int[nr];
+		nrClientiAsteptare = new int[nr];
+		for(int i = 0; i < nr ;i++) timpAsteptare[i] = nrClientiAsteptare[i] = 0;
+	}
+	
+	public void setTimeProcVec(int nr)
+	{
+		timpProcesare = new int[nr];
+		nrClientiProcesare = new int[nr];
+		for(int i = 0; i < nr ;i++) timpProcesare[i] = nrClientiProcesare[i] = 0;
+	}
+}

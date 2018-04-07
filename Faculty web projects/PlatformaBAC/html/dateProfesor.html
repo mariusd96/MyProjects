@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <title>Date personale proesori</title>
+    <link rel="stylesheet" href="css/dateElev.css">
+</head>
+
+<body background="stuff/background.svg" ng-app = "myApp" ng-controller = "controller">
+
+<div class="nav">
+    <div class="nume">{{msg}}</div>
+    <script type="text/javascript">
+        tday=new Array("Duminica","Luni","Marti","Miercuri","Joi","Vineri","Sambata");
+        tmonth=new Array("Ianuarie","Februarie","Martie","Aprilie","Mai","Iunie","Iulie","August","Septembrie","Octombrie","Noiembrie","Decembrie");
+
+        function GetClock(){
+            var d=new Date();
+            var nday=d.getDay(),nmonth=d.getMonth(),ndate=d.getDate(),nyear=d.getFullYear();
+            var nhour=d.getHours(),nmin=d.getMinutes(),nsec=d.getSeconds();
+            if(nmin<=9) nmin="0"+nmin
+            if(nsec<=9) nsec="0"+nsec;
+
+            document.getElementById('data').innerHTML=""+tday[nday]+", "+tmonth[nmonth]+" "+ndate+", "+nyear+" "+nhour+":"+nmin+":"+nsec+"";
+        }
+
+        window.onload=function(){
+            GetClock();
+            setInterval(GetClock,1000);
+        }
+    </script>
+    <div id="data"></div>
+    <button class="logout" onclick="window.location ='login.html'">Logout</button>
+</div>
+
+<div class="page">
+    <div class="container">
+        <p class="titlu">Profesori</p>
+        <br />
+        <table border="1">
+            <tr>
+                <th style="width: 15%">ID Cont</th>
+                <th style="width: 28%">Nume</th>
+                <th style="width: 28%">Prenume</th>
+                <th>Materie</th>
+            </tr>
+        </table>
+        <div class="scroll">
+            <table>
+                <tr ng-repeat = "x in receiveData">
+                    <td style="width: 15%">{{x.idCont}}</td>
+                    <td style="width: 28%">{{x.nume}}</td>
+                    <td style="width: 28%">{{x.prenume}}</td>
+                    <td>{{x.idMaterie}}</td>
+                </tr>
+            </table>
+        </div>
+        <br/>
+        <button id="login-button" onclick="window.location = 'inserareProfesor.html'">Inserare profesor</button>
+    </div>
+</div>
+
+</body>
+
+<script>
+    var myApp = angular.module("myApp", []);
+    myApp.controller("controller", function ($scope, $http) {
+        $scope.msg = document.cookie;
+
+        var data = {
+            "tabel": "DatePersonaleProfesor" ,
+            "sqlQuery": "SELECT * FROM DatePersonaleProfesor"
+        };
+
+        $http.post('../php/selectAll.php', data)
+            .then(function (response) {
+                //console.log(response.data);
+                $scope.msg2 = response.data.records;
+                $scope.receiveData = response.data.records;
+            }, function (error)
+            {
+                $scope.msg2 = "Eroare";
+            });
+
+    });
+</script>
+
+</html>

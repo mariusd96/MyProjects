@@ -1,0 +1,70 @@
+﻿<Window x:Class="FoodDelivery.presentation.ClientWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FoodDelivery.presentation"
+        mc:Ignorable="d"
+        Title="ClientWindow" Height="650" Width="1200" WindowStyle="None" WindowStartupLocation="CenterScreen" AllowsTransparency="True" BorderThickness="15">
+    <Window.BorderBrush>
+        <ImageBrush ImageSource="/FoodDelivery;component/Resources/contur2.png"/>
+    </Window.BorderBrush>
+
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Styles/btnGlass.xaml" />
+                <ResourceDictionary Source="/Styles/btnGlass2.xaml" />
+                <ResourceDictionary Source="/Styles/ScrollBarStyle.xaml" />
+                <ResourceDictionary Source="/Styles/TextBoxStyle.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+
+    <Grid>
+        <Grid.Background>
+            <RadialGradientBrush>
+                <GradientStop Color="#FFF5C891" Offset="1"/>
+                <GradientStop Color="#FFFFE5C3" Offset="0.004"/>
+            </RadialGradientBrush>
+        </Grid.Background>
+
+        <DockPanel Name="TitleBar" DockPanel.Dock="Top" Height="60" Background="Transparent" Margin="0" VerticalAlignment="Top">
+            <Button x:Name="userOptions" Height="24" VerticalAlignment="Center" Width="30" HorizontalAlignment="Right" Margin="0,10,30,0" DockPanel.Dock="Right" Foreground="Red" FontWeight="Bold" Style="{StaticResource btnGlass2}" FontSize="14" VerticalContentAlignment="Top" Cursor="Hand" ToolTip="Opțiuni" BorderThickness="0" Click="userOptions_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="/Resources/userOptions.png"/>
+                </Button.Background>
+
+                <Button.ContextMenu>
+                    <ContextMenu Background="#FFFCE4C8" Foreground="#FFB34426">
+                        <MenuItem Header="Vizualizare profil" x:Name="UpdateProfil" Click="UpdateProfil_Click"/>
+                        <MenuItem Header="Vizualizare istoric cumparaturi" x:Name="IstoricCumparaturi" Click="IstoricCumparaturi_Click"/>
+                        <MenuItem Header="Logout" x:Name="Logout" Click="Logout_Click"/>
+                    </ContextMenu>
+                </Button.ContextMenu>
+            </Button>
+            <Button x:Name="minimize" Height="20" VerticalAlignment="Bottom" Width="20" HorizontalAlignment="Right" Margin="0,0,15,15" DockPanel.Dock="Right" Foreground="#FF00B0A0" FontWeight="Bold" Style="{StaticResource btnGlass2}" FontSize="14" VerticalContentAlignment="Center" Cursor="Hand" ToolTip="Minimize" BorderThickness="0" Click="minimize_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="/Resources/minimize.png"/>
+                </Button.Background>
+            </Button>
+            <Image x:Name="image" HorizontalAlignment="Left" Height="50" VerticalAlignment="Center" Width="100" Margin ="15,10,0,0" Source="/Resources/logo.png" DockPanel.Dock="Right"/>
+        </DockPanel>
+
+        <Canvas HorizontalAlignment="Center" Height="30" Margin="130,88,630,0" VerticalAlignment="Top" Width="410">
+            <ComboBox x:Name="comboBoxCategorie" HorizontalAlignment="Center" Height="30" VerticalAlignment="Center" Width="270" Foreground="#FFB34426" BorderBrush="Black" Background="#FFFCE4C8" SelectionChanged="comboBoxCategorie_SelectionChanged" Canvas.Left="140"/>
+            <Label x:Name="categoriProdusLabel" Content="Categorie Produs" Height="30" Width="134" Foreground="#FFB34426" FontFamily="Times New Roman" FontSize="16" FontWeight="Bold"/>
+        </Canvas>
+
+        <ScrollViewer x:Name="scrollViewer" HorizontalAlignment="Center" Height="470" Margin="20,135,450,15" VerticalAlignment="Center" Width="675">
+            <StackPanel x:Name="stackPanel">
+            </StackPanel>
+        </ScrollViewer>
+
+        <ScrollViewer x:Name="cosCumparaturiViewer" HorizontalAlignment="Center" Height="470" Margin="740,135,30,15" VerticalAlignment="Center" Width="400">
+            <StackPanel x:Name="cosCumparaturiPanel">
+            </StackPanel>
+        </ScrollViewer>
+        <Label x:Name="label" Content="Coș cumpărături" HorizontalAlignment="Left" Margin="875,90,0,0" VerticalAlignment="Top" Foreground="#FFB34426" FontFamily="Times New Roman" FontSize="16" FontWeight="Bold"/>
+    </Grid>
+</Window>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <title>Pagina elevului</title>
+    <link rel="stylesheet" href="css/meniuElev.css">
+</head>
+
+<body ng-app = "myApp" ng-controller = "controller" background="stuff/background.svg">
+
+<div class="nav">
+    <div class="nume">{{msg}}</div>
+    <script type="text/javascript">
+        tday=new Array("Duminica","Luni","Marti","Miercuri","Joi","Vineri","Sambata");
+        tmonth=new Array("Ianuarie","Februarie","Martie","Aprilie","Mai","Iunie","Iulie","August","Septembrie","Octombrie","Noiembrie","Decembrie");
+
+        function GetClock(){
+            var d=new Date();
+            var nday=d.getDay(),nmonth=d.getMonth(),ndate=d.getDate(),nyear=d.getFullYear();
+            var nhour=d.getHours(),nmin=d.getMinutes(),nsec=d.getSeconds();
+            if(nmin<=9) nmin="0"+nmin
+            if(nsec<=9) nsec="0"+nsec;
+
+            document.getElementById('data').innerHTML=""+tday[nday]+", "+tmonth[nmonth]+" "+ndate+", "+nyear+" "+nhour+":"+nmin+":"+nsec+"";
+        }
+
+        window.onload=function(){
+            GetClock();
+            setInterval(GetClock,1000);
+        }
+    </script>
+    <div id="data"></div>
+    <button class="logout" onclick="window.location ='login.html'">Logout</button>
+</div>
+
+<div class="page">
+    <div class="container">
+        <form>
+            <input type="text" placeholder="Cheie inrolare" ng-model = "cheieInrolare">
+            <input style="background-color: darkblue" type="button" value="Inroleaza-te" ng-click = "inrolare()"><br/>
+
+            <ul class="butoane" ng-repeat = "x in receiveData">
+                <li ng-show="x.idMaterie == 1" class="button romana"></li>
+                <li ng-show="x.idMaterie == 2" class="button mate"></li>
+                <li ng-show="x.idMaterie == 3" class="button info"></li>
+                <li ng-show="x.idMaterie == 4" class="button fizica"></li>
+                <li ng-show="x.idMaterie == 5" class="button chimie"></li>
+                <li ng-show="x.idMaterie == 6" class="button biologie "></li>
+                <li ng-show="x.idMaterie == 7" class="button istorie"></li>
+                <li ng-show="x.idMaterie == 8" class="button geografie"></li>
+                <li ng-show="x.idMaterie == 9" class="button logica"></li>
+                <li onclick="window.location = 'materie.html'" ng-show="x.idMaterie == 10" class="button psiho"></li>
+                <li ng-show="x.idMaterie == 11" class="button economie"></li>
+                <li ng-show="x.idMaterie == 12" class="button filozofie"></li>
+            </ul>
+            <br/>
+            <input style="background-color: darkblue" type="button" value = "Chat" ng-click = "spreChat()">
+            <input style="background-color: darkblue" type="button" value="Upload solutie" ng-click = "spreUpload()">
+        </form>
+    </div>
+</div>
+</body>
+
+<script>
+    var myApp = angular.module("myApp", []);
+    myApp.controller("controller", function ($scope, $http) {
+        $scope.msg = document.cookie;
+
+        var data = {
+            "tabel": "Optiuni",
+            "sqlQuery": "SELECT * FROM Optiuni WHERE idElev = '" + document.cookie.split(',')[0] + "'"
+        };
+
+        $http.post('../php/selectAll.php', data)
+            .then(function (response)
+            {
+                $scope.msg2 = response.data.records;
+                $scope.receiveData = response.data.records;
+            }, function (error) {
+                $scope.msg2 = "Eroare";
+            });
+
+        $scope.inrolare = function ()
+        {
+            if($scope.cheieInrolare == null) alert("Introduceti cheia de inrolare");
+            else
+            {
+                var data = {
+                    "idElev": document.cookie.split(',')[0],
+                    "key": $scope.cheieInrolare
+                };
+
+                $http.post('../php/inrolare.php', data)
+                    .then(function (response)
+                    {
+                        $scope.responseJSON = response.data;
+                        console.log($scope.responseJSON.msg);
+                    }, function (error) {
+                        console.log(error);
+                    });
+            }
+        }
+
+        $scope.spreChat = function () {
+            window.location = "chatElev.html";
+        };
+
+        $scope.spreUpload = function () {
+            window.location = "uploadSolutii.html";
+        };
+    });
+</script>
+
+</html>

@@ -1,0 +1,172 @@
+﻿<Window x:Class="Inteligenta.Masurarea_inteligentei"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Masurarea_inteligentei" Height="768" Width="1024" Icon="/Inteligenta;component/Images/brain.ico" Topmost="True" WindowStartupLocation="CenterScreen" WindowState="Maximized" WindowStyle="None" ResizeMode="NoResize">
+    <Window.Background>
+        <ImageBrush ImageSource="/Inteligenta;component/Images/sah.png" />
+    </Window.Background>
+
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Styles/ScrollBar_Style.xaml">
+                </ResourceDictionary>
+            </ResourceDictionary.MergedDictionaries>
+
+            <Style x:Key="btnGlass" TargetType="Button">
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="Button">
+                            <Border x:Name="ButtonBorder" CornerRadius="100" BorderThickness="3" Background="{TemplateBinding Background}"  
+                  BorderBrush="{TemplateBinding BorderBrush}" RenderTransformOrigin="0.5,0.5">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="1.7*"/>
+                                    </Grid.RowDefinitions>
+                                    <ContentPresenter x:Name="ButtonContentPresenter"
+                                VerticalAlignment="Center"  
+                                HorizontalAlignment="Center" 
+                                Grid.RowSpan="2" />
+                                </Grid>
+
+                            </Border>
+
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsPressed" Value="True">
+                                    <Setter Property="RenderTransform" TargetName="ButtonBorder">
+                                        <Setter.Value>
+                                            <TransformGroup>
+                                                <ScaleTransform ScaleX="0.95" ScaleY="0.95"/>
+                                            </TransformGroup>
+                                        </Setter.Value>
+                                    </Setter>
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+        </ResourceDictionary>
+    </Window.Resources>
+
+    <Grid>
+        <Border Name="border1" CornerRadius="30" Width="730" Height="570" Background="#FFFFFFD3" BorderBrush="#FF78200F" BorderThickness="3">
+            <FlowDocumentReader Width="700" Height="550" Foreground="#FF78200F" FontFamily="Times New Roman" MaxZoom="150" MinZoom="80" IsTwoPageViewEnabled="False" FontSize="14">
+                <FlowDocument FontFamily="Times New Roman" TextAlignment="Justify" FontSize="18">
+                    <Paragraph>
+                        <Italic FontSize="24">
+                            <Bold>Măsurarea inteligenţei</Bold>
+                        </Italic>
+                    </Paragraph>
+                    <Paragraph>
+                        Diferenţele interindividuale reprezintă un dat cotidian, atrăgând atenţia mai ales precocitatea, care dovedeşte în primul rând existenţa unor predispoziţii native. În acest sens sunt celebre exemple precum Mozart (care a compus un menuet la 5 ani) şi Goethe (care la 8 ani scria lucrări literare cu o maturitate de adult). Calculul ulterior al coeficienţilor de inteligenţă a condus la estimări potrivit cărora Goethe ar fi avut un coeficient de inteligenţă de 200, iar Mozart de 165. Modul efectiv în care se determină celebrul IQ este redat de următoarea formulă:
+                    </Paragraph>
+                    <BlockUIContainer>
+                        <Image Source="/Inteligenta;component/Images/formula-iq.png" Width="350" Height="70"></Image>
+                    </BlockUIContainer>
+                    <Paragraph>
+                        Psihologia a făcut progrese mari din momentul în care s-au construit testele ca mijloace principale de măsurare a capacităţilor şi însuşirilor psihice. Foarte multă atenţie s-a acordat testelor de inteligenţă cu ajutorul cărora se măsoară nivelul de dezvoltare şi de funcţionalitate cognitivă a individului.
+                    </Paragraph>
+                    <Paragraph>
+                        După ce un test a fost construit, el este supus unui proces complex de standardizare, în sensul că el este aplicat pe un grup mare de subiecţi, selectaţi pe baza unor mijloace ştiinţifice din populaţia căreia i se adresează testul. Rezultatele obţinute sunt, apoi, grupate în clase ce alcătuiesc etalonul testului(vezi tabelul şi graficul de mai jos).
+                    </Paragraph>
+                    <Table CellSpacing="0" Padding="10" TextAlignment="Center" FontSize="16">
+                        <TableRowGroup>
+                            <TableRow>
+                                <TableCell BorderBrush="#FF78200F" BorderThickness="2">
+                                    <Paragraph><Bold>Scor IQ</Bold></Paragraph>
+                                </TableCell>
+                                <TableCell BorderBrush="#FF78200F" BorderThickness="2">
+                                    <Paragraph><Bold>Clasificare</Bold></Paragraph>
+                                </TableCell>
+                            </TableRow>
+                            <TableRow>
+                                <TableCell BorderBrush="#FF78200F" BorderThickness="2">
+                                    <Paragraph>145 şi peste</Paragraph>
+                                </TableCell>
+                                <TableCell BorderBrush="#FF78200F" BorderThickness="2">
+                                    <Paragraph>Supradotat</Paragraph>
+                                </TableCell>
+                            </TableRow>
+                            <TableRow>
+                                <TableCell BorderBrush="#FF78200F" BorderThickness="2">
+                                    <Paragraph>130-145</Paragraph>
+                                </TableCell>
+                                <TableCell BorderBrush="#FF78200F" BorderThickness="2">
+                                    <Paragraph>Excepţional</Paragraph>
+                                </TableCell>
+                            </TableRow>
+                            <TableRow>
+                                <TableCell BorderBrush="#FF78200F" BorderThickness="2">
+                                    <Paragraph>115-130</Paragraph>
+                                </TableCell>
+                                <TableCell BorderBrush="#FF78200F" BorderThickness="2">
+                                    <Paragraph>Peste medie</Paragraph>
+                                </TableCell>
+                            </TableRow>
+                            <TableRow>
+                                <TableCell BorderBrush="#FF78200F" BorderThickness="2">
+                                    <Paragraph>85-115</Paragraph>
+                                </TableCell>
+                                <TableCell BorderBrush="#FF78200F" BorderThickness="2">
+                                    <Paragraph>Mediu</Paragraph>
+                                </TableCell>
+                            </TableRow>
+                            <TableRow>
+                                <TableCell BorderBrush="#FF78200F" BorderThickness="2">
+                                    <Paragraph>70-85</Paragraph>
+                                </TableCell>
+                                <TableCell BorderBrush="#FF78200F" BorderThickness="2">
+                                    <Paragraph>Sub medie</Paragraph>
+                                </TableCell>
+                            </TableRow>
+                            <TableRow>
+                                <TableCell BorderBrush="#FF78200F" BorderThickness="2">
+                                    <Paragraph>55-70</Paragraph>
+                                </TableCell>
+                                <TableCell BorderBrush="#FF78200F" BorderThickness="2">
+                                    <Paragraph>Debil mintal</Paragraph>
+                                </TableCell>
+                            </TableRow>
+                            <TableRow>
+                                <TableCell BorderBrush="#FF78200F" BorderThickness="2">
+                                    <Paragraph>sub 55</Paragraph>
+                                </TableCell>
+                                <TableCell BorderBrush="#FF78200F" BorderThickness="2">
+                                    <Paragraph>Extrem de scăzut</Paragraph>
+                                </TableCell>
+                            </TableRow>
+                        </TableRowGroup>
+                    </Table>
+                    <BlockUIContainer>
+                        <Image Source="/Inteligenta;component/Images/grafic-iq2.png" Width="550" Height="200"></Image>
+                    </BlockUIContainer>
+                    <Paragraph>
+                        Testele de inteligenţă sunt folosite în activităţile de <TextBlock Foreground="Red">consiliere şcolară şi vocaţională</TextBlock>, în sensul că după ce cunoaştem valoarea IQ pentru un anumit tânăr îl putem sfătui să se îndrepte către acele forme de şcolarizare şi către acele profesiuni care solicită un acelaşi nivel de inteligenţă.
+                    </Paragraph>
+                    <Paragraph>
+                        Pe de altă parte, testele sunt folosite şi în activitatea de <TextBlock Foreground="Red">selecţie profesională</TextBlock>, în sensul că sunt recrutaţi, pe baza rezultatelor, acei candidaţi care au un nivel de IQ cerut de o anumită profesie.
+                    </Paragraph> 
+                </FlowDocument>
+            </FlowDocumentReader>
+        </Border>
+        <Canvas Height="50" HorizontalAlignment="Center" Margin="416,0,416,20" Name="canvas1" VerticalAlignment="Bottom" Width="170">
+            <Button Background="#FFFFFFD3" FontFamily="Monotype Corsiva" FontSize="30" FontWeight="Normal" Foreground="White" Height="50" Name="inapoi" Style="{StaticResource btnGlass}" Width="50" Click="inapoi_Click" Canvas.Left="0" Canvas.Top="0" BorderBrush="#FF78200F" MouseEnter="inapoi_MouseEnter" MouseLeave="inapoi_MouseLeave">
+                <StackPanel>
+                    <Image Source="/Inteligenta;component/Images/back_arrow_brown.png" Name="inapoi_img" />
+                </StackPanel>
+            </Button>
+            <Button Background="#FFFFFFD3" FontFamily="Monotype Corsiva" FontSize="30" FontWeight="Normal" Foreground="White" Height="50" Name="acasa" Style="{StaticResource btnGlass}" Width="50" Canvas.Left="60" Canvas.Top="0" BorderBrush="#FF78200F" Click="acasa_Click" MouseEnter="acasa_MouseEnter" MouseLeave="acasa_MouseLeave">
+                <StackPanel>
+                    <Image Source="/Inteligenta;component/Images/home_brown.png" Name="acasa_img" />
+                </StackPanel>
+            </Button>
+            <Button Background="#FFFFFFD3" FontFamily="Monotype Corsiva" FontSize="30" FontWeight="Normal" Foreground="White" Height="50" Name="nav_menu" Style="{StaticResource btnGlass}" Width="50" Canvas.Left="120" Canvas.Top="0" BorderBrush="#FF78200F" Click="nav_menu_Click" MouseEnter="nav_menu_MouseEnter" MouseLeave="nav_menu_MouseLeave">
+                <StackPanel>
+                    <Image Source="/Inteligenta;component/Images/menu_brown.png" Name="nav_menu_img" />
+                </StackPanel>
+            </Button>
+        </Canvas>
+    </Grid>
+</Window>

@@ -1,0 +1,785 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{23FFB148-BAED-4B8F-A515-FA5DDC67D44C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Revolutii_care_au_schimbat_lumea</RootNamespace>
+    <AssemblyName>Revolutii care au schimbat lumea</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icon3.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Aplicatii.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aplicatii.Designer.cs">
+      <DependentUpon>Aplicatii.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bibliografie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bibliografie.Designer.cs">
+      <DependentUpon>Bibliografie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fisa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fisa.Designer.cs">
+      <DependentUpon>Fisa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fr_cauze.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fr_cauze.Designer.cs">
+      <DependentUpon>Fr_cauze.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fr_desfasurare.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fr_desfasurare.Designer.cs">
+      <DependentUpon>Fr_desfasurare.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fr_directorat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fr_directorat.Designer.cs">
+      <DependentUpon>Fr_directorat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fr_moderata.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fr_moderata.Designer.cs">
+      <DependentUpon>Fr_moderata.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fr_mod_abolire.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fr_mod_abolire.Designer.cs">
+      <DependentUpon>Fr_mod_abolire.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fr_mod_adunare.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fr_mod_adunare.Designer.cs">
+      <DependentUpon>Fr_mod_adunare.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fr_mod_adunare_const.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fr_mod_adunare_const.Designer.cs">
+      <DependentUpon>Fr_mod_adunare_const.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fr_mod_bastilia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fr_mod_bastilia.Designer.cs">
+      <DependentUpon>Fr_mod_bastilia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fr_mod_constitutie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fr_mod_constitutie.Designer.cs">
+      <DependentUpon>Fr_mod_constitutie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fr_mod_girondin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fr_mod_girondin.Designer.cs">
+      <DependentUpon>Fr_mod_girondin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fr_mod_monarhie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fr_mod_monarhie.Designer.cs">
+      <DependentUpon>Fr_mod_monarhie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fr_mod_monarhie_cadere.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fr_mod_monarhie_cadere.Designer.cs">
+      <DependentUpon>Fr_mod_monarhie_cadere.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fr_origini.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fr_origini.Designer.cs">
+      <DependentUpon>Fr_origini.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fr_radical.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fr_radical.Designer.cs">
+      <DependentUpon>Fr_radical.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Rebus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rebus.Designer.cs">
+      <DependentUpon>Rebus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rev1848.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rev1848.Designer.cs">
+      <DependentUpon>Rev1848.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rev1848_franta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rev1848_franta.Designer.cs">
+      <DependentUpon>Rev1848_franta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rev1848_germania.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rev1848_germania.Designer.cs">
+      <DependentUpon>Rev1848_germania.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rev1848_imp_habs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rev1848_imp_habs.Designer.cs">
+      <DependentUpon>Rev1848_imp_habs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rev1848_italia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rev1848_italia.Designer.cs">
+      <DependentUpon>Rev1848_italia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rev1848_romania.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rev1848_romania.Designer.cs">
+      <DependentUpon>Rev1848_romania.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rev1917.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rev1917.Designer.cs">
+      <DependentUpon>Rev1917.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Revolutia_americana.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Revolutia_americana.Designer.cs">
+      <DependentUpon>Revolutia_americana.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Revolutia_americana_1789.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Revolutia_americana_1789.Designer.cs">
+      <DependentUpon>Revolutia_americana_1789.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Revolutia_americana_institutii.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Revolutia_americana_institutii.Designer.cs">
+      <DependentUpon>Revolutia_americana_institutii.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Revolutia_americana_philadelphia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Revolutia_americana_philadelphia.Designer.cs">
+      <DependentUpon>Revolutia_americana_philadelphia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Revolutia_americana_presedinte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Revolutia_americana_presedinte.Designer.cs">
+      <DependentUpon>Revolutia_americana_presedinte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Revolutia_franceza.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Revolutia_franceza.Designer.cs">
+      <DependentUpon>Revolutia_franceza.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rev_am_conflicte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rev_am_conflicte.Designer.cs">
+      <DependentUpon>Rev_am_conflicte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rev_am_intr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rev_am_intr.Designer.cs">
+      <DependentUpon>Rev_am_intr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rev_am_razboaie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rev_am_razboaie.Designer.cs">
+      <DependentUpon>Rev_am_razboaie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rev_eng.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rev_eng.Designer.cs">
+      <DependentUpon>Rev_eng.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rev_eng_desfasurare.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rev_eng_desfasurare.Designer.cs">
+      <DependentUpon>Rev_eng_desfasurare.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rev_eng_intr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rev_eng_intr.Designer.cs">
+      <DependentUpon>Rev_eng_intr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rev_eng_premise.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rev_eng_premise.Designer.cs">
+      <DependentUpon>Rev_eng_premise.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rev_garoafelor_rosii.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rev_garoafelor_rosii.Designer.cs">
+      <DependentUpon>Rev_garoafelor_rosii.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rev_glrioasa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rev_glrioasa.Designer.cs">
+      <DependentUpon>Rev_glrioasa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rev_ind.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rev_ind.Designer.cs">
+      <DependentUpon>Rev_ind.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rev_ind_epoca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rev_ind_epoca.Designer.cs">
+      <DependentUpon>Rev_ind_epoca.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rev_ind_europa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rev_ind_europa.Designer.cs">
+      <DependentUpon>Rev_ind_europa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rev_ind_inv.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rev_ind_inv.Designer.cs">
+      <DependentUpon>Rev_ind_inv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rev_junilor_turci.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rev_junilor_turci.Designer.cs">
+      <DependentUpon>Rev_junilor_turci.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Start.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Start.Designer.cs">
+      <DependentUpon>Start.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SUA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SUA.Designer.cs">
+      <DependentUpon>SUA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SUA_nastere.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SUA_nastere.Designer.cs">
+      <DependentUpon>SUA_nastere.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Test.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Test.Designer.cs">
+      <DependentUpon>Test.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Wall.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Wall.Designer.cs">
+      <DependentUpon>Wall.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Wallpaper.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Wallpaper.Designer.cs">
+      <DependentUpon>Wallpaper.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Aplicatii.resx">
+      <DependentUpon>Aplicatii.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bibliografie.resx">
+      <DependentUpon>Bibliografie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fisa.resx">
+      <DependentUpon>Fisa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fr_cauze.resx">
+      <DependentUpon>Fr_cauze.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fr_desfasurare.resx">
+      <DependentUpon>Fr_desfasurare.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fr_directorat.resx">
+      <DependentUpon>Fr_directorat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fr_moderata.resx">
+      <DependentUpon>Fr_moderata.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fr_mod_abolire.resx">
+      <DependentUpon>Fr_mod_abolire.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fr_mod_adunare.resx">
+      <DependentUpon>Fr_mod_adunare.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fr_mod_adunare_const.resx">
+      <DependentUpon>Fr_mod_adunare_const.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fr_mod_bastilia.resx">
+      <DependentUpon>Fr_mod_bastilia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fr_mod_constitutie.resx">
+      <DependentUpon>Fr_mod_constitutie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fr_mod_girondin.resx">
+      <DependentUpon>Fr_mod_girondin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fr_mod_monarhie.resx">
+      <DependentUpon>Fr_mod_monarhie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fr_mod_monarhie_cadere.resx">
+      <DependentUpon>Fr_mod_monarhie_cadere.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fr_origini.resx">
+      <DependentUpon>Fr_origini.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fr_radical.resx">
+      <DependentUpon>Fr_radical.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rebus.resx">
+      <DependentUpon>Rebus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rev1848.resx">
+      <DependentUpon>Rev1848.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rev1848_franta.resx">
+      <DependentUpon>Rev1848_franta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rev1848_germania.resx">
+      <DependentUpon>Rev1848_germania.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rev1848_imp_habs.resx">
+      <DependentUpon>Rev1848_imp_habs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rev1848_italia.resx">
+      <DependentUpon>Rev1848_italia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rev1848_romania.resx">
+      <DependentUpon>Rev1848_romania.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rev1917.resx">
+      <DependentUpon>Rev1917.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Revolutia_americana.resx">
+      <DependentUpon>Revolutia_americana.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Revolutia_americana_1789.resx">
+      <DependentUpon>Revolutia_americana_1789.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Revolutia_americana_institutii.resx">
+      <DependentUpon>Revolutia_americana_institutii.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Revolutia_americana_philadelphia.resx">
+      <DependentUpon>Revolutia_americana_philadelphia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Revolutia_americana_presedinte.resx">
+      <DependentUpon>Revolutia_americana_presedinte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Revolutia_franceza.resx">
+      <DependentUpon>Revolutia_franceza.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rev_am_conflicte.resx">
+      <DependentUpon>Rev_am_conflicte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rev_am_intr.resx">
+      <DependentUpon>Rev_am_intr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rev_am_razboaie.resx">
+      <DependentUpon>Rev_am_razboaie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rev_eng.resx">
+      <DependentUpon>Rev_eng.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rev_eng_desfasurare.resx">
+      <DependentUpon>Rev_eng_desfasurare.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rev_eng_intr.resx">
+      <DependentUpon>Rev_eng_intr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rev_eng_premise.resx">
+      <DependentUpon>Rev_eng_premise.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rev_garoafelor_rosii.resx">
+      <DependentUpon>Rev_garoafelor_rosii.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rev_glrioasa.resx">
+      <DependentUpon>Rev_glrioasa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rev_ind.resx">
+      <DependentUpon>Rev_ind.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rev_ind_epoca.resx">
+      <DependentUpon>Rev_ind_epoca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rev_ind_europa.resx">
+      <DependentUpon>Rev_ind_europa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rev_ind_inv.resx">
+      <DependentUpon>Rev_ind_inv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rev_junilor_turci.resx">
+      <DependentUpon>Rev_junilor_turci.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Start.resx">
+      <DependentUpon>Start.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SUA.resx">
+      <DependentUpon>SUA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SUA_nastere.resx">
+      <DependentUpon>SUA_nastere.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Test.resx">
+      <DependentUpon>Test.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wall.resx">
+      <DependentUpon>Wall.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wallpaper.resx">
+      <DependentUpon>Wallpaper.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\statie-monaco.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Franta.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\America.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\french_revolution.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Revolutia franceza scris1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\revolutia americana.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Revolutia americana scris1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Anglia.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Portugalia.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Revolutia garoafelor rosii scris.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Turcia.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wallpaper.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\panza.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bibliografie.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\raft.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\conductor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\test_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inapoi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inapoi1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\train_station.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="icon3.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="sua.cur" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="franta_cursor.cur" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="rev_ind_cursor.cur" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="garoafa.cur" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\map.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rev_ind.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\harta_rev_ind.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="rev_ind_cursor_copy.cur" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Revolutia industriala scris.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1848 map.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Revolutia industriala scris51.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rev-1917-oct1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Revolutia glorioasa scris11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="anglia_cursor.cur" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Revolutia industriala scris6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Revolutia industriala scris7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rev_ind2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rev_1848_background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\oct_rev.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="romania.cur" />
+    <EmbeddedResource Include="rusia_cursor.cur" />
+    <None Include="Resources\Revolutia octombrie scris1.png" />
+    <None Include="Resources\Revolutia octombrie scris.png" />
+    <None Include="Resources\oct_rev1.jpg" />
+    <None Include="Resources\rev_1917.jpg" />
+    <None Include="Resources\rebus1.jpg" />
+    <None Include="Resources\Revolutia engleza scris.png" />
+    <None Include="Resources\automobilul.jpg" />
+    <None Include="Resources\cinematograful.jpg" />
+    <None Include="Resources\compunere_bec.jpg" />
+    <None Include="Resources\dinamita.jpg" />
+    <None Include="Resources\Fonograf.jpg" />
+    <None Include="Resources\fotografia.jpg" />
+    <None Include="Resources\istoria-bicicletei.jpg" />
+    <None Include="Resources\locomotiva cu abur.jpg" />
+    <None Include="Resources\otel.jpg" />
+    <None Include="Resources\pasteurizare.jpg" />
+    <None Include="Resources\telefon.jpg" />
+    <None Include="Resources\telegraf.png" />
+    <None Include="Resources\tehnologie.jpg" />
+    <None Include="Resources\1848-germania1.png" />
+    <None Include="Resources\1848-imperiu habsburgic1.png" />
+    <None Include="Resources\1848-italia1.png" />
+    <None Include="Resources\1848-romania1.png" />
+    <None Include="Resources\1848-franta.png" />
+    <None Include="Resources\1848-italia2.png" />
+    <EmbeddedResource Include="germania.cur" />
+    <EmbeddedResource Include="imp_habs.cur" />
+    <EmbeddedResource Include="italia.cur" />
+    <None Include="Resources\billofrights.jpg" />
+    <None Include="Resources\2-french-revolution-1789-granger.jpg" />
+    <None Include="Resources\25_Abril_1983.jpg" />
+    <None Include="Resources\Boston_Tea_Party.jpg" />
+    <None Include="Resources\batalii1.jpg" />
+    <None Include="Resources\background.png" />
+    <None Include="Resources\animatie3.gif" />
+    <None Include="Resources\Battle_of_Naseby.jpg" />
+    <Content Include="Resources\Capitulaton_of_Hungarian_Army_at_Világos_1849.png" />
+    <None Include="Resources\Capitulaton_of_Hungarian_Army_at_Világos_18491.png" />
+    <None Include="Resources\Lar9_philippo_001z1.jpg" />
+    <None Include="Resources\Maerz1848_berlin1.jpg" />
+    <None Include="Resources\Tricolore18481.jpg" />
+    <None Include="Resources\italy1848.jpg" />
+    <None Include="Resources\rev_fr.jpg" />
+    <None Include="Resources\directorat.jpg" />
+    <None Include="Resources\robesppiere.jpg" />
+    <None Include="Resources\Disaster-French-Revolution2.jpg" />
+    <None Include="Resources\Estatesgeneral.jpg" />
+    <None Include="Resources\constitutie.jpg" />
+    <None Include="Resources\monarhie.jpg" />
+    <None Include="Resources\girondini.jpg" />
+    <None Include="Resources\sua.png" />
+    <None Include="Resources\independenta.jpg" />
+    <None Include="Resources\US_Slave_Free_1789-1861.gif" />
+    <None Include="Resources\george-washington.jpg" />
+    <None Include="Resources\institutii.jpg" />
+    <None Include="Resources\wallpaper1.png" />
+    <None Include="Resources\pix.png" />
+    <None Include="Resources\fisa.png" />
+    <None Include="Resources\swirling-galaxy.jpg" />
+    <None Include="Resources\Charles_I.jpg" />
+    <None Include="Resources\LongParliament.jpg" />
+    <None Include="Resources\Oliver_Cromwell_by_Samuel_Cooper.jpg" />
+    <None Include="Resources\wall.png" />
+    <Content Include="rev_1917.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

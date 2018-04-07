@@ -1,0 +1,16 @@
+D:\download\revolutii care au schimbat lumea\soft\Revolutii care au schimbat lumea\Revolutii care au schimbat lumea\obj\x86\Release\Revolutii_care_au_schimbat_lumea.Form1.resources
+D:\download\revolutii care au schimbat lumea\soft\Revolutii care au schimbat lumea\Revolutii care au schimbat lumea\obj\x86\Release\Revolutii_care_au_schimbat_lumea.Properties.Resources.resources
+D:\download\revolutii care au schimbat lumea\soft\Revolutii care au schimbat lumea\Revolutii care au schimbat lumea\obj\x86\Release\Revolutii_care_au_schimbat_lumea.Start.resources
+D:\download\revolutii care au schimbat lumea\soft\Revolutii care au schimbat lumea\Revolutii care au schimbat lumea\obj\x86\Release\Revolutii care au schimbat lumea.csproj.GenerateResource.Cache
+D:\download\revolutii care au schimbat lumea\soft\Revolutii care au schimbat lumea\Revolutii care au schimbat lumea\bin\Release\Revolutii care au schimbat lumea.exe
+D:\download\revolutii care au schimbat lumea\soft\Revolutii care au schimbat lumea\Revolutii care au schimbat lumea\bin\Release\Revolutii care au schimbat lumea.pdb
+D:\download\revolutii care au schimbat lumea\soft\Revolutii care au schimbat lumea\Revolutii care au schimbat lumea\obj\x86\Release\Revolutii care au schimbat lumea.csprojResolveAssemblyReference.cache
+D:\download\revolutii care au schimbat lumea\soft\Revolutii care au schimbat lumea\Revolutii care au schimbat lumea\obj\x86\Release\Revolutii_care_au_schimbat_lumea.Revolutia_americana.resources
+D:\download\revolutii care au schimbat lumea\soft\Revolutii care au schimbat lumea\Revolutii care au schimbat lumea\obj\x86\Release\Revolutii_care_au_schimbat_lumea.Revolutia_franceza.resources
+D:\download\revolutii care au schimbat lumea\soft\Revolutii care au schimbat lumea\Revolutii care au schimbat lumea\obj\x86\Release\Revolutii care au schimbat lumea.exe
+D:\download\revolutii care au schimbat lumea\soft\Revolutii care au schimbat lumea\Revolutii care au schimbat lumea\obj\x86\Release\Revolutii care au schimbat lumea.pdb
+D:\download\revolutii care au schimbat lumea\soft\Revolutii care au schimbat lumea\Revolutii care au schimbat lumea\obj\x86\Release\Revolutii_care_au_schimbat_lumea.Aplicatii.resources
+D:\download\revolutii care au schimbat lumea\soft\Revolutii care au schimbat lumea\Revolutii care au schimbat lumea\obj\x86\Release\Revolutii_care_au_schimbat_lumea.Bibliografie.resources
+D:\download\revolutii care au schimbat lumea\soft\Revolutii care au schimbat lumea\Revolutii care au schimbat lumea\obj\x86\Release\Revolutii_care_au_schimbat_lumea.Rev_garoafelor_rosii.resources
+D:\download\revolutii care au schimbat lumea\soft\Revolutii care au schimbat lumea\Revolutii care au schimbat lumea\obj\x86\Release\Revolutii_care_au_schimbat_lumea.Rev_junilor_turci.resources
+D:\download\revolutii care au schimbat lumea\soft\Revolutii care au schimbat lumea\Revolutii care au schimbat lumea\obj\x86\Release\Revolutii_care_au_schimbat_lumea.Wallpaper.resources

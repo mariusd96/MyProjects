@@ -1,0 +1,4 @@
+﻿Enumeraţi 10 ţări din Asia.
+Enumeraţi 10 capitale din Asia.
+Enumeraţi 4 obiective turistice din Asia.
+Enumeraţi 5 ţări din Asia şi descrieţi steagurile acestora.

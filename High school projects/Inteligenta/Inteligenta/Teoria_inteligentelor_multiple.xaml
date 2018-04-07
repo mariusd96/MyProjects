@@ -1,0 +1,139 @@
+﻿<Window x:Class="Inteligenta.Teoria_inteligentelor_multiple"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Teoria_inteligentelor_multiple" Height="768" Width="1024" Icon="/Inteligenta;component/Images/brain.ico" ResizeMode="NoResize" Topmost="True" WindowStartupLocation="CenterScreen" WindowState="Maximized" WindowStyle="None">
+    <Window.Background>
+        <ImageBrush ImageSource="/Inteligenta;component/Images/sah.png" />
+    </Window.Background>
+
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Styles/ScrollBar_Style.xaml">
+                </ResourceDictionary>
+            </ResourceDictionary.MergedDictionaries>
+            <Style x:Key="btnGlass" TargetType="Button">
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="Button">
+                            <Border x:Name="ButtonBorder" CornerRadius="100" BorderThickness="3" Background="{TemplateBinding Background}"  
+                  BorderBrush="{TemplateBinding BorderBrush}" RenderTransformOrigin="0.5,0.5">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="1.7*"/>
+                                    </Grid.RowDefinitions>
+                                    <ContentPresenter x:Name="ButtonContentPresenter"
+                                VerticalAlignment="Center"  
+                                HorizontalAlignment="Center" 
+                                Grid.RowSpan="2" />
+                                </Grid>
+
+                            </Border>
+
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsPressed" Value="True">
+                                    <Setter Property="RenderTransform" TargetName="ButtonBorder">
+                                        <Setter.Value>
+                                            <TransformGroup>
+                                                <ScaleTransform ScaleX="0.95" ScaleY="0.95"/>
+                                            </TransformGroup>
+                                        </Setter.Value>
+                                    </Setter>
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+        </ResourceDictionary>
+    </Window.Resources>
+
+    <Grid>
+        <Border Name="border1" CornerRadius="30" Width="730" Height="570" Background="#FFFFFFD3" BorderBrush="#FF78200F" BorderThickness="3">
+            <FlowDocumentReader Width="700" Height="550" Foreground="#FF78200F" FontFamily="Times New Roman" MaxZoom="150" MinZoom="80" IsTwoPageViewEnabled="False" FontSize="14">
+                <FlowDocument FontFamily="Times New Roman" TextAlignment="Justify" FontSize="18">
+                    <Paragraph>
+                        <Italic FontSize="20">
+                            <Bold>Teoria inteligenţelor multiple</Bold>
+                        </Italic>
+                    </Paragraph>
+                    <Paragraph>
+                        Teoria inteligenţelor multiple, introdusă de H. Gardner(1983), susţine că există mai multe forme ale inteligenţei. Pornind de la ele, se poate stabili profilul intelectual al unei persoane pentru a-i arăta posibilităţile pe care le deţine şi pentru a stabili opţiunile educative ce-i sunt adaptate.
+                    </Paragraph>
+                    <Paragraph>
+                        Formele inteligenţei sunt:
+                    </Paragraph>
+                    <List>
+                        <ListItem>
+                            <Paragraph>
+                                <TextBlock Foreground="Red">Inteligenţa lingvistică</TextBlock> : Cei ce posedă acest tip de inteligenţă ca dominat gândesc cu predilecţie în cuvinte şi folosesc cu uşurinta limba pentru a exprima şi/sau înţelege realităţi complexe. Sunt persoane care învaţă repede limba maternă şi limbile străine, citesc cu plăcere, folosesc metafore etc.
+                                <LineBreak></LineBreak>
+                            </Paragraph>
+                        </ListItem>
+                        <ListItem>
+                            <Paragraph>
+                                <TextBlock Foreground="Red">Inteligenţa logico-matematică</TextBlock> : Prevalenţa ei determină analiza cauzelor şi a efectelor, înţelegerea relaţiilor dintre acţiuni, obiecte şi idei. Abilitatea de a calcula, cuantifica, evalua propoziţii şi efectua operatii logice complexe sunt caracteristici care ies în evidenţă în cazul acestei inteligenţe împreună cu abilităţi de găndire deductivă şi inductivă şi capacităţi critice şi creative de rezolvare a problemelor.
+                                <LineBreak></LineBreak>
+                            </Paragraph>
+                        </ListItem>
+                        <ListItem>
+                            <Paragraph>
+                                <TextBlock Foreground="Red">Inteligenţa muzicală</TextBlock> : Persoanele cu această inteligenţă gândesc în sunet, ritmuri, melodii şi rime. Sunt sensibili la tonalitatea, intensitatea, înălţimea şi timbrul sunetului; recunosc, creează şi reproduc muzica folosind un instrument sau vocea.
+                            </Paragraph>
+                        </ListItem>
+                        <ListItem>
+                            <Paragraph>
+                                <TextBlock Foreground="Red">Inteligenţa spatială</TextBlock> : Înseamnă de a gândi în imagini şi a percepe cu acurateţe lumea vizuală. Abilitatea de a gândi în trei dimensiuni, de a transforma percepţiile şi a recrea aspecte ale experienţei vizuale cu ajutorul imaginaţiei sunt caracteristici ale acestei inteligenţe.
+                                <LineBreak></LineBreak>
+                            </Paragraph>
+                        </ListItem>
+                        <ListItem>
+                            <Paragraph>
+                                <TextBlock Foreground="Red">Inteligenţa naturalistă</TextBlock> : Persoanele la care este dominant acest tip de inteligenţă au capacitatea de a recunoaşte şi clasifica indivizi şi specii. Interacţionează eficient cu creaturi vii şi pot discerne cu uşurinşă fenomene legate de viaţă şi de forţele naturii.
+                                <LineBreak></LineBreak>
+                            </Paragraph>
+                        </ListItem>
+                        <ListItem>
+                            <Paragraph>
+                                <TextBlock Foreground="Red">Inteligenţa chinestezică</TextBlock> : Dominanţa acestei inteligenţe aduce după sine gândirea în mişcări şi folosirea corpului în moduri sugestive şi complexe. Ea implică simţul timpului şi al coordonării mişcărilor corpului şi ale mâinilor în manipularea obiectelor.
+                                <LineBreak></LineBreak>
+                            </Paragraph>
+                        </ListItem>
+                        <ListItem>
+                            <Paragraph>
+                                <TextBlock Foreground="Red">Inteligenţa interpersonală</TextBlock> : Înseamnă a înţelege celelalte persoane, a avea empatie, a recunoaşte diferenţele dintre oameni şi a aprecia modul lor de gândire, fiind sensibili la motivele, intenţiile şi la stările lor. Ea implică o interacţiune eficientă cu una sau mai multe persoane din familie sau din societate.
+                                <LineBreak></LineBreak>
+                            </Paragraph>
+                        </ListItem>
+                        <ListItem>
+                            <Paragraph>
+                                <TextBlock Foreground="Red">Inteligenţa intrapersonală</TextBlock> : Determină o gândire şi înţelegere de sine, a fi conştient de punctele tale tari şi slabe, a planifica eficient atingerea obiectivelor personale, monitorizarea şi controlul eficient al gândurilor şi emoţiilor, abilitatea de a se monitoriza în relaţiile cu alţii.
+                            </Paragraph>
+                        </ListItem>
+                    </List>
+                    <BlockUIContainer>
+                        <Image Source="/Inteligenta;component/Images/inteligenta multipla.png" Width="660" Height="500"></Image>
+                    </BlockUIContainer>
+                </FlowDocument>
+            </FlowDocumentReader>
+        </Border>
+        <Canvas Height="50" HorizontalAlignment="Center" Margin="416,0,416,20" Name="canvas1" VerticalAlignment="Bottom" Width="170">
+            <Button Background="#FFFFFFD3" FontFamily="Monotype Corsiva" FontSize="30" FontWeight="Normal" Foreground="White" Height="50" Name="inapoi" Style="{StaticResource btnGlass}" Width="50" Click="inapoi_Click" Canvas.Left="0" Canvas.Top="0" BorderBrush="#FF78200F" MouseEnter="inapoi_MouseEnter" MouseLeave="inapoi_MouseLeave">
+                <StackPanel>
+                    <Image Source="/Inteligenta;component/Images/back_arrow_brown.png" Name="inapoi_img" />
+                </StackPanel>
+            </Button>
+            <Button Background="#FFFFFFD3" FontFamily="Monotype Corsiva" FontSize="30" FontWeight="Normal" Foreground="White" Height="50" Name="acasa" Style="{StaticResource btnGlass}" Width="50" Canvas.Left="60" Canvas.Top="0" BorderBrush="#FF78200F" Click="acasa_Click" MouseEnter="acasa_MouseEnter" MouseLeave="acasa_MouseLeave">
+                <StackPanel>
+                    <Image Source="/Inteligenta;component/Images/home_brown.png" Name="acasa_img" />
+                </StackPanel>
+            </Button>
+            <Button Background="#FFFFFFD3" FontFamily="Monotype Corsiva" FontSize="30" FontWeight="Normal" Foreground="White" Height="50" Name="nav_menu" Style="{StaticResource btnGlass}" Width="50" Canvas.Left="120" Canvas.Top="0" BorderBrush="#FF78200F" Click="nav_menu_Click" MouseEnter="nav_menu_MouseEnter" MouseLeave="nav_menu_MouseLeave">
+                <StackPanel>
+                    <Image Source="/Inteligenta;component/Images/menu_brown.png" Name="nav_menu_img" />
+                </StackPanel>
+            </Button>
+        </Canvas>
+    </Grid>
+</Window>

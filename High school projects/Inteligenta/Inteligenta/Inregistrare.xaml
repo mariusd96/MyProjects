@@ -1,0 +1,108 @@
+﻿<Window x:Class="Inteligenta.Inregistrare"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Inregistrare" Height="350" Width="600" Icon="/Inteligenta;component/Images/brain.ico" ResizeMode="NoResize" Topmost="False" WindowStartupLocation="CenterScreen" WindowStyle="None">
+    <Window.Background>
+        <ImageBrush ImageSource="/Inteligenta;component/Images/sah.png" />
+    </Window.Background>
+
+    <Window.Resources>
+
+        <Style x:Key="btnGlass" TargetType="Button">
+
+            <Setter Property="FontSize" Value="28" />
+            <Setter Property="Foreground" Value="White" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="ButtonBorder" CornerRadius="2" BorderThickness="0" Background="#FFDE0909"  
+                  BorderBrush="WhiteSmoke" RenderTransformOrigin="0.5,0.5">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="1.7*"/>
+                                </Grid.RowDefinitions>
+                                <ContentPresenter x:Name="ButtonContentPresenter"
+                                VerticalAlignment="Center"  
+                                HorizontalAlignment="Center" 
+                                Grid.RowSpan="2" />
+                            </Grid>
+
+                        </Border>
+
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="RenderTransform" TargetName="ButtonBorder">
+                                    <Setter.Value>
+                                        <TransformGroup>
+                                            <ScaleTransform ScaleX="0.95" ScaleY="0.95"/>
+                                        </TransformGroup>
+                                    </Setter.Value>
+                                </Setter>
+                            </Trigger>
+
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" TargetName="ButtonBorder" Value="#FFC30909">
+                                </Setter>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style TargetType="{x:Type RadioButton}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type RadioButton}">
+                        <BulletDecorator Background="Transparent" Cursor="Hand">
+                            <BulletDecorator.Bullet>
+                                <Grid Height="20" Width="20">
+                                    <!--Define size of the Bullet-->
+
+                                    <!--The two borders-->
+                                    <Border Name="RadioOuter" Background="Transparent" BorderBrush="#FFFFFFFF" BorderThickness="2" CornerRadius="2" />
+                                    <Border CornerRadius="2" Margin="4" Name="RadioMark" Background="#FFFFFFFF" Visibility="Hidden" />
+                                </Grid>
+                            </BulletDecorator.Bullet>
+
+                            <!--Text element-->
+                            <TextBlock Margin="3,3,0,0" Foreground="#FF3E3E3E" FontFamily="Calibri" FontSize="12">
+                                <ContentPresenter />
+                            </TextBlock>
+                        </BulletDecorator>
+                        <!--If item is checked, trigger the visibility of the mark-->
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsChecked" Value="true">
+                                <!--If item is checked, trigger the visibility of the markand change the color of the selected bullet into a darker gray for better highlighting-->
+                                <Setter TargetName="RadioMark" Property="Visibility" Value="Visible"/>
+                                <Setter TargetName="RadioOuter" Property="BorderBrush" Value="#FFFFFFFF" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+
+    <Grid>
+        <Button Style="{StaticResource btnGlass}" Content="X" Height="30" HorizontalAlignment="Right" Name="exit" VerticalAlignment="Top" Width="30" FontSize="22" FontWeight="Normal" FontFamily="Berlin Sans FB" Cursor="Hand" Background="{x:Null}" Foreground="White" Click="exit_Click" />
+        <Label Content="User" Height="30" HorizontalAlignment="Left" Margin="10,50,0,0" Name="label1" VerticalAlignment="Top" Width="210" Foreground="White" FontSize="18" FontFamily="Times New Roman" VerticalContentAlignment="Center" />
+        <Label Content="Parolă" FontFamily="Times New Roman" FontSize="18" Foreground="White" Height="30" HorizontalAlignment="Left" Margin="10,85,0,0" Name="label2" VerticalAlignment="Top" Width="210" VerticalContentAlignment="Center" />
+        <Label Content="Confirmare parolă" FontFamily="Times New Roman" FontSize="18" Foreground="White" Height="30" HorizontalAlignment="Left" Margin="10,120,0,0" Name="label3" VerticalAlignment="Top" Width="210" VerticalContentAlignment="Center" />
+        <Label Content="Întrebare recuperare parolă" FontFamily="Times New Roman" FontSize="18" Foreground="White" Height="30" HorizontalAlignment="Left" Margin="10,155,0,0" Name="label4" VerticalAlignment="Top" Width="210" VerticalContentAlignment="Center" />
+        <Label Content="Răspuns" FontFamily="Times New Roman" FontSize="18" Foreground="White" Height="30" HorizontalAlignment="Left" Margin="10,190,0,0" Name="label5" VerticalAlignment="Top" Width="210" VerticalContentAlignment="Center" />
+        <Label Content="Cursor:" FontFamily="Times New Roman" FontSize="18" Foreground="White" Height="32" HorizontalAlignment="Left" Margin="10,225,0,0" Name="label6" VerticalAlignment="Top" Width="210" VerticalContentAlignment="Center" />
+        <RadioButton Height="20" HorizontalAlignment="Left" Margin="220,232,0,0" Name="radioButton1" VerticalAlignment="Top" Width="20" Checked="radioButton1_Checked" />
+        <Image Height="32" HorizontalAlignment="Left" Margin="240,225,0,0" Name="cursor1" Stretch="Fill" VerticalAlignment="Top" Width="32" Source="/Inteligenta;component/Cursor/cursor1.png" MouseLeftButtonUp="cursor1_MouseLeftButtonUp" />
+        <RadioButton Height="20" HorizontalAlignment="Left" Margin="300,232,0,0" Name="radioButton2" VerticalAlignment="Top" Width="20" Checked="radioButton2_Checked" />
+        <Image Height="32" HorizontalAlignment="Left" Margin="320,225,0,0" Name="cursor2" Source="/Inteligenta;component/Cursor/cursor2.png" Stretch="Fill" VerticalAlignment="Top" Width="32" MouseLeftButtonUp="cursor2_MouseLeftButtonUp" />
+        <Button Content="Creează cont" Height="40" HorizontalAlignment="Left" Margin="200,280,0,0" Name="creeaza_cont" VerticalAlignment="Top" Width="200" Style="{StaticResource btnGlass}" FontFamily="Times New Roman" FontSize="22" Click="creeaza_cont_Click" Cursor="Hand" />
+
+        <TextBox Height="30" HorizontalAlignment="Left" Margin="220,50,0,0" Name="user_textbox" VerticalAlignment="Top" Width="200" FontFamily="Times New Roman" FontSize="18" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" />
+        <PasswordBox Height="30" HorizontalAlignment="Left" Margin="220,85,0,0" Name="parola_textbox" VerticalAlignment="Top" Width="200" FontFamily="Times New Roman" FontSize="18" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" />
+        <PasswordBox Height="30" HorizontalAlignment="Left" Margin="220,120,0,0" Name="confirmare_parola_textbox" VerticalAlignment="Top" Width="200" FontFamily="Times New Roman" FontSize="18" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" />
+        <TextBox Height="30" HorizontalAlignment="Left" Margin="220,155,0,0" Name="intrebare_textbox" VerticalAlignment="Top" Width="200" FontFamily="Times New Roman" FontSize="18" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" />
+        <TextBox Height="30" HorizontalAlignment="Left" Margin="220,190,0,0" Name="raspuns_textbox" VerticalAlignment="Top" Width="200" FontFamily="Times New Roman" FontSize="18" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" />
+    </Grid>
+</Window>

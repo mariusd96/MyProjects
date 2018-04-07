@@ -1,0 +1,132 @@
+﻿<Window x:Class="Inteligenta.Teorii"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Teorii" Height="768" Width="1024" Icon="/Inteligenta;component/Images/brain.ico" ResizeMode="NoResize" Topmost="True" WindowStartupLocation="CenterScreen" WindowState="Maximized" WindowStyle="None">
+    <Window.Background>
+        <ImageBrush ImageSource="/Inteligenta;component/Images/sah.png" />
+    </Window.Background>
+
+    <Window.Resources>
+        <Style x:Key="btnGlass" TargetType="Button">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="ButtonBorder" CornerRadius="5" BorderThickness="0" Background="{TemplateBinding Background}"  
+                  BorderBrush="WhiteSmoke" RenderTransformOrigin="0.5,0.5">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="1.7*"/>
+                                </Grid.RowDefinitions>
+                                <ContentPresenter x:Name="ButtonContentPresenter"
+                                VerticalAlignment="Center"  
+                                HorizontalAlignment="Center" 
+                                Grid.RowSpan="2" />
+                            </Grid>
+
+                        </Border>
+
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="RenderTransform" TargetName="ButtonBorder">
+                                    <Setter.Value>
+                                        <TransformGroup>
+                                            <ScaleTransform ScaleX="0.95" ScaleY="0.95"/>
+                                        </TransformGroup>
+                                    </Setter.Value>
+                                </Setter>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        
+        
+        <Style x:Key="btnGlass2" TargetType="Button">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="ButtonBorder" CornerRadius="100" BorderThickness="3" Background="{TemplateBinding Background}"  
+                  BorderBrush="{TemplateBinding BorderBrush}" RenderTransformOrigin="0.5,0.5">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="1.7*"/>
+                                </Grid.RowDefinitions>
+                                <ContentPresenter x:Name="ButtonContentPresenter"
+                                VerticalAlignment="Center"  
+                                HorizontalAlignment="Center" 
+                                Grid.RowSpan="2" />
+                            </Grid>
+
+                        </Border>
+
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="RenderTransform" TargetName="ButtonBorder">
+                                    <Setter.Value>
+                                        <TransformGroup>
+                                            <ScaleTransform ScaleX="0.95" ScaleY="0.95"/>
+                                        </TransformGroup>
+                                    </Setter.Value>
+                                </Setter>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+    </Window.Resources>
+
+    <Grid>
+        <Border Name="border1" CornerRadius="30" Width="430" Height="270" Background="#FFFFFFD3" BorderBrush="#FF78200F" BorderThickness="3">
+            <Canvas Width="400" Height="250" Name="canvas1">
+                <Label Canvas.Left="10" Canvas.Top="10" Content="Teorii ale inteligenţei" Height="41" Name="label1" Width="361" Foreground="#FF78200F" FontFamily="Times New Roman" FontWeight="Bold" FontStyle="Italic" FontSize="28" />
+                <Label Canvas.Left="10" Canvas.Top="50" Content="Cele mai importante teorii ale inteligenţei sunt:" FontFamily="Times New Roman" FontSize="20" FontStyle="Normal" FontWeight="Normal" Foreground="#FF78200F" Height="35" Name="label2" Width="390" />
+                <Label Canvas.Left="75" Canvas.Top="100" Content="Teoria bifactorială" Height="36" Name="t_bifactoriala" Width="180" Foreground="#FF78200F" FontFamily="Times New Roman" FontSize="22" FontWeight="Bold" FontStyle="Italic" MouseLeftButtonUp="t_bifactoriala_MouseLeftButtonUp" />
+                <Label Canvas.Left="75" Canvas.Top="135" Content="Teoria multifactorială" FontFamily="Times New Roman" FontSize="22" FontStyle="Italic" FontWeight="Bold" Foreground="#FF78200F" Height="35" Name="t_multifactoriala" Width="210" MouseLeftButtonUp="t_multifactoriala_MouseLeftButtonUp" />
+                <Label Canvas.Left="75" Canvas.Top="170" Content="Teoria genetică" FontFamily="Times New Roman" FontSize="22" FontStyle="Italic" FontWeight="Bold" Foreground="#FF78200F" Height="35" Name="t_genetica" Width="150" MouseLeftButtonUp="t_genetica_MouseLeftButtonUp" />
+                <Label Canvas.Left="75" Canvas.Top="205" Content="Teoria inteligenţelor multiple" FontFamily="Times New Roman" FontSize="22" FontStyle="Italic" FontWeight="Bold" Foreground="#FF78200F" Height="35" Name="t_inteligentelor_multiple" Width="275" MouseLeftButtonUp="t_inteligentelor_multiple_MouseLeftButtonUp" />
+                <Button Background="#FF78200F" FontFamily="Monotype Corsiva" FontSize="30" FontWeight="Normal" Foreground="White" Height="25" Name="teoria_bifactoriala" Style="{StaticResource btnGlass}" Width="25" Canvas.Left="45" Canvas.Top="105" Click="teoria_bifactoriala_Click">
+                    <StackPanel>
+                        <Image Source="/Inteligenta;component/Images/play.png" />
+                    </StackPanel>
+                </Button>
+                <Button Background="#FF78200F" FontFamily="Monotype Corsiva" FontSize="30" FontWeight="Normal" Foreground="White" Height="25" Name="teoria_multifactoriala" Style="{StaticResource btnGlass}" Width="25" Canvas.Left="45" Canvas.Top="140" Click="teoria_multifactoriala_Click">
+                    <StackPanel>
+                        <Image Source="/Inteligenta;component/Images/play.png" />
+                    </StackPanel>
+                </Button>
+                <Button Background="#FF78200F" FontFamily="Monotype Corsiva" FontSize="30" FontWeight="Normal" Foreground="White" Height="25" Name="teoria_genetica" Style="{StaticResource btnGlass}" Width="25" Canvas.Left="45" Canvas.Top="175" Click="teoria_genetica_Click">
+                    <StackPanel>
+                        <Image Source="/Inteligenta;component/Images/play.png" />
+                    </StackPanel>
+                </Button>
+                <Button Background="#FF78200F" FontFamily="Monotype Corsiva" FontSize="30" FontWeight="Normal" Foreground="White" Height="25" Name="teoria_inteligentelor_multiple" Style="{StaticResource btnGlass}" Width="25" Canvas.Left="45" Canvas.Top="210" Click="teoria_inteligentelor_multiple_Click">
+                    <StackPanel>
+                        <Image Source="/Inteligenta;component/Images/play.png" />
+                    </StackPanel>
+                </Button>
+            </Canvas>
+        </Border>
+        <Canvas Height="50" HorizontalAlignment="Center" Margin="416,0,416,20" Name="canvas2" VerticalAlignment="Bottom" Width="170">
+            <Button Background="#FFFFFFD3" FontFamily="Monotype Corsiva" FontSize="30" FontWeight="Normal" Foreground="White" Height="50" Name="inapoi" Style="{StaticResource btnGlass2}" Width="50" Click="inapoi_Click" Canvas.Left="0" Canvas.Top="0" BorderBrush="#FF78200F" MouseEnter="inapoi_MouseEnter" MouseLeave="inapoi_MouseLeave">
+                <StackPanel>
+                    <Image Source="/Inteligenta;component/Images/back_arrow_brown.png" Name="inapoi_img" />
+                </StackPanel>
+            </Button>
+            <Button Background="#FFFFFFD3" FontFamily="Monotype Corsiva" FontSize="30" FontWeight="Normal" Foreground="White" Height="50" Name="acasa" Style="{StaticResource btnGlass2}" Width="50" Canvas.Left="60" Canvas.Top="0" BorderBrush="#FF78200F" Click="acasa_Click" MouseEnter="acasa_MouseEnter" MouseLeave="acasa_MouseLeave">
+                <StackPanel>
+                    <Image Source="/Inteligenta;component/Images/home_brown.png" Name="acasa_img" />
+                </StackPanel>
+            </Button>
+            <Button Background="#FFFFFFD3" FontFamily="Monotype Corsiva" FontSize="30" FontWeight="Normal" Foreground="White" Height="50" Name="nav_menu" Style="{StaticResource btnGlass2}" Width="50" Canvas.Left="120" Canvas.Top="0" BorderBrush="#FF78200F" Click="nav_menu_Click" MouseEnter="nav_menu_MouseEnter" MouseLeave="nav_menu_MouseLeave">
+                <StackPanel>
+                    <Image Source="/Inteligenta;component/Images/menu_brown.png" Name="nav_menu_img" />
+                </StackPanel>
+            </Button>
+        </Canvas>
+    </Grid>
+</Window>

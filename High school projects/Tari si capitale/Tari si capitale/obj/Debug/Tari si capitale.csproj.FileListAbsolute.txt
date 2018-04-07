@@ -1,0 +1,72 @@
+D:\download\geografie\soft\Tari si capitale\Tari si capitale\bin\Debug\Tari si capitale.exe
+D:\download\geografie\soft\Tari si capitale\Tari si capitale\bin\Debug\Tari si capitale.pdb
+D:\download\geografie\soft\Tari si capitale\Tari si capitale\obj\Debug\Tari si capitale.csprojResolveAssemblyReference.cache
+D:\download\geografie\soft\Tari si capitale\Tari si capitale\obj\Debug\Tari_si_capitale.JOC_CONTINENTE.resources
+D:\download\geografie\soft\Tari si capitale\Tari si capitale\obj\Debug\Tari_si_capitale.Obiectiv_turistic.resources
+D:\download\geografie\soft\Tari si capitale\Tari si capitale\obj\Debug\Tari_si_capitale.TA_Africa.resources
+D:\download\geografie\soft\Tari si capitale\Tari si capitale\obj\Debug\Tari_si_capitale.TA_AmericaN.resources
+D:\download\geografie\soft\Tari si capitale\Tari si capitale\obj\Debug\Tari_si_capitale.TA_AmericaS.resources
+D:\download\geografie\soft\Tari si capitale\Tari si capitale\obj\Debug\Tari_si_capitale.TA_Asia.resources
+D:\download\geografie\soft\Tari si capitale\Tari si capitale\obj\Debug\Tari_si_capitale.TA_continente.resources
+D:\download\geografie\soft\Tari si capitale\Tari si capitale\obj\Debug\Tari_si_capitale.TA_Europa.resources
+D:\download\geografie\soft\Tari si capitale\Tari si capitale\obj\Debug\Tari_si_capitale.TA_Oceania.resources
+D:\download\geografie\soft\Tari si capitale\Tari si capitale\obj\Debug\Tari_si_capitale.Biblioteca.resources
+D:\download\geografie\soft\Tari si capitale\Tari si capitale\obj\Debug\Tari_si_capitale.CA_Africa.resources
+D:\download\geografie\soft\Tari si capitale\Tari si capitale\obj\Debug\Tari_si_capitale.CA_AmericaN.resources
+D:\download\geografie\soft\Tari si capitale\Tari si capitale\obj\Debug\Tari_si_capitale.CA_AmericaS.resources
+D:\download\geografie\soft\Tari si capitale\Tari si capitale\obj\Debug\Tari_si_capitale.CA_Asia.resources
+D:\download\geografie\soft\Tari si capitale\Tari si capitale\obj\Debug\Tari_si_capitale.CA_continente.resources
+D:\download\geografie\soft\Tari si capitale\Tari si capitale\obj\Debug\Tari_si_capitale.CA_Europa.resources
+D:\download\geografie\soft\Tari si capitale\Tari si capitale\obj\Debug\Tari_si_capitale.CA_Oceania.resources
+D:\download\geografie\soft\Tari si capitale\Tari si capitale\obj\Debug\Tari_si_capitale.C_Africa.resources
+D:\download\geografie\soft\Tari si capitale\Tari si capitale\obj\Debug\Tari_si_capitale.C_AmericaN.resources
+D:\download\geografie\soft\Tari si capitale\Tari si capitale\obj\Debug\Tari_si_capitale.C_AmericaS.resources
+D:\download\geografie\soft\Tari si capitale\Tari si capitale\obj\Debug\Tari_si_capitale.C_Asia.resources
+D:\download\geografie\soft\Tari si capitale\Tari si capitale\obj\Debug\Tari_si_capitale.C_Europa.resources
+D:\download\geografie\soft\Tari si capitale\Tari si capitale\obj\Debug\Tari_si_capitale.C_Oceania.resources
+D:\download\geografie\soft\Tari si capitale\Tari si capitale\obj\Debug\Tari_si_capitale.CC_Africa.resources
+D:\download\geografie\soft\Tari si capitale\Tari si capitale\obj\Debug\Tari_si_capitale.CC_AmericaN.resources
+D:\download\geografie\soft\Tari si capitale\Tari si capitale\obj\Debug\Tari_si_capitale.CC_AmericaS.resources
+D:\download\geografie\soft\Tari si capitale\Tari si capitale\obj\Debug\Tari_si_capitale.CC_Asia.resources
+D:\download\geografie\soft\Tari si capitale\Tari si capitale\obj\Debug\Tari_si_capitale.CC_Europa.resources
+D:\download\geografie\soft\Tari si capitale\Tari si capitale\obj\Debug\Tari_si_capitale.CC_Oceania.resources
+D:\download\geografie\soft\Tari si capitale\Tari si capitale\obj\Debug\Tari_si_capitale.Form1.resources
+D:\download\geografie\soft\Tari si capitale\Tari si capitale\obj\Debug\Tari_si_capitale.Africa.resources
+D:\download\geografie\soft\Tari si capitale\Tari si capitale\obj\Debug\Tari_si_capitale.America_Nord.resources
+D:\download\geografie\soft\Tari si capitale\Tari si capitale\obj\Debug\Tari_si_capitale.America_Sud.resources
+D:\download\geografie\soft\Tari si capitale\Tari si capitale\obj\Debug\Tari_si_capitale.Asia.resources
+D:\download\geografie\soft\Tari si capitale\Tari si capitale\obj\Debug\Tari_si_capitale.Europa.resources
+D:\download\geografie\soft\Tari si capitale\Tari si capitale\obj\Debug\Tari_si_capitale.Invata.resources
+D:\download\geografie\soft\Tari si capitale\Tari si capitale\obj\Debug\Tari_si_capitale.Oceania.resources
+D:\download\geografie\soft\Tari si capitale\Tari si capitale\obj\Debug\Tari_si_capitale.Jocuri.resources
+D:\download\geografie\soft\Tari si capitale\Tari si capitale\obj\Debug\Tari_si_capitale.LC_Africa.resources
+D:\download\geografie\soft\Tari si capitale\Tari si capitale\obj\Debug\Tari_si_capitale.LC_AmericaN.resources
+D:\download\geografie\soft\Tari si capitale\Tari si capitale\obj\Debug\Tari_si_capitale.LC_AmericaS.resources
+D:\download\geografie\soft\Tari si capitale\Tari si capitale\obj\Debug\Tari_si_capitale.LC_Asia.resources
+D:\download\geografie\soft\Tari si capitale\Tari si capitale\obj\Debug\Tari_si_capitale.LC_Europa.resources
+D:\download\geografie\soft\Tari si capitale\Tari si capitale\obj\Debug\Tari_si_capitale.LC_Oceania.resources
+D:\download\geografie\soft\Tari si capitale\Tari si capitale\obj\Debug\Tari_si_capitale.Meniu.resources
+D:\download\geografie\soft\Tari si capitale\Tari si capitale\obj\Debug\Tari_si_capitale.Properties.Resources.resources
+D:\download\geografie\soft\Tari si capitale\Tari si capitale\obj\Debug\Tari_si_capitale.T_Africa.resources
+D:\download\geografie\soft\Tari si capitale\Tari si capitale\obj\Debug\Tari_si_capitale.T_AmericaN.resources
+D:\download\geografie\soft\Tari si capitale\Tari si capitale\obj\Debug\Tari_si_capitale.T_AmericaS.resources
+D:\download\geografie\soft\Tari si capitale\Tari si capitale\obj\Debug\Tari_si_capitale.T_Asia.resources
+D:\download\geografie\soft\Tari si capitale\Tari si capitale\obj\Debug\Tari_si_capitale.T_Europa.resources
+D:\download\geografie\soft\Tari si capitale\Tari si capitale\obj\Debug\Tari_si_capitale.T_Oceania.resources
+D:\download\geografie\soft\Tari si capitale\Tari si capitale\obj\Debug\Tari_si_capitale.S_Africa.resources
+D:\download\geografie\soft\Tari si capitale\Tari si capitale\obj\Debug\Tari_si_capitale.S_AmericaN.resources
+D:\download\geografie\soft\Tari si capitale\Tari si capitale\obj\Debug\Tari_si_capitale.S_AmericaS.resources
+D:\download\geografie\soft\Tari si capitale\Tari si capitale\obj\Debug\Tari_si_capitale.S_Asia.resources
+D:\download\geografie\soft\Tari si capitale\Tari si capitale\obj\Debug\Tari_si_capitale.S_Europa.resources
+D:\download\geografie\soft\Tari si capitale\Tari si capitale\obj\Debug\Tari_si_capitale.S_Oceania.resources
+D:\download\geografie\soft\Tari si capitale\Tari si capitale\obj\Debug\Tari_si_capitale.TCS_Africa.resources
+D:\download\geografie\soft\Tari si capitale\Tari si capitale\obj\Debug\Tari_si_capitale.TCS_AmericaN.resources
+D:\download\geografie\soft\Tari si capitale\Tari si capitale\obj\Debug\Tari_si_capitale.TCS_AmericaS.resources
+D:\download\geografie\soft\Tari si capitale\Tari si capitale\obj\Debug\Tari_si_capitale.TCS_Asia.resources
+D:\download\geografie\soft\Tari si capitale\Tari si capitale\obj\Debug\Tari_si_capitale.TCS_Europa.resources
+D:\download\geografie\soft\Tari si capitale\Tari si capitale\obj\Debug\Tari_si_capitale.TCS_Oceania.resources
+D:\download\geografie\soft\Tari si capitale\Tari si capitale\obj\Debug\Tari_si_capitale.Resurse.resources
+D:\download\geografie\soft\Tari si capitale\Tari si capitale\obj\Debug\Tari_si_capitale.Test.resources
+D:\download\geografie\soft\Tari si capitale\Tari si capitale\obj\Debug\Tari si capitale.csproj.GenerateResource.Cache
+D:\download\geografie\soft\Tari si capitale\Tari si capitale\obj\Debug\Tari si capitale.exe
+D:\download\geografie\soft\Tari si capitale\Tari si capitale\obj\Debug\Tari si capitale.pdb

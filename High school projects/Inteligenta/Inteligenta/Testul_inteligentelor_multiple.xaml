@@ -1,0 +1,175 @@
+﻿<Window x:Class="Inteligenta.Testul_inteligentelor_multiple"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Testul_inteligentelor_multiple" Height="768" Width="1024" Icon="/Inteligenta;component/Images/brain.ico" ResizeMode="NoResize" Topmost="True" WindowStartupLocation="CenterScreen" WindowState="Maximized" WindowStyle="None" KeyDown="Window_KeyDown">
+    <Window.Background>
+        <ImageBrush ImageSource="/Inteligenta;component/Images/sah.png" />
+    </Window.Background>
+
+    <Window.Resources>
+
+        <Style x:Key="btnGlass" TargetType="Button">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="ButtonBorder" CornerRadius="100" BorderThickness="0" Background="{TemplateBinding Background}"  
+                  BorderBrush="WhiteSmoke" RenderTransformOrigin="0.5,0.5">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="1.7*"/>
+                                </Grid.RowDefinitions>
+                                <ContentPresenter x:Name="ButtonContentPresenter"
+                                VerticalAlignment="Center"  
+                                HorizontalAlignment="Center" 
+                                Grid.RowSpan="2" />
+                            </Grid>
+
+                        </Border>
+
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="RenderTransform" TargetName="ButtonBorder">
+                                    <Setter.Value>
+                                        <TransformGroup>
+                                            <ScaleTransform ScaleX="0.97" ScaleY="0.97"/>
+                                        </TransformGroup>
+                                    </Setter.Value>
+                                </Setter>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="btnGlass2" TargetType="Button">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="ButtonBorder" CornerRadius="100" BorderThickness="3" Background="{TemplateBinding Background}"  
+                  BorderBrush="{TemplateBinding BorderBrush}" RenderTransformOrigin="0.5,0.5">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="1.7*"/>
+                                </Grid.RowDefinitions>
+                                <ContentPresenter x:Name="ButtonContentPresenter"
+                                VerticalAlignment="Center"  
+                                HorizontalAlignment="Center" 
+                                Grid.RowSpan="2" />
+                            </Grid>
+
+                        </Border>
+
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="RenderTransform" TargetName="ButtonBorder">
+                                    <Setter.Value>
+                                        <TransformGroup>
+                                            <ScaleTransform ScaleX="0.95" ScaleY="0.95"/>
+                                        </TransformGroup>
+                                    </Setter.Value>
+                                </Setter>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+    </Window.Resources>
+
+    <Grid Loaded="Grid_Loaded">
+        <Border Name="border1" Width="610" Height="210" CornerRadius="40" Background="#FFFFFFD3" BorderBrush="#FF78200F" BorderThickness="3">
+            <Canvas Height="200" Name="canvas1" Width="600">
+                <Button Canvas.Left="15" Canvas.Top="120" Content="NU" Height="60" Name="nu" Width="65" Style="{StaticResource btnGlass}" Background="#FF78200F" Foreground="#FFFFFFD3" FontFamily="Times New Roman" FontSize="32" FontWeight="Bold" Padding="1" Click="nu_Click" FontStyle="Italic" MouseEnter="nu_MouseEnter" MouseLeave="nu_MouseLeave" />
+                <Button Background="#FF78200F" Canvas.Left="520" Canvas.Top="120" Content="DA" FontFamily="Times New Roman" FontSize="32" FontWeight="Bold" Foreground="#FFFFFFD3" Height="60" Name="da" Padding="1" Style="{StaticResource btnGlass}" Width="65" Click="da_Click" FontStyle="Italic" MouseEnter="da_MouseEnter" MouseLeave="da_MouseLeave" />
+                <Label Canvas.Left="15" Canvas.Top="50" Content="Enunt" Height="65" Name="enunt" Width="570" FontSize="24" FontFamily="Times New Roman" Padding="5" Foreground="#FF78200F" />
+                <Label Canvas.Left="15" Canvas.Top="15" Content="1/88" Height="35" Name="label1" Width="65" FontFamily="Times New Roman" FontSize="22" Foreground="#FF78200F" />
+            </Canvas>
+        </Border>
+        <Border Name="border2" Width="610" Height="300" CornerRadius="30" Background="#FFFFFFD3" Visibility="Hidden" BorderBrush="#FF78200F" BorderThickness="3">
+            <RichTextBox Name="doc" Width="610" Height="295" IsReadOnly="True" Padding="10" Foreground="#FF78200F" BorderThickness="0">
+                <RichTextBox.BorderBrush>
+                    <SolidColorBrush />
+                </RichTextBox.BorderBrush>
+                <RichTextBox.Background>
+                    <SolidColorBrush />
+                </RichTextBox.Background>
+                <FlowDocument TextAlignment="Center">
+                    <Table Name="tabel" CellSpacing="0" Foreground="#FF78200F" FontFamily="Times New Roman" Padding="10" FontSize="22">
+                        <TableRowGroup FontFamily="Times New Roman">
+                            <TableRow>
+                                <TableCell BorderThickness="2" BorderBrush="#FF78200F">
+                                    <Paragraph><Bold>Tip inteligenţă</Bold></Paragraph>
+                                </TableCell>
+                                <TableCell BorderThickness="2" BorderBrush="#FF78200F">
+                                    <Paragraph><Bold>Rezultat</Bold></Paragraph>
+                                </TableCell>
+                            </TableRow>
+                            <TableRow>
+                                <TableCell BorderThickness="2" BorderBrush="#FF78200F">
+                                    <Paragraph>Spaţială</Paragraph>
+                                </TableCell>
+                            </TableRow>
+                            <TableRow>
+                                <TableCell BorderThickness="2" BorderBrush="#FF78200F">
+                                    <Paragraph>Chinestezică</Paragraph>
+                                </TableCell>
+                            </TableRow>
+                            <TableRow>
+                                <TableCell BorderThickness="2" BorderBrush="#FF78200F">
+                                    <Paragraph>Interpersonală</Paragraph>
+                                </TableCell>
+                            </TableRow>
+                            <TableRow>
+                                <TableCell BorderThickness="2" BorderBrush="#FF78200F">
+                                    <Paragraph>Intrapersonală</Paragraph>
+                                </TableCell>
+                            </TableRow>
+                            <TableRow>
+                                <TableCell BorderThickness="2" BorderBrush="#FF78200F">
+                                    <Paragraph>Muzicală</Paragraph>
+                                </TableCell>
+                            </TableRow>
+                            <TableRow>
+                                <TableCell BorderThickness="2" BorderBrush="#FF78200F">
+                                    <Paragraph>Lingvistică</Paragraph>
+                                </TableCell>
+                            </TableRow>
+                            <TableRow>
+                                <TableCell BorderThickness="2" BorderBrush="#FF78200F">
+                                    <Paragraph>Logico-matematică</Paragraph>
+                                </TableCell>
+                            </TableRow>
+                            <TableRow>
+                                <TableCell BorderThickness="2" BorderBrush="#FF78200F">
+                                    <Paragraph>Naturalistă</Paragraph>
+                                </TableCell>
+                            </TableRow>
+                        </TableRowGroup>
+                    </Table>
+                </FlowDocument>
+            </RichTextBox>
+        </Border>
+
+        <Canvas Height="50" HorizontalAlignment="Center" Margin="416,0,416,20" Name="canvas_meniu" VerticalAlignment="Bottom" Width="170">
+            <Button Background="#FFFFFFD3" FontFamily="Monotype Corsiva" FontSize="30" FontWeight="Normal" Foreground="White" Height="50" Name="inapoi" Style="{StaticResource btnGlass2}" Width="50" Click="inapoi_Click" Canvas.Left="0" Canvas.Top="0" BorderBrush="#FF78200F" MouseEnter="inapoi_MouseEnter" MouseLeave="inapoi_MouseLeave">
+                <StackPanel>
+                    <Image Source="/Inteligenta;component/Images/back_arrow_brown.png" Name="inapoi_img" />
+                </StackPanel>
+            </Button>
+            <Button Background="#FFFFFFD3" FontFamily="Monotype Corsiva" FontSize="30" FontWeight="Normal" Foreground="White" Height="50" Name="acasa" Style="{StaticResource btnGlass2}" Width="50" Canvas.Left="60" Canvas.Top="0" BorderBrush="#FF78200F" Click="acasa_Click" MouseEnter="acasa_MouseEnter" MouseLeave="acasa_MouseLeave">
+                <StackPanel>
+                    <Image Source="/Inteligenta;component/Images/home_brown.png" Name="acasa_img" />
+                </StackPanel>
+            </Button>
+            <Button Background="#FFFFFFD3" FontFamily="Monotype Corsiva" FontSize="30" FontWeight="Normal" Foreground="White" Height="50" Name="nav_menu" Style="{StaticResource btnGlass2}" Width="50" Canvas.Left="120" Canvas.Top="0" BorderBrush="#FF78200F" Click="nav_menu_Click" MouseEnter="nav_menu_MouseEnter" MouseLeave="nav_menu_MouseLeave">
+                <StackPanel>
+                    <Image Source="/Inteligenta;component/Images/menu_brown.png" Name="nav_menu_img" />
+                </StackPanel>
+            </Button>
+        </Canvas>
+    </Grid>
+</Window>

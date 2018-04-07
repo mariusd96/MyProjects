@@ -1,0 +1,137 @@
+﻿<Window x:Class="Inteligenta.Problema_celor_n_regine_meniu"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Problema_celor_n_regine_meniu" Height="768" Width="1024" Icon="/Inteligenta;component/Images/brain.ico" ResizeMode="NoResize" Topmost="True" WindowStartupLocation="CenterScreen" WindowState="Maximized" WindowStyle="None">
+    <Window.Background>
+        <ImageBrush ImageSource="/Inteligenta;component/Images/sah.png" />
+    </Window.Background>
+
+    <Window.Resources>
+
+        <Style x:Key="btnGlass" TargetType="Button">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="ButtonBorder" CornerRadius="15" BorderThickness="0" Background="{TemplateBinding Background}"  
+                  BorderBrush="WhiteSmoke" RenderTransformOrigin="0.5,0.5">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="1.7*"/>
+                                </Grid.RowDefinitions>
+                                <ContentPresenter x:Name="ButtonContentPresenter"
+                                VerticalAlignment="Center"  
+                                HorizontalAlignment="Center" 
+                                Grid.RowSpan="2" />
+                            </Grid>
+
+                        </Border>
+
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="RenderTransform" TargetName="ButtonBorder">
+                                    <Setter.Value>
+                                        <TransformGroup>
+                                            <ScaleTransform ScaleX="0.95" ScaleY="0.95"/>
+                                        </TransformGroup>
+                                    </Setter.Value>
+                                </Setter>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="btnlock" TargetType="Button">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="ButtonBorder" CornerRadius="15" BorderThickness="0" Background="{TemplateBinding Background}"  
+                  BorderBrush="WhiteSmoke" RenderTransformOrigin="0.5,0.5">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="1.7*"/>
+                                </Grid.RowDefinitions>
+                                <ContentPresenter x:Name="ButtonContentPresenter" VerticalAlignment="Center"  
+                                HorizontalAlignment="Center" Grid.RowSpan="2" >
+                                </ContentPresenter>
+                            </Grid>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        
+        <Style x:Key="btnGlass2" TargetType="Button">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="ButtonBorder" CornerRadius="100" BorderThickness="3" Background="{TemplateBinding Background}"  
+                  BorderBrush="{TemplateBinding BorderBrush}" RenderTransformOrigin="0.5,0.5">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="1.7*"/>
+                                </Grid.RowDefinitions>
+                                <ContentPresenter x:Name="ButtonContentPresenter"
+                                VerticalAlignment="Center"  
+                                HorizontalAlignment="Center" 
+                                Grid.RowSpan="2" />
+                            </Grid>
+
+                        </Border>
+
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="RenderTransform" TargetName="ButtonBorder">
+                                    <Setter.Value>
+                                        <TransformGroup>
+                                            <ScaleTransform ScaleX="0.95" ScaleY="0.95"/>
+                                        </TransformGroup>
+                                    </Setter.Value>
+                                </Setter>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+    </Window.Resources>
+
+    <Grid Loaded="Grid_Loaded">
+        <Canvas Height="130" HorizontalAlignment="Center" Margin="167,319" Name="canvas1" VerticalAlignment="Center" Width="690">
+            <Button Content="1" Height="130" Name="button1" Width="130" Canvas.Left="0" Canvas.Top="0" Background="#FFFFFFD3" Foreground="#FF78200F" FontFamily="Times New Roman" FontStyle="Italic" FontSize="48" Style="{StaticResource btnGlass}" />
+            <Button Background="#FF78200F" Canvas.Left="140" Canvas.Top="0" Content="2" FontFamily="Times New Roman" FontSize="48" FontStyle="Italic" Foreground="#FFFFFFD3" Height="130" Name="button2" Style="{StaticResource btnGlass}" Width="130" />
+            <Button Background="#FFFFFFD3" Canvas.Left="280" Canvas.Top="0" Content="3" FontFamily="Times New Roman" FontSize="48" FontStyle="Italic" Foreground="#FF78200F" Height="130" Name="button3" Style="{StaticResource btnGlass}" Width="130" />
+            <Button Background="#FF78200F" Canvas.Left="420" Canvas.Top="0" Content="4" FontFamily="Times New Roman" FontSize="48" FontStyle="Italic" Foreground="#FFFFFFD3" Height="130" Name="button4" Style="{StaticResource btnGlass}" Width="130" />
+            <Button Background="#FFFFFFD3" Canvas.Left="560" Canvas.Top="0" Content="5" FontFamily="Times New Roman" FontSize="48" FontStyle="Italic" Foreground="#FF78200F" Height="130" Name="button5" Style="{StaticResource btnGlass}" Width="130" />
+
+            <Image Height="40" Name="image1" Stretch="Fill" Width="40" Source="/Inteligenta;component/Images/lock_brown.png" Canvas.Left="80" Canvas.Top="80" />
+            <Image Canvas.Left="220" Canvas.Top="80" Height="40" Name="image2" Source="/Inteligenta;component/Images/lock.png" Stretch="Fill" Width="40" />
+            <Image Canvas.Left="360" Canvas.Top="80" Height="40" Name="image3" Source="/Inteligenta;component/Images/lock_brown.png" Stretch="Fill" Width="40" />
+            <Image Canvas.Left="500" Canvas.Top="80" Height="40" Name="image4" Source="/Inteligenta;component/Images/lock.png" Stretch="Fill" Width="40" />
+            <Image Canvas.Left="640" Canvas.Top="80" Height="40" Name="image5" Source="/Inteligenta;component/Images/lock_brown.png" Stretch="Fill" Width="40" />
+        </Canvas>
+
+        <Canvas Height="50" HorizontalAlignment="Center" Margin="416,0,416,20" Name="canvas_meniu" VerticalAlignment="Bottom" Width="170">
+            <Button Background="#FFFFFFD3" FontFamily="Monotype Corsiva" FontSize="30" FontWeight="Normal" Foreground="White" Height="50" Name="inapoi" Style="{StaticResource btnGlass2}" Width="50" Click="inapoi_Click" Canvas.Left="0" Canvas.Top="0" BorderBrush="#FF78200F" MouseEnter="inapoi_MouseEnter" MouseLeave="inapoi_MouseLeave">
+                <StackPanel>
+                    <Image Source="/Inteligenta;component/Images/back_arrow_brown.png" Name="inapoi_img" />
+                </StackPanel>
+            </Button>
+            <Button Background="#FFFFFFD3" FontFamily="Monotype Corsiva" FontSize="30" FontWeight="Normal" Foreground="White" Height="50" Name="acasa" Style="{StaticResource btnGlass2}" Width="50" Canvas.Left="60" Canvas.Top="0" BorderBrush="#FF78200F" Click="acasa_Click" MouseEnter="acasa_MouseEnter" MouseLeave="acasa_MouseLeave">
+                <StackPanel>
+                    <Image Source="/Inteligenta;component/Images/home_brown.png" Name="acasa_img" />
+                </StackPanel>
+            </Button>
+            <Button Background="#FFFFFFD3" FontFamily="Monotype Corsiva" FontSize="30" FontWeight="Normal" Foreground="White" Height="50" Name="nav_menu" Style="{StaticResource btnGlass2}" Width="50" Canvas.Left="120" Canvas.Top="0" BorderBrush="#FF78200F" Click="nav_menu_Click" MouseEnter="nav_menu_MouseEnter" MouseLeave="nav_menu_MouseLeave">
+                <StackPanel>
+                    <Image Source="/Inteligenta;component/Images/menu_brown.png" Name="nav_menu_img" />
+                </StackPanel>
+            </Button>
+        </Canvas>
+    </Grid>
+</Window>

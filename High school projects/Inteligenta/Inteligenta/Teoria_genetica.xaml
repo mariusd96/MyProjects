@@ -1,0 +1,130 @@
+﻿<Window x:Class="Inteligenta.Teoria_genetica"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Teoria_genetica" Height="768" Width="1024" Icon="/Inteligenta;component/Images/brain.ico" ResizeMode="NoResize" Topmost="True" WindowStartupLocation="CenterScreen" WindowState="Maximized" WindowStyle="None">
+    <Window.Background>
+        <ImageBrush ImageSource="/Inteligenta;component/Images/sah.png" />
+    </Window.Background>
+
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Styles/ScrollBar_Style.xaml">
+                </ResourceDictionary>
+            </ResourceDictionary.MergedDictionaries>
+            <Style x:Key="btnGlass" TargetType="Button">
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="Button">
+                            <Border x:Name="ButtonBorder" CornerRadius="100" BorderThickness="3" Background="{TemplateBinding Background}"  
+                  BorderBrush="{TemplateBinding BorderBrush}" RenderTransformOrigin="0.5,0.5">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="1.7*"/>
+                                    </Grid.RowDefinitions>
+                                    <ContentPresenter x:Name="ButtonContentPresenter"
+                                VerticalAlignment="Center"  
+                                HorizontalAlignment="Center" 
+                                Grid.RowSpan="2" />
+                                </Grid>
+
+                            </Border>
+
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsPressed" Value="True">
+                                    <Setter Property="RenderTransform" TargetName="ButtonBorder">
+                                        <Setter.Value>
+                                            <TransformGroup>
+                                                <ScaleTransform ScaleX="0.95" ScaleY="0.95"/>
+                                            </TransformGroup>
+                                        </Setter.Value>
+                                    </Setter>
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+        </ResourceDictionary>
+    </Window.Resources>
+
+    <Grid>
+        <Border Name="border1" CornerRadius="30" Width="730" Height="570" Background="#FFFFFFD3" BorderBrush="#FF78200F" BorderThickness="3">
+            <FlowDocumentReader Width="700" Height="550" Foreground="#FF78200F" FontFamily="Times New Roman" MaxZoom="150" MinZoom="80" IsTwoPageViewEnabled="False" FontSize="14">
+                <FlowDocument FontFamily="Times New Roman" TextAlignment="Justify" FontSize="18">
+                    <Paragraph>
+                        <Italic FontSize="20">
+                            <Bold>Teoria genetică</Bold>
+                        </Italic>
+                    </Paragraph>
+                    <Paragraph>
+                        Creatorul acestei teorii a inteligenţei este J. Piaget, care insistă mai ales asupra genezei inteligenţei. În cadrul teoriei sale, foloseşte noţiuni preluate din biologie, dar care capătă o altă semnificaţie. Astfel, inteligenţa este o adaptare a organismului la mediu. Adaptarea la rândul ei este o echilibrare intre asimilare (integrarea noilor informaţii în sistemul celor vechi) şi acomodare (restructurarea schemelor de asimilare impusă de noile informaţii). Conduita inteligentă se elaborează treptat, parcurgând patru stadii:
+                    </Paragraph>
+                    <List MarkerStyle="Decimal">
+                        <ListItem>
+                            <Paragraph>
+                                <TextBlock Foreground="Red">Stadiul senzorio-motor (0-2 ani)</TextBlock> : începe cu stadiul exersării reflexelor (0-1 luna), în cadrul căruia sunt exersate schemele senzorio-motorii simple (reflexe neconditionate), înnăscute, copilul descoperind treptat relaţiile dintre ceea ce percepe şi propriile acţiuni (în primul rând motorii). În cadrul primului an de viaţă învaţă să pună în legătură ceea ce fac oamenii sau obiectele din jur, să reacţioneze la schimbările mediului sau cum să-l controleze. Una dintre cele mai importante achiziţii este permanenţa obiectelor (6 luni-2 ani), anume că obiectele continuă să existe chiar dacă nu le mai vede.
+                                <LineBreak></LineBreak>
+                            </Paragraph>
+                        </ListItem>
+                        <ListItem>
+                            <Paragraph>
+                                <TextBlock Foreground="Red">Stadiul preoperaţional (2-7 ani)</TextBlock> : în cadrul căruia achiziţiile cele mai importante sunt deprinderea mersului şi limbajului, a funcţiei simbolic-reprezentative în general. Acestea permit interiorizarea acţiunilor, fără însă a exista posibilitatea reversibilităţii lor. La finalul stadiului apare conceptul de număr.
+                                <LineBreak></LineBreak>
+                            </Paragraph>
+                            <Paragraph>
+                                Caracteristicile cele mai importante ale stadiului sunt:
+                            </Paragraph>
+                            <List>
+                                <ListItem>
+                                    <Paragraph>aparitia unui tip de
+                                        <Bold>gândire cauzală</Bold> , nu însă în sensul unui raţionament logic, prin care încearcă să-şi explice ceea ce se petrece în jurul lor;
+                                    </Paragraph>
+                                </ListItem>
+                                <ListItem>
+                                    <Paragraph>
+                                        <Bold>amestecul realului cu imaginarul</Bold> şi imposibilitatea de a trece dincolo de aparenţe;
+                                    </Paragraph>
+                                </ListItem>
+                                <ListItem>
+                                    <Paragraph>
+                                        <Bold>egocentrismul</Bold> , în sensul că nu pot vedea lucrurile decât din punctul lor de vedere.
+                                    </Paragraph>
+                                </ListItem>
+                            </List>
+                        </ListItem>
+                        <ListItem>
+                            <Paragraph>
+                                <TextBlock Foreground="Red">Stadiul operaţiilor concrete (7-12 ani)</TextBlock> : în această etapă, copiii încep să aplice reguli logice operaţiilor de transformare a informaţiilor pentru a rezolva problemele cu care se confruntă. Achiziţii importante: clasificarea, categorizarea şi conservarea proprietăţilor fizice ale obiectelor. Inteligenţa copilului este inductiv-logică şi concretă, fiind necesare corespondenţe concrete în realitate. Se dobândeşte capacitatea reversibilităţii acţiunilor interiorizate, la sfârşitul stadiului constituindu-se mecanismele de coordonare logică şi matematică.
+                                <LineBreak></LineBreak>
+                            </Paragraph>
+                        </ListItem>
+                        <ListItem>
+                            <Paragraph>
+                                <TextBlock Foreground="Red">Stadiul operaţiilor formale (12-17 ani)</TextBlock> : în această etapă se dobândeşte capacitatea de a lucra cu concepte abstracte şi să realizeze operaţii cu operaţii (combinări, permutări, aranjamente). Gândirea devine deductivă, subiectul putând opera nu numai asupra realului, ci şi asupra posibilului. Se mai numeşte şi stadiul propoziţional, deoarece acum subiectul poate opera cu enunţuri verbale abstracte, devenind capabil de discurs argumentativ.
+                            </Paragraph>
+                        </ListItem>
+                    </List>
+                </FlowDocument>
+            </FlowDocumentReader>
+        </Border>
+        <Canvas Height="50" HorizontalAlignment="Center" Margin="416,0,416,20" Name="canvas1" VerticalAlignment="Bottom" Width="170">
+            <Button Background="#FFFFFFD3" FontFamily="Monotype Corsiva" FontSize="30" FontWeight="Normal" Foreground="White" Height="50" Name="inapoi" Style="{StaticResource btnGlass}" Width="50" Click="inapoi_Click" Canvas.Left="0" Canvas.Top="0" BorderBrush="#FF78200F" MouseEnter="inapoi_MouseEnter" MouseLeave="inapoi_MouseLeave">
+                <StackPanel>
+                    <Image Source="/Inteligenta;component/Images/back_arrow_brown.png" Name="inapoi_img" />
+                </StackPanel>
+            </Button>
+            <Button Background="#FFFFFFD3" FontFamily="Monotype Corsiva" FontSize="30" FontWeight="Normal" Foreground="White" Height="50" Name="acasa" Style="{StaticResource btnGlass}" Width="50" Canvas.Left="60" Canvas.Top="0" BorderBrush="#FF78200F" Click="acasa_Click" MouseEnter="acasa_MouseEnter" MouseLeave="acasa_MouseLeave">
+                <StackPanel>
+                    <Image Source="/Inteligenta;component/Images/home_brown.png" Name="acasa_img" />
+                </StackPanel>
+            </Button>
+            <Button Background="#FFFFFFD3" FontFamily="Monotype Corsiva" FontSize="30" FontWeight="Normal" Foreground="White" Height="50" Name="nav_menu" Style="{StaticResource btnGlass}" Width="50" Canvas.Left="120" Canvas.Top="0" BorderBrush="#FF78200F" Click="nav_menu_Click" MouseEnter="nav_menu_MouseEnter" MouseLeave="nav_menu_MouseLeave">
+                <StackPanel>
+                    <Image Source="/Inteligenta;component/Images/menu_brown.png" Name="nav_menu_img" />
+                </StackPanel>
+            </Button>
+        </Canvas>
+    </Grid>
+</Window>

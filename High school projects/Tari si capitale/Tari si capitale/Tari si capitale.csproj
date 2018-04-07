@@ -1,0 +1,920 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A596BEA4-2241-4A06-8D77-88FB720DEB0E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Tari_si_capitale</RootNamespace>
+    <AssemblyName>Tari si capitale</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Aplicatii\JOC_CONTINENTE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aplicatii\JOC_CONTINENTE.Designer.cs">
+      <DependentUpon>JOC_CONTINENTE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Aplicatii\Obiectiv_turistic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aplicatii\Obiectiv_turistic.Designer.cs">
+      <DependentUpon>Obiectiv_turistic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Aplicatii\Tari_aleatoare\TA_Africa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aplicatii\Tari_aleatoare\TA_Africa.Designer.cs">
+      <DependentUpon>TA_Africa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Aplicatii\Tari_aleatoare\TA_AmericaN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aplicatii\Tari_aleatoare\TA_AmericaN.Designer.cs">
+      <DependentUpon>TA_AmericaN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Aplicatii\Tari_aleatoare\TA_AmericaS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aplicatii\Tari_aleatoare\TA_AmericaS.Designer.cs">
+      <DependentUpon>TA_AmericaS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Aplicatii\Tari_aleatoare\TA_Asia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aplicatii\Tari_aleatoare\TA_Asia.Designer.cs">
+      <DependentUpon>TA_Asia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Aplicatii\Tari_aleatoare\TA_continente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aplicatii\Tari_aleatoare\TA_continente.Designer.cs">
+      <DependentUpon>TA_continente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Aplicatii\Tari_aleatoare\TA_Europa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aplicatii\Tari_aleatoare\TA_Europa.Designer.cs">
+      <DependentUpon>TA_Europa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Aplicatii\Tari_aleatoare\TA_Oceania.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aplicatii\Tari_aleatoare\TA_Oceania.Designer.cs">
+      <DependentUpon>TA_Oceania.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Biblioteca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Biblioteca.Designer.cs">
+      <DependentUpon>Biblioteca.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Aplicatii\Capitale_aleatoare\CA_Africa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aplicatii\Capitale_aleatoare\CA_Africa.Designer.cs">
+      <DependentUpon>CA_Africa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Aplicatii\Capitale_aleatoare\CA_AmericaN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aplicatii\Capitale_aleatoare\CA_AmericaN.Designer.cs">
+      <DependentUpon>CA_AmericaN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Aplicatii\Capitale_aleatoare\CA_AmericaS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aplicatii\Capitale_aleatoare\CA_AmericaS.Designer.cs">
+      <DependentUpon>CA_AmericaS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Aplicatii\Capitale_aleatoare\CA_Asia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aplicatii\Capitale_aleatoare\CA_Asia.Designer.cs">
+      <DependentUpon>CA_Asia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Aplicatii\Capitale_aleatoare\CA_continente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aplicatii\Capitale_aleatoare\CA_continente.Designer.cs">
+      <DependentUpon>CA_continente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Aplicatii\Capitale_aleatoare\CA_Europa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aplicatii\Capitale_aleatoare\CA_Europa.Designer.cs">
+      <DependentUpon>CA_Europa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Aplicatii\Capitale_aleatoare\CA_Oceania.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aplicatii\Capitale_aleatoare\CA_Oceania.Designer.cs">
+      <DependentUpon>CA_Oceania.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Aplicatii\Capitale\C_Africa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aplicatii\Capitale\C_Africa.Designer.cs">
+      <DependentUpon>C_Africa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Aplicatii\Capitale\C_AmericaN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aplicatii\Capitale\C_AmericaN.Designer.cs">
+      <DependentUpon>C_AmericaN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Aplicatii\Capitale\C_AmericaS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aplicatii\Capitale\C_AmericaS.Designer.cs">
+      <DependentUpon>C_AmericaS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Aplicatii\Capitale\C_Asia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aplicatii\Capitale\C_Asia.Designer.cs">
+      <DependentUpon>C_Asia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Aplicatii\Capitale\C_Europa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aplicatii\Capitale\C_Europa.Designer.cs">
+      <DependentUpon>C_Europa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Aplicatii\Capitale\C_Oceania.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aplicatii\Capitale\C_Oceania.Designer.cs">
+      <DependentUpon>C_Oceania.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Aplicatii\Capitale_locatie\CC_Africa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aplicatii\Capitale_locatie\CC_Africa.Designer.cs">
+      <DependentUpon>CC_Africa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Aplicatii\Capitale_locatie\CC_AmericaN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aplicatii\Capitale_locatie\CC_AmericaN.Designer.cs">
+      <DependentUpon>CC_AmericaN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Aplicatii\Capitale_locatie\CC_AmericaS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aplicatii\Capitale_locatie\CC_AmericaS.Designer.cs">
+      <DependentUpon>CC_AmericaS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Aplicatii\Capitale_locatie\CC_Asia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aplicatii\Capitale_locatie\CC_Asia.Designer.cs">
+      <DependentUpon>CC_Asia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Aplicatii\Capitale_locatie\CC_Europa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aplicatii\Capitale_locatie\CC_Europa.Designer.cs">
+      <DependentUpon>CC_Europa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Aplicatii\Capitale_locatie\CC_Oceania.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aplicatii\Capitale_locatie\CC_Oceania.Designer.cs">
+      <DependentUpon>CC_Oceania.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Invata\Africa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Invata\Africa.Designer.cs">
+      <DependentUpon>Africa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Invata\America_Nord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Invata\America_Nord.Designer.cs">
+      <DependentUpon>America_Nord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Invata\America_Sud.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Invata\America_Sud.Designer.cs">
+      <DependentUpon>America_Sud.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Invata\Asia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Invata\Asia.Designer.cs">
+      <DependentUpon>Asia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Invata\Europa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Invata\Europa.Designer.cs">
+      <DependentUpon>Europa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Invata\Invata.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Invata\Invata.Designer.cs">
+      <DependentUpon>Invata.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Invata\Oceania.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Invata\Oceania.Designer.cs">
+      <DependentUpon>Oceania.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Aplicatii\Jocuri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aplicatii\Jocuri.Designer.cs">
+      <DependentUpon>Jocuri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Aplicatii\Localizati_capitalele\LC_Africa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aplicatii\Localizati_capitalele\LC_Africa.Designer.cs">
+      <DependentUpon>LC_Africa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Aplicatii\Localizati_capitalele\LC_AmericaN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aplicatii\Localizati_capitalele\LC_AmericaN.Designer.cs">
+      <DependentUpon>LC_AmericaN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Aplicatii\Localizati_capitalele\LC_AmericaS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aplicatii\Localizati_capitalele\LC_AmericaS.Designer.cs">
+      <DependentUpon>LC_AmericaS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Aplicatii\Localizati_capitalele\LC_Asia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aplicatii\Localizati_capitalele\LC_Asia.Designer.cs">
+      <DependentUpon>LC_Asia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Aplicatii\Localizati_capitalele\LC_Europa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aplicatii\Localizati_capitalele\LC_Europa.Designer.cs">
+      <DependentUpon>LC_Europa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Aplicatii\Localizati_capitalele\LC_Oceania.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aplicatii\Localizati_capitalele\LC_Oceania.Designer.cs">
+      <DependentUpon>LC_Oceania.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Meniu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Meniu.Designer.cs">
+      <DependentUpon>Meniu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Aplicatii\Tari\T_Africa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aplicatii\Tari\T_Africa.Designer.cs">
+      <DependentUpon>T_Africa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Aplicatii\Tari\T_AmericaN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aplicatii\Tari\T_AmericaN.Designer.cs">
+      <DependentUpon>T_AmericaN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Aplicatii\Tari\T_AmericaS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aplicatii\Tari\T_AmericaS.Designer.cs">
+      <DependentUpon>T_AmericaS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Aplicatii\Tari\T_Asia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aplicatii\Tari\T_Asia.Designer.cs">
+      <DependentUpon>T_Asia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Aplicatii\Tari\T_Europa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aplicatii\Tari\T_Europa.Designer.cs">
+      <DependentUpon>T_Europa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Aplicatii\Tari\T_Oceania.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aplicatii\Tari\T_Oceania.Designer.cs">
+      <DependentUpon>T_Oceania.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Aplicatii\Steaguri\S_Africa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aplicatii\Steaguri\S_Africa.Designer.cs">
+      <DependentUpon>S_Africa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Aplicatii\Steaguri\S_AmericaN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aplicatii\Steaguri\S_AmericaN.Designer.cs">
+      <DependentUpon>S_AmericaN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Aplicatii\Steaguri\S_AmericaS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aplicatii\Steaguri\S_AmericaS.Designer.cs">
+      <DependentUpon>S_AmericaS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Aplicatii\Steaguri\S_Asia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aplicatii\Steaguri\S_Asia.Designer.cs">
+      <DependentUpon>S_Asia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Aplicatii\Steaguri\S_Europa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aplicatii\Steaguri\S_Europa.Designer.cs">
+      <DependentUpon>S_Europa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Aplicatii\Steaguri\S_Oceania.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aplicatii\Steaguri\S_Oceania.Designer.cs">
+      <DependentUpon>S_Oceania.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Aplicatii\Tari, capitale, steaguri\TCS_Africa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aplicatii\Tari, capitale, steaguri\TCS_Africa.Designer.cs">
+      <DependentUpon>TCS_Africa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Aplicatii\Tari, capitale, steaguri\TCS_AmericaN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aplicatii\Tari, capitale, steaguri\TCS_AmericaN.Designer.cs">
+      <DependentUpon>TCS_AmericaN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Aplicatii\Tari, capitale, steaguri\TCS_AmericaS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aplicatii\Tari, capitale, steaguri\TCS_AmericaS.Designer.cs">
+      <DependentUpon>TCS_AmericaS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Aplicatii\Tari, capitale, steaguri\TCS_Asia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aplicatii\Tari, capitale, steaguri\TCS_Asia.Designer.cs">
+      <DependentUpon>TCS_Asia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Aplicatii\Tari, capitale, steaguri\TCS_Europa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aplicatii\Tari, capitale, steaguri\TCS_Europa.Designer.cs">
+      <DependentUpon>TCS_Europa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Aplicatii\Tari, capitale, steaguri\TCS_Oceania.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aplicatii\Tari, capitale, steaguri\TCS_Oceania.Designer.cs">
+      <DependentUpon>TCS_Oceania.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resurse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resurse.Designer.cs">
+      <DependentUpon>Resurse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Test.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Test.Designer.cs">
+      <DependentUpon>Test.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Aplicatii\JOC_CONTINENTE.resx">
+      <DependentUpon>JOC_CONTINENTE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aplicatii\Obiectiv_turistic.resx">
+      <DependentUpon>Obiectiv_turistic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aplicatii\Tari_aleatoare\TA_Africa.resx">
+      <DependentUpon>TA_Africa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aplicatii\Tari_aleatoare\TA_AmericaN.resx">
+      <DependentUpon>TA_AmericaN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aplicatii\Tari_aleatoare\TA_AmericaS.resx">
+      <DependentUpon>TA_AmericaS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aplicatii\Tari_aleatoare\TA_Asia.resx">
+      <DependentUpon>TA_Asia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aplicatii\Tari_aleatoare\TA_continente.resx">
+      <DependentUpon>TA_continente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aplicatii\Tari_aleatoare\TA_Europa.resx">
+      <DependentUpon>TA_Europa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aplicatii\Tari_aleatoare\TA_Oceania.resx">
+      <DependentUpon>TA_Oceania.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Biblioteca.resx">
+      <DependentUpon>Biblioteca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aplicatii\Capitale_aleatoare\CA_Africa.resx">
+      <DependentUpon>CA_Africa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aplicatii\Capitale_aleatoare\CA_AmericaN.resx">
+      <DependentUpon>CA_AmericaN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aplicatii\Capitale_aleatoare\CA_AmericaS.resx">
+      <DependentUpon>CA_AmericaS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aplicatii\Capitale_aleatoare\CA_Asia.resx">
+      <DependentUpon>CA_Asia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aplicatii\Capitale_aleatoare\CA_continente.resx">
+      <DependentUpon>CA_continente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aplicatii\Capitale_aleatoare\CA_Europa.resx">
+      <DependentUpon>CA_Europa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aplicatii\Capitale_aleatoare\CA_Oceania.resx">
+      <DependentUpon>CA_Oceania.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aplicatii\Capitale\C_Africa.resx">
+      <DependentUpon>C_Africa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aplicatii\Capitale\C_AmericaN.resx">
+      <DependentUpon>C_AmericaN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aplicatii\Capitale\C_AmericaS.resx">
+      <DependentUpon>C_AmericaS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aplicatii\Capitale\C_Asia.resx">
+      <DependentUpon>C_Asia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aplicatii\Capitale\C_Europa.resx">
+      <DependentUpon>C_Europa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aplicatii\Capitale\C_Oceania.resx">
+      <DependentUpon>C_Oceania.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aplicatii\Capitale_locatie\CC_Africa.resx">
+      <DependentUpon>CC_Africa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aplicatii\Capitale_locatie\CC_AmericaN.resx">
+      <DependentUpon>CC_AmericaN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aplicatii\Capitale_locatie\CC_AmericaS.resx">
+      <DependentUpon>CC_AmericaS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aplicatii\Capitale_locatie\CC_Asia.resx">
+      <DependentUpon>CC_Asia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aplicatii\Capitale_locatie\CC_Europa.resx">
+      <DependentUpon>CC_Europa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aplicatii\Capitale_locatie\CC_Oceania.resx">
+      <DependentUpon>CC_Oceania.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Invata\Africa.resx">
+      <DependentUpon>Africa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Invata\America_Nord.resx">
+      <DependentUpon>America_Nord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Invata\America_Sud.resx">
+      <DependentUpon>America_Sud.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Invata\Asia.resx">
+      <DependentUpon>Asia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Invata\Europa.resx">
+      <DependentUpon>Europa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Invata\Invata.resx">
+      <DependentUpon>Invata.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Invata\Oceania.resx">
+      <DependentUpon>Oceania.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aplicatii\Jocuri.resx">
+      <DependentUpon>Jocuri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aplicatii\Localizati_capitalele\LC_Africa.resx">
+      <DependentUpon>LC_Africa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aplicatii\Localizati_capitalele\LC_AmericaN.resx">
+      <DependentUpon>LC_AmericaN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aplicatii\Localizati_capitalele\LC_AmericaS.resx">
+      <DependentUpon>LC_AmericaS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aplicatii\Localizati_capitalele\LC_Asia.resx">
+      <DependentUpon>LC_Asia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aplicatii\Localizati_capitalele\LC_Europa.resx">
+      <DependentUpon>LC_Europa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aplicatii\Localizati_capitalele\LC_Oceania.resx">
+      <DependentUpon>LC_Oceania.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Meniu.resx">
+      <DependentUpon>Meniu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Aplicatii\Tari\T_Africa.resx">
+      <DependentUpon>T_Africa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aplicatii\Tari\T_AmericaN.resx">
+      <DependentUpon>T_AmericaN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aplicatii\Tari\T_AmericaS.resx">
+      <DependentUpon>T_AmericaS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aplicatii\Tari\T_Asia.resx">
+      <DependentUpon>T_Asia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aplicatii\Tari\T_Europa.resx">
+      <DependentUpon>T_Europa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aplicatii\Tari\T_Oceania.resx">
+      <DependentUpon>T_Oceania.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aplicatii\Steaguri\S_Africa.resx">
+      <DependentUpon>S_Africa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aplicatii\Steaguri\S_AmericaN.resx">
+      <DependentUpon>S_AmericaN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aplicatii\Steaguri\S_AmericaS.resx">
+      <DependentUpon>S_AmericaS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aplicatii\Steaguri\S_Asia.resx">
+      <DependentUpon>S_Asia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aplicatii\Steaguri\S_Europa.resx">
+      <DependentUpon>S_Europa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aplicatii\Steaguri\S_Oceania.resx">
+      <DependentUpon>S_Oceania.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aplicatii\Tari, capitale, steaguri\TCS_Africa.resx">
+      <DependentUpon>TCS_Africa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aplicatii\Tari, capitale, steaguri\TCS_AmericaN.resx">
+      <DependentUpon>TCS_AmericaN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aplicatii\Tari, capitale, steaguri\TCS_AmericaS.resx">
+      <DependentUpon>TCS_AmericaS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aplicatii\Tari, capitale, steaguri\TCS_Asia.resx">
+      <DependentUpon>TCS_Asia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aplicatii\Tari, capitale, steaguri\TCS_Europa.resx">
+      <DependentUpon>TCS_Europa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aplicatii\Tari, capitale, steaguri\TCS_Oceania.resx">
+      <DependentUpon>TCS_Oceania.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resurse.resx">
+      <DependentUpon>Resurse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Test.resx">
+      <DependentUpon>Test.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="icon.ico" />
+    <None Include="Resources\America de N.jpg" />
+    <None Include="Resources\asia_capitale1.png" />
+    <None Include="Resources\Australia.jpg" />
+    <None Include="Resources\Europa1.jpg" />
+    <None Include="Resources\Africa.jpg" />
+    <None Include="Resources\Asia.jpg" />
+    <None Include="Resources\joc.png" />
+    <None Include="Resources\sun-and-earth1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\america de nord.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\america de nord1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1Europa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\America_de_S.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\raft.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\carti.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1Australia1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\România.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Noua Zeelandă.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\brazil.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1Africa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1Asia.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\continente2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\world_map.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\c1Africa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\c1AmericaN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\c1AmericaS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\c1Asia.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\c1Europa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\c1Oceania.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\c1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\canadian-landscape-the-lake.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Angel-Falls.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\machu_picchu1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fuji2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Germany-Bavaria-landscape-mountains-alps_1080.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\corect.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gresit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0Africa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\marakele-national-park-south-africa-landscape-wallpaper.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\borc899a-maramures.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0Asia1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\c_an_Canada.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wa_pinnacles_nambung_national_park.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\capitale.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tari.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Resurse\Obiective turistice\Taj Mahal.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0Asia2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\asia_harta_muta.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\africa_harta_muta.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\asia_capitale.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\corect_alb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gresit_alb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\net1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\africa_harta_muta1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\americaN_continent1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\americaS_continent.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\europa_continent.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\asia_continent.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\africa_continent.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\oceania_continent.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cerc_americaN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cerc_americaN2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cerc_americaS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cerc_americaS2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cerc_europa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cerc_europa2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cerc_asia.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cerc_asia2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cerc_africa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cerc_africa2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cerc_oceania.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cerc_oceania2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\americaN_harta_muta.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\start.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\finish.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\americaS_harta_muta.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\europa_harta_muta.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wood.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zar1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zar2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zar3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zar4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zar5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zar6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icon2.ico" />
+    <None Include="Resources\0Africa_capitale1.png" />
+    <None Include="Resources\0Africa_capitale2.png" />
+    <None Include="Resources\0Africa_capitale.png" />
+    <None Include="Resources\sigla-papiu.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,317 @@
+﻿<Window x:Class="Inteligenta.Teste_teoretice_testul2"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Teste_teoretice_testul2" Height="768" Width="1024" Icon="/Inteligenta;component/Images/brain.ico" ResizeMode="NoResize" Topmost="True" WindowStartupLocation="CenterScreen" WindowState="Maximized" WindowStyle="None">
+    <Window.Background>
+        <ImageBrush ImageSource="/Inteligenta;component/Images/sah.png" />
+    </Window.Background>
+
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Styles/ScrollBar_Style.xaml">
+                </ResourceDictionary>
+            </ResourceDictionary.MergedDictionaries>
+            <Style x:Key="btnGlass" TargetType="Button">
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="Button">
+                            <Border x:Name="ButtonBorder" CornerRadius="20" BorderThickness="3" Background="{TemplateBinding Background}"  
+                  BorderBrush="{TemplateBinding BorderBrush}" RenderTransformOrigin="0.5,0.5">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="1.7*"/>
+                                    </Grid.RowDefinitions>
+                                    <ContentPresenter x:Name="ButtonContentPresenter"
+                                VerticalAlignment="Center"  
+                                HorizontalAlignment="Center" 
+                                Grid.RowSpan="2" />
+                                </Grid>
+
+                            </Border>
+
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsPressed" Value="True">
+                                    <Setter Property="RenderTransform" TargetName="ButtonBorder">
+                                        <Setter.Value>
+                                            <TransformGroup>
+                                                <ScaleTransform ScaleX="0.97" ScaleY="0.97"/>
+                                            </TransformGroup>
+                                        </Setter.Value>
+                                    </Setter>
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+            <Style x:Key="btnGlass_second" TargetType="Button">
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="Button">
+                            <Border x:Name="ButtonBorder" CornerRadius="20" BorderThickness="0" Background="{TemplateBinding Background}"  
+                  BorderBrush="{TemplateBinding BorderBrush}" RenderTransformOrigin="0.5,0.5">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="1.7*"/>
+                                    </Grid.RowDefinitions>
+                                    <ContentPresenter x:Name="ButtonContentPresenter"
+                                VerticalAlignment="Center"  
+                                HorizontalAlignment="Center" 
+                                Grid.RowSpan="2" />
+                                </Grid>
+
+                            </Border>
+
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsPressed" Value="True">
+                                    <Setter Property="RenderTransform" TargetName="ButtonBorder">
+                                        <Setter.Value>
+                                            <TransformGroup>
+                                                <ScaleTransform ScaleX="0.97" ScaleY="0.97"/>
+                                            </TransformGroup>
+                                        </Setter.Value>
+                                    </Setter>
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+            <Style x:Key="btnGlass2" TargetType="Button">
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="Button">
+                            <Border x:Name="ButtonBorder" CornerRadius="100" BorderThickness="3" Background="{TemplateBinding Background}"  
+                  BorderBrush="{TemplateBinding BorderBrush}" RenderTransformOrigin="0.5,0.5">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="1.7*"/>
+                                    </Grid.RowDefinitions>
+                                    <ContentPresenter x:Name="ButtonContentPresenter"
+                                VerticalAlignment="Center"  
+                                HorizontalAlignment="Center" 
+                                Grid.RowSpan="2" />
+                                </Grid>
+
+                            </Border>
+
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsPressed" Value="True">
+                                    <Setter Property="RenderTransform" TargetName="ButtonBorder">
+                                        <Setter.Value>
+                                            <TransformGroup>
+                                                <ScaleTransform ScaleX="0.97" ScaleY="0.97"/>
+                                            </TransformGroup>
+                                        </Setter.Value>
+                                    </Setter>
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+            <Style TargetType="{x:Type RadioButton}">
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type RadioButton}">
+                            <BulletDecorator Background="Transparent" Cursor="Hand">
+                                <BulletDecorator.Bullet>
+                                    <Grid Height="20" Width="20">
+                                        <!--Define size of the Bullet-->
+
+                                        <!--The two borders-->
+                                        <Border Name="RadioOuter" Background="Transparent" BorderBrush="#FF78200F" BorderThickness="2" CornerRadius="2" />
+                                        <Border CornerRadius="2" Margin="4" Name="RadioMark" Background="#FF78200F" Visibility="Hidden" />
+                                    </Grid>
+                                </BulletDecorator.Bullet>
+
+                                <!--Text element-->
+                                <TextBlock Margin="5,0,0,0" Foreground="#FF78200F" FontFamily="Times New Roman" FontSize="18" Height="25">
+                                <ContentPresenter />
+                                </TextBlock>
+                            </BulletDecorator>
+                            <!--If item is checked, trigger the visibility of the mark-->
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsChecked" Value="true">
+                                    <!--If item is checked, trigger the visibility of the markand change the color of the selected bullet into a darker gray for better highlighting-->
+                                    <Setter TargetName="RadioMark" Property="Visibility" Value="Visible"/>
+                                    <Setter TargetName="RadioOuter" Property="BorderBrush" Value="#FF78200F" />
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+        </ResourceDictionary>
+    </Window.Resources>
+
+    <Grid>
+        <Border Width="300" Height="420" BorderThickness="5" CornerRadius="30" Background="#FFFFFFD3" BorderBrush="#FF78200F">
+            <Canvas Name="canvas1" Width="290" Height="410" >
+                <Label Canvas.Left="0" Canvas.Top="5" Content="Corectarea răspunsurilor" Height="35" Foreground="#FF78200F" FontSize="24" FontFamily="Times New Roman" Width="290" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
+                <Label Canvas.Left="115" Canvas.Top="50" Content="1)" Height="30" Name="label1" Foreground="#FF78200F" FontFamily="Times New Roman" FontSize="18" Width="30" Visibility="Hidden" />
+                <Image Canvas.Left="145" Canvas.Top="50" Height="30" Name="image1" Stretch="Fill" Width="30" Visibility="Hidden" />
+                <Label Canvas.Left="115" Canvas.Top="85" Content="2)" FontFamily="Times New Roman" FontSize="18" Foreground="#FF78200F" Height="30" Name="label2" Width="30" Visibility="Hidden" />
+                <Image Canvas.Left="145" Canvas.Top="85" Height="30" Name="image2" Stretch="Fill" Width="30" Visibility="Hidden" />
+                <Label Canvas.Left="115" Canvas.Top="120" Content="3)" FontFamily="Times New Roman" FontSize="18" Foreground="#FF78200F" Height="30" Name="label3" Width="30" Visibility="Hidden" />
+                <Image Canvas.Left="145" Canvas.Top="120" Height="30" Name="image3" Stretch="Fill" Width="30" Visibility="Hidden" />
+                <Label Canvas.Left="115" Canvas.Top="155" Content="4)" FontFamily="Times New Roman" FontSize="18" Foreground="#FF78200F" Height="30" Name="label4" Width="30" Visibility="Hidden" />
+                <Image Canvas.Left="145" Canvas.Top="155" Height="30" Name="image4" Stretch="Fill" Width="30" Visibility="Hidden" />
+                <Label Canvas.Left="115" Canvas.Top="190" Content="5)" FontFamily="Times New Roman" FontSize="18" Foreground="#FF78200F" Height="30" Name="label5" Width="30" Visibility="Hidden" />
+                <Image Canvas.Left="145" Canvas.Top="190" Height="30" Name="image5" Stretch="Fill" Width="30" Visibility="Hidden" />
+                <Label Canvas.Left="115" Canvas.Top="225" Content="6)" FontFamily="Times New Roman" FontSize="18" Foreground="#FF78200F" Height="30" Name="label6" Width="30" Visibility="Hidden" />
+                <Image Canvas.Left="145" Canvas.Top="225" Height="30" Name="image6" Stretch="Fill" Width="30" Visibility="Hidden" />
+                <Label Canvas.Left="115" Canvas.Top="260" Content="7)" FontFamily="Times New Roman" FontSize="18" Foreground="#FF78200F" Height="30" Name="label7" Width="30" Visibility="Hidden" />
+                <Image Canvas.Left="145" Canvas.Top="260" Height="30" Name="image7" Stretch="Fill" Width="30" Visibility="Hidden" />
+                <Label Canvas.Left="115" Canvas.Top="295" Content="8)" FontFamily="Times New Roman" FontSize="18" Foreground="#FF78200F" Height="30" Name="label8" Width="30" Visibility="Hidden" />
+                <Image Canvas.Left="145" Canvas.Top="295" Height="30" Name="image8" Stretch="Fill" Width="30" Visibility="Hidden" />
+                <Label Canvas.Left="115" Canvas.Top="330" Content="9)" FontFamily="Times New Roman" FontSize="18" Foreground="#FF78200F" Height="30" Name="label9" Width="30" Visibility="Hidden" />
+                <Image Canvas.Left="145" Canvas.Top="330" Height="30" Name="image9" Stretch="Fill" Width="30" Visibility="Hidden" />
+
+                <Line Name="line1" X1="50" X2="250" Y1="365" Y2="365" Fill="#FF78200F" Stroke="#FF78200F" StrokeThickness="3" Visibility="Hidden" />
+                <Label Canvas.Left="50" Canvas.Top="370" Content="Ai obţinut nota " Height="35" Name="label10" FontSize="24" FontFamily="Times New Roman" Foreground="#FF78200F" Width="200" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Visibility="Hidden" />
+            </Canvas>
+        </Border>
+
+        <Border Name="border1"  Width="640" Height="510" BorderThickness="5" CornerRadius="30" Background="#FFFFFFD3" BorderBrush="#FF78200F">
+            <FlowDocumentScrollViewer Width="600" Height="500">
+                <FlowDocument Name="flowdoc1" Foreground="#FF78200F" FontFamily="Times New Roman" FontSize="18">
+                    <Paragraph FontSize="24" TextAlignment="Center">
+                        Test
+                    </Paragraph>
+                    <Paragraph>
+                        <TextBlock Text="      Răspundeţi la următoarele întrebări alegând o variantă de răspuns."></TextBlock>
+                        <LineBreak></LineBreak>
+                        1) Ce job poate avea cineva dacă are ca inteligenţă predominantă pe cea logico-matematică ?
+                    </Paragraph>
+                    <BlockUIContainer>
+                        <StackPanel>
+                            <RadioButton Name="corect1">programator</RadioButton>
+                            <RadioButton>dansator</RadioButton>
+                            <RadioButton>pompier</RadioButton>
+                            <RadioButton>jurnalist politic</RadioButton>
+                        </StackPanel>
+                    </BlockUIContainer>
+                    <Paragraph>
+                        2) Un pictor are ca inteligenţă predominantă pe cea:
+                    </Paragraph>
+                    <BlockUIContainer>
+                        <StackPanel>
+                            <RadioButton Name="corect2">spaţială</RadioButton>
+                            <RadioButton>lingvistică</RadioButton>
+                            <RadioButton>naturalistă</RadioButton>
+                            <RadioButton>interpersonală</RadioButton>
+                        </StackPanel>
+                    </BlockUIContainer>
+                    <Paragraph>
+                        3) Ce job poate avea cineva dacă are ca inteligenţă predominantă pe cea intrapersonală ?
+                    </Paragraph>
+                    <BlockUIContainer>
+                        <StackPanel>
+                            <RadioButton>botanist</RadioButton>
+                            <RadioButton>atlet</RadioButton>
+                            <RadioButton>om politic</RadioButton>
+                            <RadioButton Name="corect3">romancier</RadioButton>
+                        </StackPanel>
+                    </BlockUIContainer>
+                    <Paragraph>
+                        4) O persoană care are ca inteligenţă predominantă pe cea interpesonală:
+                    </Paragraph>
+                    <BlockUIContainer>
+                        <StackPanel>
+                            <RadioButton>poate scrie un roman</RadioButton>
+                            <RadioButton Name="corect4">poate deveni consilier</RadioButton>
+                            <RadioButton>are deprinderi muzicale si ritmice</RadioButton>
+                            <RadioButton>poate deveni sportiv</RadioButton>
+                        </StackPanel>
+                    </BlockUIContainer>
+                    <Paragraph>
+                        5) O carte foarte bună este scrisă de obicei de o persoană care are ca inteligenţă predominantă pe cea:
+                    </Paragraph>
+                    <BlockUIContainer>
+                        <StackPanel>
+                            <RadioButton>naturalistă</RadioButton>
+                            <RadioButton>lingvistică</RadioButton>
+                            <RadioButton Name="corect5">intrapersonală</RadioButton>
+                            <RadioButton>interpersonală</RadioButton>
+                        </StackPanel>
+                    </BlockUIContainer>
+                    <Paragraph>
+                        6) Ce tip de inteligenţă trebuie să aibă orice profesor?
+                    </Paragraph>
+                    <BlockUIContainer>
+                        <StackPanel>
+                            <RadioButton>interpersonală</RadioButton>
+                            <RadioButton>spaţială</RadioButton>
+                            <RadioButton>logico-matematică</RadioButton>
+                            <RadioButton Name="corect6">lingvistică</RadioButton>
+                        </StackPanel>
+                    </BlockUIContainer>
+                    <Paragraph>
+                        7) Dacă un elev are înclinaţii sportive el ar putea deveni:
+                    </Paragraph>
+                    <BlockUIContainer>
+                        <StackPanel>
+                            <RadioButton Name="corect7">sportiv</RadioButton>
+                            <RadioButton>profesor de fizică</RadioButton>
+                            <RadioButton>inginer în construcţii</RadioButton>
+                            <RadioButton>inginer chimist</RadioButton>
+                        </StackPanel>
+                    </BlockUIContainer>
+                    <Paragraph>
+                        8) Ce tip de inteligenţă predominantă are un inginer în construcţii?
+                    </Paragraph>
+                    <BlockUIContainer>
+                        <StackPanel>
+                            <RadioButton>naturalistă</RadioButton>
+                            <RadioButton Name="corect8">spaţială</RadioButton>
+                            <RadioButton >muzicală</RadioButton>
+                            <RadioButton>logico-matematică</RadioButton>
+                        </StackPanel>
+                    </BlockUIContainer>
+                    <Paragraph>
+                        9) Care din următoarele meserii necesită inteligenţa naturalistă?
+                    </Paragraph>
+                    <BlockUIContainer>
+                        <StackPanel>
+                            <RadioButton>nicio meserie</RadioButton>
+                            <RadioButton>orice meserie</RadioButton>
+                            <RadioButton>profesor de biologie</RadioButton>
+                            <RadioButton Name="corect9">ecologist</RadioButton>
+                        </StackPanel>
+                    </BlockUIContainer>
+                    <Paragraph>Se acordă un punct din oficiu.</Paragraph>
+                    <BlockUIContainer>
+                        <Button Name="rezultat" Width="120" Height="40" Content="Rezultat" Foreground="#FFFFFFD3" Background="#FF78200F" Style="{StaticResource btnGlass_second}" FontSize="20" Click="rezultat_Click" MouseEnter="rezultat_MouseEnter" MouseLeave="rezultat_MouseLeave" />
+                    </BlockUIContainer>
+                </FlowDocument>
+            </FlowDocumentScrollViewer>
+        </Border>
+        <Button Background="#FFFFFFD3" Content="Refă testul" FontFamily="Times New Roman" FontSize="28" FontStyle="Italic" FontWeight="Normal" Foreground="#FF78200F" Height="50" HorizontalAlignment="Right" Margin="0,0,20,20" Name="refa_test" Style="{StaticResource btnGlass}" VerticalAlignment="Bottom" Width="160" Visibility="Hidden" Click="refa_test_Click" BorderBrush="#FF78200F" MouseEnter="refa_test_MouseEnter" MouseLeave="refa_test_MouseLeave" />
+
+        <Canvas Height="50" HorizontalAlignment="Center" Margin="416,0,416,20" Name="canvas_meniu" VerticalAlignment="Bottom" Width="170">
+            <Button Background="#FFFFFFD3" FontFamily="Monotype Corsiva" FontSize="30" FontWeight="Normal" Foreground="White" Height="50" Name="inapoi" Style="{StaticResource btnGlass2}" Width="50" Click="inapoi_Click" Canvas.Left="0" Canvas.Top="0" BorderBrush="#FF78200F" MouseEnter="inapoi_MouseEnter" MouseLeave="inapoi_MouseLeave">
+                <StackPanel>
+                    <Image Source="/Inteligenta;component/Images/back_arrow_brown.png" Name="inapoi_img" />
+                </StackPanel>
+            </Button>
+            <Button Background="#FFFFFFD3" FontFamily="Monotype Corsiva" FontSize="30" FontWeight="Normal" Foreground="White" Height="50" Name="acasa" Style="{StaticResource btnGlass2}" Width="50" Canvas.Left="60" Canvas.Top="0" BorderBrush="#FF78200F" Click="acasa_Click" MouseEnter="acasa_MouseEnter" MouseLeave="acasa_MouseLeave">
+                <StackPanel>
+                    <Image Source="/Inteligenta;component/Images/home_brown.png" Name="acasa_img" />
+                </StackPanel>
+            </Button>
+            <Button Background="#FFFFFFD3" FontFamily="Monotype Corsiva" FontSize="30" FontWeight="Normal" Foreground="White" Height="50" Name="nav_menu" Style="{StaticResource btnGlass2}" Width="50" Canvas.Left="120" Canvas.Top="0" BorderBrush="#FF78200F" Click="nav_menu_Click" MouseEnter="nav_menu_MouseEnter" MouseLeave="nav_menu_MouseLeave">
+                <StackPanel>
+                    <Image Source="/Inteligenta;component/Images/menu_brown.png" Name="nav_menu_img" />
+                </StackPanel>
+            </Button>
+        </Canvas>
+    </Grid>
+</Window>

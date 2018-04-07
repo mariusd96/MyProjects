@@ -1,0 +1,378 @@
+﻿<Window x:Class="Inteligenta.Teste_de_inteligenta_test_einstein"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Teste_de_inteligenta_test_einstein" Height="768" Width="1024" Icon="/Inteligenta;component/Images/brain.ico" ResizeMode="NoResize" WindowStyle="None" Topmost="True" WindowStartupLocation="CenterScreen" WindowState="Maximized">
+    <Window.Background>
+        <ImageBrush ImageSource="/Inteligenta;component/Images/sah.png" />
+    </Window.Background>
+
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Styles/ScrollBar_Style.xaml">
+                </ResourceDictionary>
+            </ResourceDictionary.MergedDictionaries>
+            <Style x:Key="btnGlass" TargetType="Button">
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="Button">
+                            <Border x:Name="ButtonBorder" CornerRadius="100" BorderThickness="3" Background="{TemplateBinding Background}"  
+                  BorderBrush="{TemplateBinding BorderBrush}" RenderTransformOrigin="0.5,0.5">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="1.7*"/>
+                                    </Grid.RowDefinitions>
+                                    <ContentPresenter x:Name="ButtonContentPresenter"
+                                VerticalAlignment="Center"  
+                                HorizontalAlignment="Center" 
+                                Grid.RowSpan="2" />
+                                </Grid>
+
+                            </Border>
+
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsPressed" Value="True">
+                                    <Setter Property="RenderTransform" TargetName="ButtonBorder">
+                                        <Setter.Value>
+                                            <TransformGroup>
+                                                <ScaleTransform ScaleX="0.97" ScaleY="0.97"/>
+                                            </TransformGroup>
+                                        </Setter.Value>
+                                    </Setter>
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+
+            <Style x:Key="btnGlass2" TargetType="Button">
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="Button">
+                            <Border x:Name="ButtonBorder" CornerRadius="100" BorderThickness="0" Background="{TemplateBinding Background}"  
+                  BorderBrush="WhiteSmoke" RenderTransformOrigin="0.5,0.5">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="1.7*"/>
+                                    </Grid.RowDefinitions>
+                                    <ContentPresenter x:Name="ButtonContentPresenter"
+                                VerticalAlignment="Center"  
+                                HorizontalAlignment="Center" 
+                                Grid.RowSpan="2" />
+                                </Grid>
+
+                            </Border>
+
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsPressed" Value="True">
+                                    <Setter Property="RenderTransform" TargetName="ButtonBorder">
+                                        <Setter.Value>
+                                            <TransformGroup>
+                                                <ScaleTransform ScaleX="0.97" ScaleY="0.97"/>
+                                            </TransformGroup>
+                                        </Setter.Value>
+                                    </Setter>
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+        </ResourceDictionary>
+    </Window.Resources>
+    
+    <Grid>
+        <Canvas Width="950" Height="550">
+            <Border BorderThickness="5" CornerRadius="20" Background="#FFFFFFD3" BorderBrush="#FF78200F" Width="370" Height="550">
+                <FlowDocumentScrollViewer Width="350" Height="540">
+                    <FlowDocument FontFamily="Times New Roman" TextAlignment="Justify" FontSize="18" Foreground="#FF78200F">
+                        <Paragraph>
+                            Fizicianul Albert Einstein a conceput, în urmă cu aproape 100 de ani, un test de inteligenţă pe care îl pot rezolva doar două persoane dintr-o sută. Indiciile trebuie urmărite cu mare atenţie pentru a putea afla răspunsul corect.
+                        </Paragraph>
+                        <Paragraph>
+                            Iată testul:
+                        </Paragraph>
+                        <List MarkerStyle="Decimal">
+                            <ListItem>
+                                <Paragraph>Există 5 case, fiecare de altă culoare.</Paragraph>
+                            </ListItem>
+                            <ListItem>
+                                <Paragraph>În fiecare casă, locuieşte o singură persoană, fiecare de altă naţionalitate.</Paragraph>
+                            </ListItem>
+                            <ListItem>
+                                <Paragraph>Fiecărui locatar al fiecărei case îi place o anumită băutură, fumează o anumită marcă de ţigări şi deţine un anumit animal de casă.</Paragraph>
+                            </ListItem>
+                            <ListItem>
+                                <Paragraph>Niciuna din cele 5 persoane nu bea aceeaşi băutură, nu fumează aceeaşi marcă de ţigări şi nu deţine acelaşi fel de animal de casă.</Paragraph>
+                            </ListItem>
+                            <ListItem>
+                                <Paragraph>Britanicul locuieşte în casa roşie.</Paragraph>
+                            </ListItem>
+                            <ListItem>
+                                <Paragraph>Suedezul are un câine.</Paragraph>
+                            </ListItem>
+                            <ListItem>
+                                <Paragraph>Danezul bea ceai cu plăcere.</Paragraph>
+                            </ListItem>
+                            <ListItem>
+                                <Paragraph>Casa verde se află în stânga casei albe.</Paragraph>
+                            </ListItem>
+                            <ListItem>
+                                <Paragraph>Locatarul casei verzi bea cafea.</Paragraph>
+                            </ListItem>
+                            <ListItem>
+                                <Paragraph>Persoana care fumează Pall Mall are o pasăre.</Paragraph>
+                            </ListItem>
+                            <ListItem>
+                                <Paragraph>Locatarul care locuieşte în casa din mijloc bea lapte.</Paragraph>
+                            </ListItem>
+                            <ListItem>
+                                <Paragraph>Locatarul din casa galbenă fumează Dunhill.</Paragraph>
+                            </ListItem>
+                            <ListItem>
+                                <Paragraph>Norvegianul locuieşte în prima casă.</Paragraph>
+                            </ListItem>
+                            <ListItem>
+                                <Paragraph>Fumătorul de Marlboro locuieşte lângă cel care are o pisică.</Paragraph>
+                            </ListItem>
+                            <ListItem>
+                                <Paragraph>Locatarul care are un cal locuieşte lângă cel care fumează Dunhill.</Paragraph>
+                            </ListItem>
+                            <ListItem>
+                                <Paragraph>Fumătorul de Winfield bea cu plăcere bere.</Paragraph>
+                            </ListItem>
+                            <ListItem>
+                                <Paragraph>Norvegianul locuieşte lângă casa albastră.</Paragraph>
+                            </ListItem>
+                            <ListItem>
+                                <Paragraph>Germanul fumează Rothmans.</Paragraph>
+                            </ListItem>
+                            <ListItem>
+                                <Paragraph>Fumătorul de Marlboro are un vecin care bea apă.</Paragraph>
+                            </ListItem>
+                        </List>
+                        <Paragraph FontWeight="Bold">
+                            Cine este proprietarul acvariului cu peşti? Veţi afla răspunsul completând tabelul alăturat.
+                        </Paragraph>
+                    </FlowDocument>
+                </FlowDocumentScrollViewer>
+            </Border>
+            
+            <Border Width="570" Height="300" Canvas.Left="380" Background="#FF78200F" BorderBrush="#FF78200F" BorderThickness="0" CornerRadius="25" Canvas.Top="50">
+                <Canvas Name="tabel">
+                    <Label Canvas.Left="10" Canvas.Top="86" Content="Britanicul" Height="30" Name="label1" FontFamily="Times New Roman" FontSize="18" Foreground="#FFFFFFD3" />
+                    <Label Canvas.Left="10" Canvas.Top="122" Content="Suedezul" FontFamily="Times New Roman" FontSize="18" Foreground="#FFFFFFD3" Height="30" Name="label2" />
+                    <Label Canvas.Left="10" Canvas.Top="158" Content="Danezul" FontFamily="Times New Roman" FontSize="18" Foreground="#FFFFFFD3" Height="30" Name="label3" />
+                    <Label Canvas.Left="10" Canvas.Top="194" Content="Norvegianul" FontFamily="Times New Roman" FontSize="18" Foreground="#FFFFFFD3" Height="30" Name="label4" />
+                    <Label Canvas.Left="12" Canvas.Top="230" Content="Germanul" FontFamily="Times New Roman" FontSize="18" Foreground="#FFFFFFD3" Height="30" Name="label5" />
+                    <Label Canvas.Left="125" Canvas.Top="44" Content="Nr. casă" FontFamily="Times New Roman" FontSize="18" Foreground="#FFFFFFD3" Height="30" Name="label6" />
+                    <Label Canvas.Left="199" Canvas.Top="44" Content="Culoare casă" FontFamily="Times New Roman" FontSize="18" Foreground="#FFFFFFD3" Height="30" Name="label7" />
+                    <Label Canvas.Left="307" Canvas.Top="44" Content="Băutură" FontFamily="Times New Roman" FontSize="18" Foreground="#FFFFFFD3" Height="30" Name="label8" />
+                    <Label Canvas.Left="380" Canvas.Top="44" Content="Marcă ţigări" FontFamily="Times New Roman" FontSize="18" Foreground="#FFFFFFD3" Height="30" Name="label9" />
+                    <Label Canvas.Left="484" Canvas.Top="44" Content="Animal" FontFamily="Times New Roman" FontSize="18" Foreground="#FFFFFFD3" Height="30" Name="label10" Width="78" HorizontalContentAlignment="Center" />
+                    <ComboBox Canvas.Left="125" Canvas.Top="89" Height="23" Name="casa1" Width="68" Background="#FFFFFFD3" Foreground="#FF78200F" ItemsSource="{Binding}" FontFamily="Times New Roman" FontSize="16">
+                        <ComboBoxItem Background="#FFFFFFD3" Content="1" />
+                        <ComboBoxItem Background="#FFFFFFD3" Content="2" />
+                        <ComboBoxItem Background="#FFFFFFD3" Content="3" IsSelected="True" />
+                        <ComboBoxItem Background="#FFFFFFD3" Content="4" />
+                        <ComboBoxItem Background="#FFFFFFD3" Content="5" />
+                    </ComboBox>
+                    <ComboBox Background="#FFFFFFD3" Canvas.Left="125" Canvas.Top="124" Foreground="#FF78200F" Height="23" Name="casa2" Width="68" FontFamily="Times New Roman" FontSize="16">
+                        <ComboBoxItem Background="#FFFFFFD3" Content="1" />
+                        <ComboBoxItem Background="#FFFFFFD3" Content="2" />
+                        <ComboBoxItem Background="#FFFFFFD3" Content="3" />
+                        <ComboBoxItem Background="#FFFFFFD3" Content="4" />
+                        <ComboBoxItem Background="#FFFFFFD3" Content="5" IsSelected="True" />
+                    </ComboBox>
+                    <ComboBox Background="#FFFFFFD3" Canvas.Left="125" Canvas.Top="159" Foreground="#FF78200F" Height="23" Name="casa3" Width="68" FontFamily="Times New Roman" FontSize="16">
+                        <ComboBoxItem Background="#FFFFFFD3" Content="1" />
+                        <ComboBoxItem Background="#FFFFFFD3" Content="2" IsSelected="True" />
+                        <ComboBoxItem Background="#FFFFFFD3" Content="3" />
+                        <ComboBoxItem Background="#FFFFFFD3" Content="4" />
+                        <ComboBoxItem Background="#FFFFFFD3" Content="5" />
+                    </ComboBox>
+                    <ComboBox Background="#FFFFFFD3" Canvas.Left="125" Canvas.Top="194" Foreground="#FF78200F" Height="23" Name="casa4" Width="68" FontFamily="Times New Roman" FontSize="16">
+                        <ComboBoxItem Background="#FFFFFFD3" Content="1" IsSelected="True" />
+                        <ComboBoxItem Background="#FFFFFFD3" Content="2" />
+                        <ComboBoxItem Background="#FFFFFFD3" Content="3" />
+                        <ComboBoxItem Background="#FFFFFFD3" Content="4" />
+                        <ComboBoxItem Background="#FFFFFFD3" Content="5" />
+                    </ComboBox>
+                    <ComboBox Background="#FFFFFFD3" Canvas.Left="125" Canvas.Top="229" Foreground="#FF78200F" Height="23" Name="casa5" Width="68" FontFamily="Times New Roman" FontSize="16">
+                        <ComboBoxItem Background="#FFFFFFD3" Content="1" />
+                        <ComboBoxItem Background="#FFFFFFD3" Content="2" />
+                        <ComboBoxItem Background="#FFFFFFD3" Content="3" />
+                        <ComboBoxItem Background="#FFFFFFD3" Content="4" IsSelected="True" />
+                        <ComboBoxItem Background="#FFFFFFD3" Content="5" />
+                    </ComboBox>
+                    <ComboBox Background="#FFFFFFD3" Canvas.Left="199" Canvas.Top="89" Foreground="#FF78200F" Height="23" Name="culoare1" Width="103" FontFamily="Times New Roman" FontSize="16">
+                        <ComboBoxItem Background="#FFFFFFD3" Content="roşie" IsSelected="True" />
+                        <ComboBoxItem Background="#FFFFFFD3" Content="verde" />
+                        <ComboBoxItem Background="#FFFFFFD3" Content="albă" />
+                        <ComboBoxItem Background="#FFFFFFD3" Content="galbenă" />
+                        <ComboBoxItem Background="#FFFFFFD3" Content="albastră" />
+                    </ComboBox>
+                    <ComboBox Background="#FFFFFFD3" Canvas.Left="199" Canvas.Top="124" Foreground="#FF78200F" Height="23" Name="culoare2" Width="103" FontFamily="Times New Roman" FontSize="16">
+                        <ComboBoxItem Background="#FFFFFFD3" Content="roşie" />
+                        <ComboBoxItem Background="#FFFFFFD3" Content="verde" />
+                        <ComboBoxItem Background="#FFFFFFD3" Content="albă" IsSelected="True" />
+                        <ComboBoxItem Background="#FFFFFFD3" Content="galbenă" />
+                        <ComboBoxItem Background="#FFFFFFD3" Content="albastră" />
+                    </ComboBox>
+                    <ComboBox Background="#FFFFFFD3" Canvas.Left="199" Canvas.Top="159" Foreground="#FF78200F" Height="23" Name="culoare3" Width="103" FontFamily="Times New Roman" FontSize="16">
+                        <ComboBoxItem Background="#FFFFFFD3" Content="roşie" />
+                        <ComboBoxItem Background="#FFFFFFD3" Content="verde" />
+                        <ComboBoxItem Background="#FFFFFFD3" Content="albă" />
+                        <ComboBoxItem Background="#FFFFFFD3" Content="galbenă" />
+                        <ComboBoxItem Background="#FFFFFFD3" Content="albastră" IsSelected="True" />
+                    </ComboBox>
+                    <ComboBox Background="#FFFFFFD3" Canvas.Left="199" Canvas.Top="194" Foreground="#FF78200F" Height="23" Name="culoare4" Width="103" FontFamily="Times New Roman" FontSize="16">
+                        <ComboBoxItem Background="#FFFFFFD3" Content="roşie" />
+                        <ComboBoxItem Background="#FFFFFFD3" Content="verde" />
+                        <ComboBoxItem Background="#FFFFFFD3" Content="albă" />
+                        <ComboBoxItem Background="#FFFFFFD3" Content="galbenă" IsSelected="True" />
+                        <ComboBoxItem Background="#FFFFFFD3" Content="albastră" />
+                    </ComboBox>
+                    <ComboBox Background="#FFFFFFD3" Canvas.Left="199" Canvas.Top="229" Foreground="#FF78200F" Height="23" Name="culoare5" Width="103" FontFamily="Times New Roman" FontSize="16">
+                        <ComboBoxItem Background="#FFFFFFD3" Content="roşie" />
+                        <ComboBoxItem Background="#FFFFFFD3" Content="verde" IsSelected="True" />
+                        <ComboBoxItem Background="#FFFFFFD3" Content="albă" />
+                        <ComboBoxItem Background="#FFFFFFD3" Content="galbenă" />
+                        <ComboBoxItem Background="#FFFFFFD3" Content="albastră" />
+                    </ComboBox>
+                    <ComboBox Background="#FFFFFFD3" Canvas.Left="307" Canvas.Top="89" Foreground="#FF78200F" Height="23" Name="bautura1" Width="67" FontFamily="Times New Roman" FontSize="16">
+                        <ComboBoxItem Background="#FFFFFFD3" Content="apă" />
+                        <ComboBoxItem Background="#FFFFFFD3" Content="ceai" />
+                        <ComboBoxItem Background="#FFFFFFD3" Content="lapte" IsSelected="True" />
+                        <ComboBoxItem Background="#FFFFFFD3" Content="cafea" />
+                        <ComboBoxItem Background="#FFFFFFD3" Content="bere" />
+                    </ComboBox>
+                    <ComboBox Background="#FFFFFFD3" Canvas.Left="307" Canvas.Top="124" Foreground="#FF78200F" Height="23" Name="bautura2" Width="67" FontFamily="Times New Roman" FontSize="16">
+                        <ComboBoxItem Background="#FFFFFFD3" Content="apă" />
+                        <ComboBoxItem Background="#FFFFFFD3" Content="ceai" />
+                        <ComboBoxItem Background="#FFFFFFD3" Content="lapte" />
+                        <ComboBoxItem Background="#FFFFFFD3" Content="cafea" />
+                        <ComboBoxItem Background="#FFFFFFD3" Content="bere" IsSelected="True" />
+                    </ComboBox>
+                    <ComboBox Background="#FFFFFFD3" Canvas.Left="307" Canvas.Top="159" Foreground="#FF78200F" Height="23" Name="bautura3" Width="67" FontFamily="Times New Roman" FontSize="16">
+                        <ComboBoxItem Background="#FFFFFFD3" Content="apă" />
+                        <ComboBoxItem Background="#FFFFFFD3" Content="ceai" IsSelected="True" />
+                        <ComboBoxItem Background="#FFFFFFD3" Content="lapte" />
+                        <ComboBoxItem Background="#FFFFFFD3" Content="cafea" />
+                        <ComboBoxItem Background="#FFFFFFD3" Content="bere" />
+                    </ComboBox>
+                    <ComboBox Background="#FFFFFFD3" Canvas.Left="307" Canvas.Top="194" Foreground="#FF78200F" Height="23" Name="bautura4" Width="67" FontFamily="Times New Roman" FontSize="16">
+                        <ComboBoxItem Background="#FFFFFFD3" Content="apă" IsSelected="True" />
+                        <ComboBoxItem Background="#FFFFFFD3" Content="ceai" />
+                        <ComboBoxItem Background="#FFFFFFD3" Content="lapte" />
+                        <ComboBoxItem Background="#FFFFFFD3" Content="cafea" />
+                        <ComboBoxItem Background="#FFFFFFD3" Content="bere" />
+                    </ComboBox>
+                    <ComboBox Background="#FFFFFFD3" Canvas.Left="307" Canvas.Top="229" Foreground="#FF78200F" Height="23" Name="bautura5" Width="67" FontFamily="Times New Roman" FontSize="16">
+                        <ComboBoxItem Background="#FFFFFFD3" Content="apă" />
+                        <ComboBoxItem Background="#FFFFFFD3" Content="ceai" />
+                        <ComboBoxItem Background="#FFFFFFD3" Content="lapte" />
+                        <ComboBoxItem Background="#FFFFFFD3" Content="cafea" IsSelected="True" />
+                        <ComboBoxItem Background="#FFFFFFD3" Content="bere" />
+                    </ComboBox>
+                    <ComboBox Background="#FFFFFFD3" Canvas.Left="380" Canvas.Top="89" Foreground="#FF78200F" Height="23" Name="tigari1" Width="99" FontFamily="Times New Roman" FontSize="16">
+                        <ComboBoxItem Background="#FFFFFFD3" Content="Dunhill" />
+                        <ComboBoxItem Background="#FFFFFFD3" Content="Marlboro" />
+                        <ComboBoxItem Background="#FFFFFFD3" Content="Pall Mall" IsSelected="True" />
+                        <ComboBoxItem Background="#FFFFFFD3" Content="Rothmans" />
+                        <ComboBoxItem Background="#FFFFFFD3" Content="Winfield" />
+                    </ComboBox>
+                    <ComboBox Background="#FFFFFFD3" Canvas.Left="379" Canvas.Top="124" Foreground="#FF78200F" Height="23" Name="tigari2" Width="99" FontFamily="Times New Roman" FontSize="16">
+                        <ComboBoxItem Background="#FFFFFFD3" Content="Dunhill" />
+                        <ComboBoxItem Background="#FFFFFFD3" Content="Marlboro" />
+                        <ComboBoxItem Background="#FFFFFFD3" Content="Pall Mall" />
+                        <ComboBoxItem Background="#FFFFFFD3" Content="Rothmans" />
+                        <ComboBoxItem Background="#FFFFFFD3" Content="Winfield" IsSelected="True" />
+                    </ComboBox>
+                    <ComboBox Background="#FFFFFFD3" Canvas.Left="379" Canvas.Top="159" Foreground="#FF78200F" Height="23" Name="tigari3" Width="99" FontFamily="Times New Roman" FontSize="16">
+                        <ComboBoxItem Background="#FFFFFFD3" Content="Dunhill" />
+                        <ComboBoxItem Background="#FFFFFFD3" Content="Marlboro" IsSelected="True" />
+                        <ComboBoxItem Background="#FFFFFFD3" Content="Pall Mall" />
+                        <ComboBoxItem Background="#FFFFFFD3" Content="Rothmans" />
+                        <ComboBoxItem Background="#FFFFFFD3" Content="Winfield" />
+                    </ComboBox>
+                    <ComboBox Background="#FFFFFFD3" Canvas.Left="380" Canvas.Top="194" Foreground="#FF78200F" Height="23" Name="tigari4" Width="99" FontFamily="Times New Roman" FontSize="16">
+                        <ComboBoxItem Background="#FFFFFFD3" Content="Dunhill" IsSelected="True" />
+                        <ComboBoxItem Background="#FFFFFFD3" Content="Marlboro" />
+                        <ComboBoxItem Background="#FFFFFFD3" Content="Pall Mall" />
+                        <ComboBoxItem Background="#FFFFFFD3" Content="Rothmans" />
+                        <ComboBoxItem Background="#FFFFFFD3" Content="Winfield" />
+                    </ComboBox>
+                    <ComboBox Background="#FFFFFFD3" Canvas.Left="380" Canvas.Top="230" Foreground="#FF78200F" Height="23" Name="tigari5" Width="99" FontFamily="Times New Roman" FontSize="16">
+                        <ComboBoxItem Background="#FFFFFFD3" Content="Dunhill" />
+                        <ComboBoxItem Background="#FFFFFFD3" Content="Marlboro" />
+                        <ComboBoxItem Background="#FFFFFFD3" Content="Pall Mall" />
+                        <ComboBoxItem Background="#FFFFFFD3" Content="Rothmans" IsSelected="True" />
+                        <ComboBoxItem Background="#FFFFFFD3" Content="Winfield" />
+                    </ComboBox>
+                    <ComboBox Background="#FFFFFFD3" Canvas.Left="484" Canvas.Top="89" Foreground="#FF78200F" Height="23" Name="animal1" Width="78" FontFamily="Times New Roman" FontSize="16">
+                        <ComboBoxItem Background="#FFFFFFD3" Content="pisică" />
+                        <ComboBoxItem Background="#FFFFFFD3" Content="cal" />
+                        <ComboBoxItem Background="#FFFFFFD3" Content="pasăre" IsSelected="True" />
+                        <ComboBoxItem Background="#FFFFFFD3" Content="peşti" />
+                        <ComboBoxItem Background="#FFFFFFD3" Content="câine" />
+                    </ComboBox>
+                    <ComboBox Background="#FFFFFFD3" Canvas.Left="484" Canvas.Top="124" Foreground="#FF78200F" Height="23" Name="animal2" Width="78" FontFamily="Times New Roman" FontSize="16">
+                        <ComboBoxItem Background="#FFFFFFD3" Content="pisică" />
+                        <ComboBoxItem Background="#FFFFFFD3" Content="cal" />
+                        <ComboBoxItem Background="#FFFFFFD3" Content="pasăre" />
+                        <ComboBoxItem Background="#FFFFFFD3" Content="peşti" />
+                        <ComboBoxItem Background="#FFFFFFD3" Content="câine" IsSelected="True" />
+                    </ComboBox>
+                    <ComboBox Background="#FFFFFFD3" Canvas.Left="484" Canvas.Top="159" Foreground="#FF78200F" Height="23" Name="animal3" Width="78" FontFamily="Times New Roman" FontSize="16">
+                        <ComboBoxItem Background="#FFFFFFD3" Content="pisică" />
+                        <ComboBoxItem Background="#FFFFFFD3" Content="cal" IsSelected="True" />
+                        <ComboBoxItem Background="#FFFFFFD3" Content="pasăre" />
+                        <ComboBoxItem Background="#FFFFFFD3" Content="peşti" />
+                        <ComboBoxItem Background="#FFFFFFD3" Content="câine" />
+                    </ComboBox>
+                    <ComboBox Background="#FFFFFFD3" Canvas.Left="484" Canvas.Top="194" Foreground="#FF78200F" Height="23" Name="animal4" Width="78" FontFamily="Times New Roman" FontSize="16">
+                        <ComboBoxItem Background="#FFFFFFD3" Content="pisică" IsSelected="True" />
+                        <ComboBoxItem Background="#FFFFFFD3" Content="cal" />
+                        <ComboBoxItem Background="#FFFFFFD3" Content="pasăre" />
+                        <ComboBoxItem Background="#FFFFFFD3" Content="peşti" />
+                        <ComboBoxItem Background="#FFFFFFD3" Content="câine" />
+                    </ComboBox>
+                    <ComboBox Background="#FFFFFFD3" Canvas.Left="484" Canvas.Top="230" Foreground="#FF78200F" Height="23" Name="animal5" Width="78" FontFamily="Times New Roman" FontSize="16">
+                        <ComboBoxItem Background="#FFFFFFD3" Content="pisică" />
+                        <ComboBoxItem Background="#FFFFFFD3" Content="cal" />
+                        <ComboBoxItem Background="#FFFFFFD3" Content="pasăre" />
+                        <ComboBoxItem Background="#FFFFFFD3" Content="peşti" IsSelected="True" />
+                        <ComboBoxItem Background="#FFFFFFD3" Content="câine" />
+                    </ComboBox>
+                </Canvas>
+            </Border>
+            <Button Content="Verificare" FontFamily="Times New Roman" FontSize="28" Foreground="#FFFFFFD3" Height="150" Name="verificare" Style="{StaticResource btnGlass2}" Width="150" FontStyle="Italic" Background="#FF78200F" Canvas.Left="590" Canvas.Top="360" Click="verificare_Click" MouseEnter="verificare_MouseEnter" MouseLeave="verificare_MouseLeave" />
+            <Border BorderBrush="#FF78200F" BorderThickness="5" Height="150" Name="border_verificare" Width="150" Background="#FFFFFFD3" CornerRadius="100" Visibility="Hidden" Canvas.Left="590" Canvas.Top="360">
+                <Image Name="img_corect" Height="100" Stretch="Fill" Width="100" Source="/Inteligenta;component/Images/corect.png" />
+            </Border>
+        </Canvas>
+        
+        <Canvas Height="50" HorizontalAlignment="Center" Margin="416,0,416,20" VerticalAlignment="Bottom" Width="170">
+            <Button Background="#FFFFFFD3" FontFamily="Monotype Corsiva" FontSize="30" FontWeight="Normal" Foreground="White" Height="50" Name="inapoi" Style="{StaticResource btnGlass}" Width="50" Click="inapoi_Click" Canvas.Left="0" Canvas.Top="0" BorderBrush="#FF78200F" MouseEnter="inapoi_MouseEnter" MouseLeave="inapoi_MouseLeave">
+                <StackPanel>
+                    <Image Source="/Inteligenta;component/Images/back_arrow_brown.png" Name="inapoi_img" />
+                </StackPanel>
+            </Button>
+            <Button Background="#FFFFFFD3" FontFamily="Monotype Corsiva" FontSize="30" FontWeight="Normal" Foreground="White" Height="50" Name="acasa" Style="{StaticResource btnGlass}" Width="50" Canvas.Left="60" Canvas.Top="0" BorderBrush="#FF78200F" Click="acasa_Click" MouseEnter="acasa_MouseEnter" MouseLeave="acasa_MouseLeave">
+                <StackPanel>
+                    <Image Source="/Inteligenta;component/Images/home_brown.png" Name="acasa_img" />
+                </StackPanel>
+            </Button>
+            <Button Background="#FFFFFFD3" FontFamily="Monotype Corsiva" FontSize="30" FontWeight="Normal" Foreground="White" Height="50" Name="nav_menu" Style="{StaticResource btnGlass}" Width="50" Canvas.Left="120" Canvas.Top="0" BorderBrush="#FF78200F" Click="nav_menu_Click" MouseEnter="nav_menu_MouseEnter" MouseLeave="nav_menu_MouseLeave">
+                <StackPanel>
+                    <Image Source="/Inteligenta;component/Images/menu_brown.png" Name="nav_menu_img" />
+                </StackPanel>
+            </Button>
+        </Canvas>
+    </Grid>
+</Window>

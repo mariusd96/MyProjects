@@ -1,0 +1,59 @@
+D:\download\revolutii care au schimbat lumea\soft\Revolutii care au schimbat lumea\Revolutii care au schimbat lumea\bin\Debug\Revolutii care au schimbat lumea.exe
+D:\download\revolutii care au schimbat lumea\soft\Revolutii care au schimbat lumea\Revolutii care au schimbat lumea\bin\Debug\Revolutii care au schimbat lumea.pdb
+D:\download\revolutii care au schimbat lumea\soft\Revolutii care au schimbat lumea\Revolutii care au schimbat lumea\obj\x86\Debug\Revolutii_care_au_schimbat_lumea.Form1.resources
+D:\download\revolutii care au schimbat lumea\soft\Revolutii care au schimbat lumea\Revolutii care au schimbat lumea\obj\x86\Debug\Revolutii_care_au_schimbat_lumea.Properties.Resources.resources
+D:\download\revolutii care au schimbat lumea\soft\Revolutii care au schimbat lumea\Revolutii care au schimbat lumea\obj\x86\Debug\Revolutii_care_au_schimbat_lumea.Start.resources
+D:\download\revolutii care au schimbat lumea\soft\Revolutii care au schimbat lumea\Revolutii care au schimbat lumea\obj\x86\Debug\Revolutii care au schimbat lumea.csproj.GenerateResource.Cache
+D:\download\revolutii care au schimbat lumea\soft\Revolutii care au schimbat lumea\Revolutii care au schimbat lumea\obj\x86\Debug\Revolutii care au schimbat lumea.exe
+D:\download\revolutii care au schimbat lumea\soft\Revolutii care au schimbat lumea\Revolutii care au schimbat lumea\obj\x86\Debug\Revolutii care au schimbat lumea.pdb
+D:\download\revolutii care au schimbat lumea\soft\Revolutii care au schimbat lumea\Revolutii care au schimbat lumea\obj\x86\Debug\Revolutii_care_au_schimbat_lumea.Revolutia_franceza.resources
+D:\download\revolutii care au schimbat lumea\soft\Revolutii care au schimbat lumea\Revolutii care au schimbat lumea\obj\x86\Debug\Revolutii_care_au_schimbat_lumea.Revolutia_americana.resources
+D:\download\revolutii care au schimbat lumea\soft\Revolutii care au schimbat lumea\Revolutii care au schimbat lumea\obj\x86\Debug\Revolutii care au schimbat lumea.csprojResolveAssemblyReference.cache
+D:\download\revolutii care au schimbat lumea\soft\Revolutii care au schimbat lumea\Revolutii care au schimbat lumea\obj\x86\Debug\Revolutii_care_au_schimbat_lumea.Rev_garoafelor_rosii.resources
+D:\download\revolutii care au schimbat lumea\soft\Revolutii care au schimbat lumea\Revolutii care au schimbat lumea\obj\x86\Debug\Revolutii_care_au_schimbat_lumea.Rev_junilor_turci.resources
+D:\download\revolutii care au schimbat lumea\soft\Revolutii care au schimbat lumea\Revolutii care au schimbat lumea\obj\x86\Debug\Revolutii_care_au_schimbat_lumea.Wallpaper.resources
+D:\download\revolutii care au schimbat lumea\soft\Revolutii care au schimbat lumea\Revolutii care au schimbat lumea\obj\x86\Debug\Revolutii_care_au_schimbat_lumea.Aplicatii.resources
+D:\download\revolutii care au schimbat lumea\soft\Revolutii care au schimbat lumea\Revolutii care au schimbat lumea\obj\x86\Debug\Revolutii_care_au_schimbat_lumea.Bibliografie.resources
+D:\download\revolutii care au schimbat lumea\soft\Revolutii care au schimbat lumea\Revolutii care au schimbat lumea\obj\x86\Debug\Revolutii_care_au_schimbat_lumea.Rev_ind.resources
+D:\download\revolutii care au schimbat lumea\soft\Revolutii care au schimbat lumea\Revolutii care au schimbat lumea\obj\x86\Debug\Revolutii_care_au_schimbat_lumea.Rev_glrioasa.resources
+D:\download\revolutii care au schimbat lumea\soft\Revolutii care au schimbat lumea\Revolutii care au schimbat lumea\obj\x86\Debug\Revolutii_care_au_schimbat_lumea.Rev1848.resources
+D:\download\revolutii care au schimbat lumea\soft\Revolutii care au schimbat lumea\Revolutii care au schimbat lumea\obj\x86\Debug\Revolutii_care_au_schimbat_lumea.Rev1917.resources
+D:\download\revolutii care au schimbat lumea\soft\Revolutii care au schimbat lumea\Revolutii care au schimbat lumea\obj\x86\Debug\Revolutii_care_au_schimbat_lumea.Rev_eng.resources
+D:\download\revolutii care au schimbat lumea\soft\Revolutii care au schimbat lumea\Revolutii care au schimbat lumea\obj\x86\Debug\Revolutii_care_au_schimbat_lumea.Rev_ind_inv.resources
+D:\download\revolutii care au schimbat lumea\soft\Revolutii care au schimbat lumea\Revolutii care au schimbat lumea\obj\x86\Debug\Revolutii_care_au_schimbat_lumea.Rev1848_italia.resources
+D:\download\revolutii care au schimbat lumea\soft\Revolutii care au schimbat lumea\Revolutii care au schimbat lumea\obj\x86\Debug\Revolutii_care_au_schimbat_lumea.Rev1848_romania.resources
+D:\download\revolutii care au schimbat lumea\soft\Revolutii care au schimbat lumea\Revolutii care au schimbat lumea\obj\x86\Debug\Revolutii_care_au_schimbat_lumea.Rev1848_franta.resources
+D:\download\revolutii care au schimbat lumea\soft\Revolutii care au schimbat lumea\Revolutii care au schimbat lumea\obj\x86\Debug\Revolutii_care_au_schimbat_lumea.Rev1848_germania.resources
+D:\download\revolutii care au schimbat lumea\soft\Revolutii care au schimbat lumea\Revolutii care au schimbat lumea\obj\x86\Debug\Revolutii_care_au_schimbat_lumea.Rev1848_imp_habs.resources
+D:\download\revolutii care au schimbat lumea\soft\Revolutii care au schimbat lumea\Revolutii care au schimbat lumea\obj\x86\Debug\Revolutii_care_au_schimbat_lumea.Rev_ind_epoca.resources
+D:\download\revolutii care au schimbat lumea\soft\Revolutii care au schimbat lumea\Revolutii care au schimbat lumea\obj\x86\Debug\Revolutii_care_au_schimbat_lumea.Rev_ind_europa.resources
+D:\download\revolutii care au schimbat lumea\soft\Revolutii care au schimbat lumea\Revolutii care au schimbat lumea\obj\x86\Debug\Revolutii_care_au_schimbat_lumea.Fr_origini.resources
+D:\download\revolutii care au schimbat lumea\soft\Revolutii care au schimbat lumea\Revolutii care au schimbat lumea\obj\x86\Debug\Revolutii_care_au_schimbat_lumea.Fr_cauze.resources
+D:\download\revolutii care au schimbat lumea\soft\Revolutii care au schimbat lumea\Revolutii care au schimbat lumea\obj\x86\Debug\Revolutii_care_au_schimbat_lumea.Fr_desfasurare.resources
+D:\download\revolutii care au schimbat lumea\soft\Revolutii care au schimbat lumea\Revolutii care au schimbat lumea\obj\x86\Debug\Revolutii_care_au_schimbat_lumea.Fr_directorat.resources
+D:\download\revolutii care au schimbat lumea\soft\Revolutii care au schimbat lumea\Revolutii care au schimbat lumea\obj\x86\Debug\Revolutii_care_au_schimbat_lumea.Fr_radical.resources
+D:\download\revolutii care au schimbat lumea\soft\Revolutii care au schimbat lumea\Revolutii care au schimbat lumea\obj\x86\Debug\Revolutii_care_au_schimbat_lumea.Fr_moderata.resources
+D:\download\revolutii care au schimbat lumea\soft\Revolutii care au schimbat lumea\Revolutii care au schimbat lumea\obj\x86\Debug\Revolutii_care_au_schimbat_lumea.Fr_mod_adunare.resources
+D:\download\revolutii care au schimbat lumea\soft\Revolutii care au schimbat lumea\Revolutii care au schimbat lumea\obj\x86\Debug\Revolutii_care_au_schimbat_lumea.Fr_mod_adunare_const.resources
+D:\download\revolutii care au schimbat lumea\soft\Revolutii care au schimbat lumea\Revolutii care au schimbat lumea\obj\x86\Debug\Revolutii_care_au_schimbat_lumea.Fr_mod_bastilia.resources
+D:\download\revolutii care au schimbat lumea\soft\Revolutii care au schimbat lumea\Revolutii care au schimbat lumea\obj\x86\Debug\Revolutii_care_au_schimbat_lumea.Fr_mod_abolire.resources
+D:\download\revolutii care au schimbat lumea\soft\Revolutii care au schimbat lumea\Revolutii care au schimbat lumea\obj\x86\Debug\Revolutii_care_au_schimbat_lumea.Fr_mod_constitutie.resources
+D:\download\revolutii care au schimbat lumea\soft\Revolutii care au schimbat lumea\Revolutii care au schimbat lumea\obj\x86\Debug\Revolutii_care_au_schimbat_lumea.Fr_mod_monarhie.resources
+D:\download\revolutii care au schimbat lumea\soft\Revolutii care au schimbat lumea\Revolutii care au schimbat lumea\obj\x86\Debug\Revolutii_care_au_schimbat_lumea.Fr_mod_monarhie_cadere.resources
+D:\download\revolutii care au schimbat lumea\soft\Revolutii care au schimbat lumea\Revolutii care au schimbat lumea\obj\x86\Debug\Revolutii_care_au_schimbat_lumea.Fr_mod_girondin.resources
+D:\download\revolutii care au schimbat lumea\soft\Revolutii care au schimbat lumea\Revolutii care au schimbat lumea\obj\x86\Debug\Revolutii_care_au_schimbat_lumea.Rev_am_intr.resources
+D:\download\revolutii care au schimbat lumea\soft\Revolutii care au schimbat lumea\Revolutii care au schimbat lumea\obj\x86\Debug\Revolutii_care_au_schimbat_lumea.Rev_am_conflicte.resources
+D:\download\revolutii care au schimbat lumea\soft\Revolutii care au schimbat lumea\Revolutii care au schimbat lumea\obj\x86\Debug\Revolutii_care_au_schimbat_lumea.Rev_am_razboaie.resources
+D:\download\revolutii care au schimbat lumea\soft\Revolutii care au schimbat lumea\Revolutii care au schimbat lumea\obj\x86\Debug\Revolutii_care_au_schimbat_lumea.SUA.resources
+D:\download\revolutii care au schimbat lumea\soft\Revolutii care au schimbat lumea\Revolutii care au schimbat lumea\obj\x86\Debug\Revolutii_care_au_schimbat_lumea.SUA_nastere.resources
+D:\download\revolutii care au schimbat lumea\soft\Revolutii care au schimbat lumea\Revolutii care au schimbat lumea\obj\x86\Debug\Revolutii_care_au_schimbat_lumea.Revolutia_americana_philadelphia.resources
+D:\download\revolutii care au schimbat lumea\soft\Revolutii care au schimbat lumea\Revolutii care au schimbat lumea\obj\x86\Debug\Revolutii_care_au_schimbat_lumea.Revolutia_americana_1789.resources
+D:\download\revolutii care au schimbat lumea\soft\Revolutii care au schimbat lumea\Revolutii care au schimbat lumea\obj\x86\Debug\Revolutii_care_au_schimbat_lumea.Revolutia_americana_presedinte.resources
+D:\download\revolutii care au schimbat lumea\soft\Revolutii care au schimbat lumea\Revolutii care au schimbat lumea\obj\x86\Debug\Revolutii_care_au_schimbat_lumea.Revolutia_americana_institutii.resources
+D:\download\revolutii care au schimbat lumea\soft\Revolutii care au schimbat lumea\Revolutii care au schimbat lumea\obj\x86\Debug\Revolutii_care_au_schimbat_lumea.Rebus.resources
+D:\download\revolutii care au schimbat lumea\soft\Revolutii care au schimbat lumea\Revolutii care au schimbat lumea\obj\x86\Debug\Revolutii_care_au_schimbat_lumea.Fisa.resources
+D:\download\revolutii care au schimbat lumea\soft\Revolutii care au schimbat lumea\Revolutii care au schimbat lumea\obj\x86\Debug\Revolutii_care_au_schimbat_lumea.Test.resources
+D:\download\revolutii care au schimbat lumea\soft\Revolutii care au schimbat lumea\Revolutii care au schimbat lumea\obj\x86\Debug\Revolutii_care_au_schimbat_lumea.Rev_eng_desfasurare.resources
+D:\download\revolutii care au schimbat lumea\soft\Revolutii care au schimbat lumea\Revolutii care au schimbat lumea\obj\x86\Debug\Revolutii_care_au_schimbat_lumea.Rev_eng_intr.resources
+D:\download\revolutii care au schimbat lumea\soft\Revolutii care au schimbat lumea\Revolutii care au schimbat lumea\obj\x86\Debug\Revolutii_care_au_schimbat_lumea.Rev_eng_premise.resources
+D:\download\revolutii care au schimbat lumea\soft\Revolutii care au schimbat lumea\Revolutii care au schimbat lumea\obj\x86\Debug\Revolutii_care_au_schimbat_lumea.Wall.resources

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Opera" namespace="Opera.model">
+  <class name="DistributieBalet" table="distributie_Balet">
+    <id name="IdActorBalet">
+      <column name="idActorBalet" sql-type="int" not-null="true" />
+    </id>
+    <property name="IdSpectacol">
+      <column name="idSpectacol" sql-type="int" not-null="true" />
+    </property>
+    <property name="NumeActor">
+      <column name="nume_actor" sql-type="varchar(64)" not-null="true" />
+    </property>
+  </class>
+</hibernate-mapping>

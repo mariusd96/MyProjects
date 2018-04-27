@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfBilet xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Bilet>
+    <IdSpectacol>1</IdSpectacol>
+    <Rand>1</Rand>
+    <Coloana>1</Coloana>
+  </Bilet>
+  <Bilet>
+    <IdSpectacol>1</IdSpectacol>
+    <Rand>1</Rand>
+    <Coloana>2</Coloana>
+  </Bilet>
+  <Bilet>
+    <IdSpectacol>1</IdSpectacol>
+    <Rand>1</Rand>
+    <Coloana>5</Coloana>
+  </Bilet>
+  <Bilet>
+    <IdSpectacol>1</IdSpectacol>
+    <Rand>1</Rand>
+    <Coloana>10</Coloana>
+  </Bilet>
+  <Bilet>
+    <IdSpectacol>1</IdSpectacol>
+    <Rand>2</Rand>
+    <Coloana>1</Coloana>
+  </Bilet>
+  <Bilet>
+    <IdSpectacol>1</IdSpectacol>
+    <Rand>10</Rand>
+    <Coloana>7</Coloana>
+  </Bilet>
+</ArrayOfBilet>

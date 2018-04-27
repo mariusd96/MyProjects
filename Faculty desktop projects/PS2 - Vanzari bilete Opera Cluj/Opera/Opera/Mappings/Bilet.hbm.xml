@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Opera" namespace="Opera.model">
+  <class name="Bilet" table="bilet">
+    <id name="IdBilet">
+      <column name="idBilet" sql-type="int" not-null="true" />
+    </id>
+    <property name="IdSpectacol">
+      <column name="idSpectacol" sql-type="int" not-null="true" />
+    </property>
+    <property name="Rand">
+      <column name="rand" sql-type="int" not-null="true" />
+    </property>
+    <property name="Coloana">
+      <column name="coloana" sql-type="int" not-null="true" />
+    </property>
+  </class>
+</hibernate-mapping>

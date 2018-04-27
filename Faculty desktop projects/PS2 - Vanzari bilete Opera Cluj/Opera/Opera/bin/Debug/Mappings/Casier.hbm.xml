@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Opera" namespace="Opera.model">
+  <class name="Casier" table="casier">
+    <id name="Username">
+      <column name="username" sql-type="varchar(32)" not-null="true" />
+    </id>
+    <property name="Password">
+      <column name="parola" sql-type="varchar(32)" not-null="true" />
+    </property>
+    <property name="Nume">
+      <column name="nume" sql-type="varchar(64)" not-null="true" />
+    </property>
+  </class>
+</hibernate-mapping>
